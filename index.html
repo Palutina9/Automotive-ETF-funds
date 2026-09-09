@@ -252,7 +252,7 @@
         <svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
       </div>
       <div>
-        <h1>داشبورد بازدهی صندوق‌ها</h1>
+        <h1> بازدهی صندوق‌های بخشی خودرویی</h1>
         <div class="sub">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           <span id="todayDate">—</span>
@@ -269,7 +269,11 @@
       </span>
       <button class="btn" id="refreshBtn">
         <svg class="icon" id="refreshIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 1 1 2.13 9.36L1 20"/></svg>
-        به‌روزرسانی
+        بارگذاری دوباره
+      </button>
+      <button class="btn" id="chartImgBtn" disabled>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        دانلود نمودار
       </button>
       <button class="btn primary" id="exportBtn" disabled>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -329,13 +333,13 @@ const PERIOD_LABELS = {
   SIMPLE_WEEKLY: "هفته گذشته",
   SIMPLE_MONTHLY: "ماه گذشته",
   SIMPLE_MONTHLY3: "۳ ماه اخیر",
-  SIMPLE_MONTHLY6: "۶ ماه",
+  SIMPLE_MONTHLY6: "۶ ماه اخیر",
   SIMPLE_YEARLY: "یک سال اخیر",
   SIMPLE_ALL_DAYS: "از ابتدای فعالیت",
   MAX_SIMPLE_WEEKLY: "حداکثر بازدهی هفتگی",
   MIN_SIMPLE_WEEKLY: "حداقل بازدهی هفتگی",
 };
-const FUND_NAMES_FA = { AutoAgah: "اتوآگاه", AutoDariush: "اتوداریوش", Khodran: "خودران", AutoCar: "اتوکار", BehinRo: "بهین‌رو", TakhtGaz: "تخت‌گاز" };
+const FUND_NAMES_FA = { AutoAgah: "اتوآگاه ", AutoDariush: "اتوداریوش ", Khodran: "خودران", AutoCar: "اتوکار", BehinRo: "بهین‌رو ", TakhtGaz: "تخت‌گاز" };
 
 // Chart palette — corporate cool
 const NAV_BAR_COLOR = "#3B82F6";       // blue-500
@@ -384,8 +388,8 @@ function relativeTime(iso) {
 }
 
 function parseDataset(list) {
-  const periods = []; let marketDaily = null; const funds = {}; const order = []; const index = {};
-  if (!Array.isArray(list)) return { periods, marketDaily, funds, order, index };
+  const periods = []; let marketDaily = null; let dailyReturnDate = null; const funds = {}; const order = []; const index = {};
+  if (!Array.isArray(list)) return { periods, marketDaily, funds, order, index, dailyReturnDate };
   const ensureFund = (slug) => {
     if (!funds[slug]) { funds[slug] = { simpleReturns: new Array(PERIOD_KEYS.length).fill(null), nav: null, dailyReturn: null }; order.push(slug); }
     return funds[slug];
@@ -403,6 +407,7 @@ function parseDataset(list) {
       continue;
     }
     if (obj.marketDailyReturn !== undefined) { marketDaily = obj.marketDailyReturn; continue; }
+    if (obj.dailyReturnDate !== undefined) { dailyReturnDate = String(obj.dailyReturnDate); continue; }    
     const entryKey = Object.keys(obj)[0];
     if (!entryKey) continue;
     const value = obj[entryKey];
@@ -417,18 +422,19 @@ function parseDataset(list) {
       ensureFund(m[1]).dailyReturn = typeof value === "number" ? value : null;
     }
   }
-  return { periods, marketDaily, funds, order, index };
+  return { periods, marketDaily, funds, order, index, dailyReturnDate };
 }
 
 function mergeDatasets(auto, manual) {
   const a = parseDataset(auto), b = parseDataset(manual);
   const periods = a.periods.length ? a.periods : b.periods;
   const marketDaily = a.marketDaily ?? b.marketDaily;
+  const dailyReturnDate = a.dailyReturnDate ?? b.dailyReturnDate;
   const index = { ...a.index, ...b.index };
   const funds = { ...a.funds, ...b.funds };
   const order = [...a.order, ...b.order.filter(s => !a.order.includes(s))];
   const manualSlugs = new Set(b.order);
-  return { periods, marketDaily, funds, order, manualSlugs, index };
+  return { periods, marketDaily, funds, order, manualSlugs, index, dailyReturnDate };
 }
 
 function renderKpis(state) {
@@ -437,10 +443,10 @@ function renderKpis(state) {
   const totalNav = order.reduce((s, slug) => s + (funds[slug].nav || 0), 0);
   const dailyVals = order.map(s => funds[s].dailyReturn).filter(v => v !== null && isFinite(v));
   const avgDaily = dailyVals.length ? dailyVals.reduce((s, v) => s + v, 0) / dailyVals.length : null;
-  const yearIdx = PERIOD_KEYS.indexOf("SIMPLE_YEARLY");
+  const weekIdx = PERIOD_KEYS.indexOf("SIMPLE_WEEKLY");
   let best = null;
   for (const slug of order) {
-    const v = funds[slug].simpleReturns[yearIdx];
+    const v = funds[slug].simpleReturns[weekIdx];
     if (v !== null && isFinite(v) && (!best || v > best.value)) best = { name: FUND_NAMES_FA[slug] || slug, value: v };
   }
 
@@ -451,7 +457,7 @@ function renderKpis(state) {
       icon: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>' },
     { label: "میانگین بازدهی روزانه", value: fmtPctText(avgDaily), sub: "میانگین همه صندوق‌ها", bg: (avgDaily ?? 0) < 0 ? "var(--loss-bg)" : "var(--gain-bg)", fg: (avgDaily ?? 0) < 0 ? "var(--loss)" : "var(--gain)",
       icon: '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' },
-    { label: "بهترین بازدهی یک‌ساله", value: best ? fmtPctText(best.value) : "—", sub: best ? best.name : "—", bg: "#FFF7ED", fg: "#C2410C",
+    { label: "بهترین بازدهی هفتگی", value: best ? fmtPctText(best.value) : "—", sub: best ? best.name : "—", bg: "#FFF7ED", fg: "#C2410C",
       icon: '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>' },
   ];
 
@@ -470,7 +476,7 @@ function renderKpis(state) {
 }
 
 function renderTable(state) {
-  const { periods, marketDaily, funds, order, manualSlugs, index } = state;
+  const { periods, marketDaily, funds, order, manualSlugs, index, dailyReturnDate } = state;
   const host = document.getElementById("tableHost");
   if (order.length === 0 && periods.length === 0) { host.innerHTML = '<div class="empty-state">هنوز داده‌ای برای نمایش وجود ندارد</div>'; return; }
 
@@ -483,26 +489,33 @@ function renderTable(state) {
     ${order.map(slug => `<th>${FUND_NAMES_FA[slug] || slug}${manualSlugs.has(slug) ? '<span class="badge-manual">دستی</span>' : ""}</th>`).join("")}
   </tr>`;
 
-  // Daily return row (at the top, with today's date)
-  const todayStr = new Date().toLocaleDateString("fa-IR");
+  // Daily return row — date comes from JSON (dailyReturnDate), falls back to today
+  const dailyDateStr = dailyReturnDate
+    ? toFaDigits(dailyReturnDate)
+    : new Date().toLocaleDateString("fa-IR");
   const dailyRow = `<tr class="daily-row">
     <td>بازدهی روزانه</td>
-    <td class="date-cell">${toFaDigits(todayStr)}</td>
+    <td class="date-cell">${dailyDateStr}</td>
     <td>${fmtPct(marketDaily)}</td>
     <td>${fmtPct(index.daily)}</td>
     ${order.map(slug => `<td>${fmtPct(funds[slug].dailyReturn)}</td>`).join("")}
   </tr>`;
-
-  // Period rows
+  
+  // Period rows — SIMPLE_ALL_DAYS and MIN_SIMPLE_WEEKLY show no dates
+  const NO_DATE_PERIODS = new Set(["SIMPLE_ALL_DAYS", "MIN_SIMPLE_WEEKLY"]);
   const periodRows = PERIOD_KEYS.map((pk, i) => {
     const periodRow = periods.find(p => p.key === pk);
     const marketVal = periodRow ? periodRow.marketSimpleReturn : null;
     const indexVal = index[pk] ?? null;
-    const fromDate = periodRow ? toFaDigits(periodRow.fromDate) : "—";
-    const toDate = periodRow ? toFaDigits(periodRow.toDate) : "—";
+    const showDate = periodRow && !NO_DATE_PERIODS.has(pk);
+    const fromDate = showDate ? toFaDigits(periodRow.fromDate) : "";
+    const toDate = showDate ? toFaDigits(periodRow.toDate) : "";
+    const dateCell = showDate
+      ? `<td class="date-cell">${fromDate}<span class="to">تا ${toDate}</span></td>`
+      : `<td class="date-cell">—</td>`;
     return `<tr>
       <td>${PERIOD_LABELS[pk]}</td>
-      <td class="date-cell">${fromDate}<span class="to">تا ${toDate}</span></td>
+      ${dateCell}
       <td>${fmtPct(marketVal)}</td>
       <td>${fmtPct(indexVal)}</td>
       ${order.map(slug => `<td>${fmtPct(funds[slug].simpleReturns[i])}</td>`).join("")}
@@ -567,10 +580,21 @@ function renderChart(state, selectedKey) {
     RETURN_DOT_FLAT
   );
 
-  // Bar colors: market = slate, index = teal, funds = blue.
+  // Bar colors: market = slate, index = teal, each fund gets its own color.
   const INDEX_BAR_COLOR = "#14B8A6"; // teal-500 for شاخص خودرو
-  const barColors = [MARKET_BAR_COLOR, INDEX_BAR_COLOR, ...order.map(() => NAV_BAR_COLOR)];
-  const barBorders = [MARKET_BAR_COLOR, INDEX_BAR_COLOR, ...order.map(() => NAV_BAR_BORDER)];
+  const FUND_PALETTE = [
+    "#3B82F6", // blue-500
+    "#8B5CF6", // violet-500
+    "#EC4899", // pink-500
+    "#F59E0B", // amber-500
+    "#10B981", // emerald-500
+    "#06B6D4", // cyan-500
+    "#F97316", // orange-500
+    "#84CC16", // lime-500
+  ];
+  const barColors = [MARKET_BAR_COLOR, INDEX_BAR_COLOR, ...order.map((_, i) => FUND_PALETTE[i % FUND_PALETTE.length])];
+  // Darken each color slightly for the border (just reuse the same color).
+  const barBorders = barColors;
 
   chartInstance = new Chart(ctx, {
     type: "bar",
@@ -708,8 +732,21 @@ function setupPeriodSelect(state) {
   const options = [...PERIOD_KEYS.map(k => ({ value: k, label: PERIOD_LABELS[k] })), { value: "daily", label: "بازدهی روزانه" }];
   select.innerHTML = options.map(o => `<option value="${o.value}">${o.label}</option>`).join("");
   select.value = "SIMPLE_YEARLY";
-  select.onchange = () => renderChart(state, select.value);
+  select.onchange = () => { renderChart(state, select.value); document.getElementById("chartImgBtn").disabled = !chartInstance; };
   renderChart(state, select.value);
+  document.getElementById("chartImgBtn").disabled = !chartInstance;
+}
+
+function downloadChartImage() {
+  if (!chartInstance) return;
+  // Render at 2x resolution for crisp output.
+  const url = chartInstance.toBase64Image("image/png", 1);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `fund-chart-${new Date().toISOString().slice(0, 10)}.png`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
 
 function exportExcel(state) {
@@ -750,6 +787,8 @@ async function loadData(refreshBtnEl) {
 
   document.getElementById("exportBtn").disabled = state.order.length === 0;
   document.getElementById("exportBtn").onclick = () => exportExcel(state);
+  document.getElementById("chartImgBtn").disabled = !chartInstance;
+  document.getElementById("chartImgBtn").onclick = () => downloadChartImage();
 
   lastFetchedAt = new Date().toISOString();
   document.getElementById("freshnessText").textContent = `به‌روزرسانی: ${relativeTime(lastFetchedAt)}`;
