@@ -27,7 +27,7 @@
     "Khodran_fundSimpleReturn": -7.37
   },
   {
-    "Khodran_fundNAV": 10296318903966.0
+    "Khodran_fundNAV": 10132705327836.0
   },
   {
     "TakhtGaz_fundDailyReturn": 2.541
@@ -57,7 +57,7 @@
     "TakhtGaz_fundSimpleReturn": -12.04
   },
   {
-    "TakhtGaz_fundNAV": 6398794732184.0
+    "TakhtGaz_fundNAV": 6294578053261.0
   },
   {
     "AutoCar_fundDailyReturn": 1.881
@@ -87,6 +87,6 @@
     "AutoCar_fundSimpleReturn": -1.19
   },
   {
-    "AutoCar_fundNAV": 6825993463069.0
+    "AutoCar_fundNAV": 6748927128211.0
   }
 ]
