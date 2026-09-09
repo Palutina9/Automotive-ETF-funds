@@ -502,7 +502,7 @@ function renderTable(state) {
   </tr>`;
   
   // Period rows — SIMPLE_ALL_DAYS and MIN_SIMPLE_WEEKLY show no dates
-  const NO_DATE_PERIODS = new Set(["SIMPLE_ALL_DAYS", "MIN_SIMPLE_WEEKLY"]);
+  const NO_DATE_PERIODS = new Set(["SIMPLE_ALL_DAYS", "MIN_SIMPLE_WEEKLY", "MAX_SIMPLE_WEEKLY]);
   const periodRows = PERIOD_KEYS.map((pk, i) => {
     const periodRow = periods.find(p => p.key === pk);
     const marketVal = periodRow ? periodRow.marketSimpleReturn : null;
