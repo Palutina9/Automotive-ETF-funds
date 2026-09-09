@@ -344,7 +344,7 @@ const FUND_NAMES_FA = { AutoAgah: "اتوآگاه ", AutoDariush: "اتودار�
 // Chart palette — corporate cool
 const NAV_BAR_COLOR = "#3B82F6";       // blue-500
 const NAV_BAR_BORDER = "#2563EB";      // blue-600
-const RETURN_LINE_COLOR = "#DC2626";   // red-600 (return line)
+const RETURN_LINE_COLOR = "#8B7A27";   // red-600 (return line)
 const RETURN_DOT_GAIN = "#059669";     // emerald-600
 const RETURN_DOT_LOSS = "#DC2626";     // red-600
 const RETURN_DOT_FLAT = "#64748B";     // slate-500
@@ -585,11 +585,11 @@ function renderChart(state, selectedKey) {
   const FUND_PALETTE = [
     "#3B82F6", // blue-500
     "#8B5CF6", // violet-500
+    "#F97316", // orange-500
     "#EC4899", // pink-500
     "#F59E0B", // amber-500
     "#10B981", // emerald-500
     "#06B6D4", // cyan-500
-    "#F97316", // orange-500
     "#84CC16", // lime-500
   ];
   const barColors = [MARKET_BAR_COLOR, INDEX_BAR_COLOR, ...order.map((_, i) => FUND_PALETTE[i % FUND_PALETTE.length])];
