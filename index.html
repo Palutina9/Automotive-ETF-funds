@@ -383,7 +383,7 @@ function relativeTime(iso) {
 }
 
 function parseDataset(list) {
-  const periods = []; let marketDaily = null; const funds = {}; const order = [];
+  const periods = []; let marketDaily = null; const funds = {}; const order = []; const index = {};
   if (!Array.isArray(list)) return { periods, marketDaily, funds, order };
   const ensureFund = (slug) => {
     if (!funds[slug]) { funds[slug] = { simpleReturns: new Array(PERIOD_KEYS.length).fill(null), nav: null, dailyReturn: null }; order.push(slug); }
@@ -426,7 +426,6 @@ function mergeDatasets(auto, manual) {
   const index = { ...a.index, ...b.index };
   const funds = { ...a.funds, ...b.funds };
   const order = [...a.order, ...b.order.filter(s => !a.order.includes(s))];
-  const index = {};
   const manualSlugs = new Set(b.order);
   return { periods, marketDaily, funds, order, manualSlugs, index };
 }
