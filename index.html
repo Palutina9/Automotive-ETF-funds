@@ -314,6 +314,14 @@
 </div>
 
 <script>
+const INDEX_KEY_MAP = {
+  indexDailyReturn: "daily",
+  indexWeeklyReturn: "SIMPLE_WEEKLY",
+  indexMonthlyReturn: "SIMPLE_MONTHLY",
+  indexQuarterlyReturn: "SIMPLE_MONTHLY3",
+  indexSixmonthsReturn: "SIMPLE_MONTHLY6",
+  indexAnnualReturn: "SIMPLE_YEARLY",
+};
 const PERIOD_KEYS = ["SIMPLE_WEEKLY", "SIMPLE_MONTHLY", "SIMPLE_MONTHLY3", "SIMPLE_MONTHLY6", "SIMPLE_YEARLY", "SIMPLE_ALL_DAYS", "MAX_SIMPLE_WEEKLY", "MIN_SIMPLE_WEEKLY"];
 const PERIOD_LABELS = {
   SIMPLE_WEEKLY: "هفته گذشته",
@@ -326,6 +334,7 @@ const PERIOD_LABELS = {
   MIN_SIMPLE_WEEKLY: "حداقل بازدهی هفتگی",
 };
 const FUND_NAMES_FA = { AutoAgah: "اتوآگاه", AutoDariush: "اتوداریوش", Khodran: "خودران", AutoCar: "اتوکار", BehinRo: "بهین‌رو", TakhtGaz: "تخت‌گاز" };
+
 
 // Chart palette — corporate cool
 const NAV_BAR_COLOR = "#3B82F6";       // blue-500
@@ -386,6 +395,12 @@ function parseDataset(list) {
       periods.push({ key: obj.key, fromDate: obj.fromDate, toDate: obj.toDate, marketSimpleReturn: obj.marketSimpleReturn });
       continue;
     }
+    if (obj.hasOwnProperty(Object.keys(INDEX_KEY_MAP).find(k => obj.hasOwnProperty(k)))) {
+    const rawKey = Object.keys(obj)[0];
+    const mappedKey = INDEX_KEY_MAP[rawKey];
+    if (mappedKey) index[mappedKey] = obj[rawKey];
+    continue;
+  }
     if (obj.marketDailyReturn !== undefined) { marketDaily = obj.marketDailyReturn; continue; }
     const entryKey = Object.keys(obj)[0];
     if (!entryKey) continue;
@@ -401,17 +416,19 @@ function parseDataset(list) {
       ensureFund(m[1]).dailyReturn = typeof value === "number" ? value : null;
     }
   }
-  return { periods, marketDaily, funds, order };
+  return { periods, marketDaily, funds, order, index };
 }
 
 function mergeDatasets(auto, manual) {
   const a = parseDataset(auto), b = parseDataset(manual);
   const periods = a.periods.length ? a.periods : b.periods;
   const marketDaily = a.marketDaily ?? b.marketDaily;
+  const index = { ...a.index, ...b.index };
   const funds = { ...a.funds, ...b.funds };
   const order = [...a.order, ...b.order.filter(s => !a.order.includes(s))];
+  const index = {};
   const manualSlugs = new Set(b.order);
-  return { periods, marketDaily, funds, order, manualSlugs };
+  return { periods, marketDaily, funds, order, manualSlugs, index };
 }
 
 function renderKpis(state) {
@@ -453,7 +470,7 @@ function renderKpis(state) {
 }
 
 function renderTable(state) {
-  const { periods, marketDaily, funds, order, manualSlugs } = state;
+  const { periods, marketDaily, funds, order, manualSlugs, index } = state;
   const host = document.getElementById("tableHost");
   if (order.length === 0 && periods.length === 0) { host.innerHTML = '<div class="empty-state">هنوز داده‌ای برای نمایش وجود ندارد</div>'; return; }
 
@@ -462,6 +479,7 @@ function renderTable(state) {
     <th>دوره</th>
     <th>بازه زمانی</th>
     <th>بازار</th>
+    <th>شاخص خودرو</th>
     ${order.map(slug => `<th>${FUND_NAMES_FA[slug] || slug}${manualSlugs.has(slug) ? '<span class="badge-manual">دستی</span>' : ""}</th>`).join("")}
   </tr>`;
 
@@ -471,6 +489,7 @@ function renderTable(state) {
     <td>بازدهی روزانه</td>
     <td class="date-cell">${toFaDigits(todayStr)}</td>
     <td>${fmtPct(marketDaily)}</td>
+    <td>${fmtPct(index.daily)}</td>
     ${order.map(slug => `<td>${fmtPct(funds[slug].dailyReturn)}</td>`).join("")}
   </tr>`;
 
@@ -484,6 +503,7 @@ function renderTable(state) {
       <td>${PERIOD_LABELS[pk]}</td>
       <td class="date-cell">${fromDate}<span class="to">تا ${toDate}</span></td>
       <td>${fmtPct(marketVal)}</td>
+      <td>${fmtPct(index[pk])}</td>
       ${order.map(slug => `<td>${fmtPct(funds[slug].simpleReturns[i])}</td>`).join("")}
     </tr>`;
   }).join("");
