@@ -731,7 +731,7 @@ function setupPeriodSelect(state) {
   const select = document.getElementById("periodSelect");
   const options = [...PERIOD_KEYS.map(k => ({ value: k, label: PERIOD_LABELS[k] })), { value: "daily", label: "بازدهی روزانه" }];
   select.innerHTML = options.map(o => `<option value="${o.value}">${o.label}</option>`).join("");
-  select.value = "SIMPLE_YEARLY";
+  select.value = "SIMPLE_WEEKLY";
   select.onchange = () => { renderChart(state, select.value); document.getElementById("chartImgBtn").disabled = !chartInstance; };
   renderChart(state, select.value);
   document.getElementById("chartImgBtn").disabled = !chartInstance;
