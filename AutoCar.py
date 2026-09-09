@@ -108,6 +108,19 @@ payload = {
     }
 ajaxetelaat(name, link, payload, navapi)
 
+#AutoMotve index
+index_api = "https://fipiran.ir/services/chart/indexefficiencychart?insCodes=20213770409093165&showAll=true"
+index = safe_get(index_api)
+rows = index.json()[0]['items'][0]
+jadval.append({
+    "indexDailyReturn": rows['dailyEfficiency'],
+    "indexWeeklyReturn": rows['weeklyEfficiency'],
+    "indexMonthlyReturn": rows['monthlyEfficiency'],
+    "indexQuarterlyReturn": rows['quarterlyEfficiency'],
+    "indexSixmonthsReturn": rows['sixMonthEfficiency'],
+    "indexAnnualReturn": rows['annualEfficiency']
+    })
+
 # ---------- Save results ----------
 with open("auto_data.json", "w", encoding="utf-8") as f:
     json.dump(jadval, f, ensure_ascii=False, indent=2)
