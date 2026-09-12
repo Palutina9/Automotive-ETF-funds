@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بازدهی صندوق‌های بخشی خودرو</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<style>
+  :root {
+    --bg: #F1F5F9;
+    --panel: #FFFFFF;
+    --ink: #0F172A;
+    --ink-soft: #334155;
+    --muted: #64748B;
+    --line: #E2E8F0;
+    --line-strong: #CBD5E1;
+    --accent: #2563EB;
+    --accent-soft: #EFF6FF;
+    --accent-bar: #3B82F6;
+    --gain: #059669;
+    --gain-bg: #ECFDF5;
+    --loss: #DC2626;
+    --loss-bg: #FEF2F2;
+    --nav-row-bg: #F8FAFC;
+    --daily-row-bg: #EFF6FF;
+    --badge: #C2410C;
+    --badge-bg: #FFF7ED;
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px 64px; }
+
+  th.sortable { cursor: pointer; user-select: none; transition: background 0.15s; }
+  th.sortable:hover { background: #F1F5F9; }
+  .sort-arrow { color: var(--accent); font-size: 11px; margin-inline-start: 2px; }
+
+  .fund-link {
+    color: var(--accent); text-decoration: none; font-weight: 600;
+    border-bottom: 1px dashed transparent; transition: border-color 0.15s;
+  }
+  .fund-link:hover { border-bottom-color: var(--accent); text-decoration: none; }
+
+  .topbar { position: sticky; top: 0; z-index: 10; background: var(--panel); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+  .topbar-inner { max-width: 1180px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .brand h1 { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.3; color: var(--ink); }
+  .brand .sub { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; margin-top: 3px; }
+  .brand .sub .dot { color: var(--line-strong); }
+
+  .topbar-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .freshness { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); color: var(--muted); font-size: 12px; background: var(--panel); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px;
+    font-size: 13px; font-weight: 600; border: 1px solid var(--line); background: var(--panel); color: var(--ink-soft);
+    cursor: pointer; font-family: inherit; transition: background 0.15s, border-color 0.15s;
+  }
+  .btn:hover { background: #F8FAFC; border-color: var(--line-strong); }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary:hover { background: #1D4ED8; border-color: #1D4ED8; }
+  .icon { width: 15px; height: 15px; flex-shrink: 0; }
+  .spin { animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  main { padding-top: 24px; }
+
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .kpi-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; box-shadow: var(--shadow); }
+  .kpi-card .label { font-size: 12px; color: var(--muted); margin: 0 0 6px; font-weight: 500; }
+  .kpi-card .value { font-size: 22px; font-weight: 700; margin: 0; font-variant-numeric: tabular-nums; color: var(--ink); line-height: 1.2; }
+  .kpi-card .subvalue { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .kpi-icon { width: 38px; height: 38px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin-bottom: 24px; box-shadow: var(--shadow); }
+  .panel h2 { font-size: 15px; font-weight: 700; margin: 0 0 16px; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+  .panel-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .panel-head h2 { margin: 0; }
+  select.period-select {
+    font-family: inherit; font-size: 13px; padding: 8px 12px; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; font-weight: 500;
+  }
+  select.period-select:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+  .chart-box { height: 340px; position: relative; }
+  .chart-box.small { height: 260px; }
+
+  .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  thead th {
+    background: #F8FAFC; color: var(--ink-soft); font-weight: 600; font-size: 12px; padding: 14px 12px;
+    text-align: center; border-bottom: 2px solid var(--line-strong); white-space: nowrap; letter-spacing: -0.01em;
+  }
+  thead th:first-child { text-align: right; }
+  tbody td { padding: 12px; text-align: center; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  tbody td:first-child { text-align: right; font-weight: 600; color: var(--ink); }
+  tbody tr:hover { background: #F8FAFC; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  tr.market-row, tr.index-row { background: var(--nav-row-bg); font-weight: 700; }
+  tr.market-row td:first-child, tr.index-row td:first-child { color: var(--ink-soft); }
+
+  .pct { font-variant-numeric: tabular-nums; font-weight: 600; padding: 4px 10px; border-radius: 6px; display: inline-block; font-size: 12px; min-width: 64px; }
+  .pct.gain { color: var(--gain); background: var(--gain-bg); }
+  .pct.loss { color: var(--loss); background: var(--loss-bg); }
+  .pct.flat { color: var(--muted); background: transparent; }
+
+  .badge-manual {
+    font-size: 9px; color: var(--badge); background: var(--badge-bg); border: 1px solid #FED7AA; border-radius: 4px;
+    padding: 1px 5px; font-weight: 600; margin-inline-start: 6px; vertical-align: middle;
+  }
+
+  .nav-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+  .nav-list-row { display: flex; align-items: center; gap: 12px; font-size: 13px; }
+  .nav-list-row .name { width: 110px; flex-shrink: 0; font-weight: 600; color: var(--ink-soft); }
+  .nav-list-row .bar-track { flex: 1; background: #F1F5F9; border-radius: 6px; height: 14px; overflow: hidden; }
+  .nav-list-row .bar-fill { height: 100%; border-radius: 6px; }
+  .nav-list-row .value { width: 130px; flex-shrink: 0; text-align: left; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  .empty-state { text-align: center; color: var(--muted); padding: 40px 20px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 16px; padding: 16px 0; }
+  .table-caption { font-size: 11px; color: var(--muted); margin-top: 10px; text-align: right; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .spin { animation: none !important; } }
+  @media (max-width: 640px) {
+    .kpi-card .value { font-size: 18px; }
+    .brand h1 { font-size: 15px; }
+    .panel { padding: 16px; }
+    .nav-list-row .name { width: 80px; font-size: 12px; }
+    .nav-list-row .value { width: 100px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      </div>
+      <div>
+        <h1> بازدهی صندوق‌های بخشی خودرویی</h1>
+        <div class="sub">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span id="todayDate">—</span>
+          <span class="dot">•</span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span id="clockNow">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <span class="freshness">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span id="freshnessText">در حال بارگذاری…</span>
+      </span>
+      <button class="btn" id="refreshBtn">
+        <svg class="icon" id="refreshIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 1 1 2.13 9.36L1 20"/></svg>
+        بارگذاری دوباره
+      </button>
+      <button class="btn" id="chartImgBtn" disabled>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        دانلود نمودار
+      </button>
+      <button class="btn primary" id="exportBtn" disabled>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        خروجی اکسل
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+<main>
+
+  <section class="kpi-grid" id="kpiGrid"></section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+        مقایسه بازدهی
+      </h2>
+      <select class="period-select" id="periodSelect"></select>
+    </div>
+    <div class="chart-box"><canvas id="periodChart"></canvas></div>
+    <div class="table-caption">بازدهی دوره انتخاب‌شده برای بازار، شاخص خودرو و هر صندوق (٪)</div>
+  </section>
+
+  <section class="panel">
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+      ارزش خالص دارایی (NAV)
+    </h2>
+    <div id="navList" class="nav-list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+      جدول مقایسه بازدهی صندوق‌ها
+    </h2>
+    <div class="table-wrap">
+      <div id="tableHost"></div>
+    </div>
+    <div class="table-caption">برای مرتب‌سازی بر اساس یک دوره، روی عنوان همان ستون کلیک کنید.</div>
+  </section>
+
+  <footer>داده‌ها به‌صورت خودکار و دستی از منابع رسمی صندوق‌ها گردآوری می‌شود</footer>
+
+</main>
+</div>
+
+<script>
+const INDEX_KEY_MAP = {
+  indexDailyReturn: "daily",
+  indexWeeklyReturn: "SIMPLE_WEEKLY",
+  indexMonthlyReturn: "SIMPLE_MONTHLY",
+  indexQuarterlyReturn: "SIMPLE_MONTHLY3",
+  indexSixmonthsReturn: "SIMPLE_MONTHLY6",
+  indexAnnualReturn: "SIMPLE_YEARLY",
+};
+const PERIOD_KEYS = ["SIMPLE_WEEKLY", "SIMPLE_MONTHLY", "SIMPLE_MONTHLY3", "SIMPLE_MONTHLY6", "SIMPLE_YEARLY", "SIMPLE_ALL_DAYS", "MAX_SIMPLE_WEEKLY", "MIN_SIMPLE_WEEKLY"];
+// Columns shown in the transposed table, in order: daily first, then the period keys.
+const TABLE_COLUMNS = ["daily", ...PERIOD_KEYS];
+const PERIOD_LABELS = {
+  daily: "بازدهی روزانه",
+  SIMPLE_WEEKLY: "هفته گذشته",
+  SIMPLE_MONTHLY: "ماه گذشته",
+  SIMPLE_MONTHLY3: "۳ ماه اخیر",
+  SIMPLE_MONTHLY6: "۶ ماه اخیر",
+  SIMPLE_YEARLY: "یک سال اخیر",
+  SIMPLE_ALL_DAYS: "از ابتدای فعالیت",
+  MAX_SIMPLE_WEEKLY: "حداکثر بازدهی هفتگی",
+  MIN_SIMPLE_WEEKLY: "حداقل بازدهی هفتگی",
+};
+const FUND_NAMES_FA = { AutoAgah: "اتوآگاه ", AutoDariush: "اتوداریوش ", Khodran: "خودران", AutoCar: "اتوکار", BehinRo: "بهین‌رو ", TakhtGaz: "تخت‌گاز" };
+const FUND_URLS = {
+  Khodran: "https://mofidsectorfund.com/",
+  AutoDariush: "https://sector.dariush.fund/home/index",
+  AutoAgah: "https://agahsectorfund.ir/home/index",
+  AutoCar: "https://karamadsectorfund.ir/",
+  BehinRo: "https://vistasectorfund.ir/home/index",
+  TakhtGaz: "https://meyarsectorfund.ir/",
+};
+
+const RETURN_LINE_COLOR = "#2563EB";
+const RETURN_DOT_GAIN = "#059669";
+const RETURN_DOT_LOSS = "#DC2626";
+const RETURN_DOT_FLAT = "#64748B";
+const GRID_COLOR = "#F1F5F9";
+const FUND_PALETTE = ["#3B82F6", "#8B5CF6", "#EC4899", "#F59E0B", "#10B981", "#06B6D4", "#F97316", "#84CC16"];
+
+function fmtPctText(v) {
+  if (v === null || v === undefined || !isFinite(v)) return "—";
+  const sign = v > 0 ? "+" : "";
+  return sign + v.toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "٪";
+}
+function fmtPct(v) {
+  if (v === null || v === undefined || !isFinite(v)) return '<span class="pct flat">—</span>';
+  const cls = v > 0 ? "gain" : v < 0 ? "loss" : "flat";
+  return `<span class="pct ${cls}">${fmtPctText(v)}</span>`;
+}
+function fmtNav(v) {
+  if (v === null || v === undefined || !isFinite(v)) return "—";
+  return Math.round(v).toLocaleString("fa-IR");
+}
+function toFaDigits(s) { return String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[Number(d)]); }
+function todayJalaliLong() {
+  try { return new Intl.DateTimeFormat("fa-IR", { weekday: "long", year: "numeric", month: "long", day: "numeric" }).format(new Date()); }
+  catch { return new Date().toLocaleDateString(); }
+}
+function nowTimeFa() {
+  try { return new Intl.DateTimeFormat("fa-IR", { hour: "2-digit", minute: "2-digit" }).format(new Date()); }
+  catch { return ""; }
+}
+function relativeTime(iso) {
+  if (!iso) return "هرگز";
+  const sec = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
+  if (sec < 60) return "لحظاتی پیش";
+  if (sec < 3600) return `${Math.floor(sec / 60)} دقیقه پیش`;
+  if (sec < 86400) return `${Math.floor(sec / 3600)} ساعت پیش`;
+  return `${Math.floor(sec / 86400)} روز پیش`;
+}
+
+// ---------- Parsing ----------
+function parseDataset(list) {
+  const periods = []; let marketDaily = null; let dailyReturnDate = null; const funds = {}; const order = []; const index = {};
+  if (!Array.isArray(list)) return { periods, marketDaily, funds, order, index, dailyReturnDate };
+  const ensureFund = (slug) => {
+    if (!funds[slug]) { funds[slug] = { simpleReturns: new Array(PERIOD_KEYS.length).fill(null), nav: null, dailyReturn: null }; order.push(slug); }
+    return funds[slug];
+  };
+  for (const obj of list) {
+    if (!obj || typeof obj !== "object") continue;
+    if (obj.key !== undefined) {
+      periods.push({ key: obj.key, fromDate: obj.fromDate, toDate: obj.toDate, marketSimpleReturn: obj.marketSimpleReturn });
+      continue;
+    }
+    const indexKey = Object.keys(obj)[0];
+    if (indexKey && INDEX_KEY_MAP[indexKey] !== undefined) {
+      index[INDEX_KEY_MAP[indexKey]] = typeof obj[indexKey] === "number" ? obj[indexKey] : null;
+      continue;
+    }
+    if (obj.marketDailyReturn !== undefined) { marketDaily = obj.marketDailyReturn; continue; }
+    if (obj.dailyReturnDate !== undefined) { dailyReturnDate = String(obj.dailyReturnDate); continue; }
+    const entryKey = Object.keys(obj)[0];
+    if (!entryKey) continue;
+    const value = obj[entryKey];
+    let m;
+    if ((m = entryKey.match(/^(.+)_fundSimpleReturn$/))) {
+      const acc = ensureFund(m[1]);
+      const idx = acc.simpleReturns.findIndex(x => x === null);
+      if (idx >= 0) acc.simpleReturns[idx] = typeof value === "number" ? value : null;
+    } else if ((m = entryKey.match(/^(.+)_fundNAV$/))) {
+      ensureFund(m[1]).nav = typeof value === "number" ? value : null;
+    } else if ((m = entryKey.match(/^(.+)_fundDailyReturn$/))) {
+      ensureFund(m[1]).dailyReturn = typeof value === "number" ? value : null;
+    }
+  }
+  return { periods, marketDaily, funds, order, index, dailyReturnDate };
+}
+
+function mergeDatasets(auto, manual) {
+  const a = parseDataset(auto), b = parseDataset(manual);
+  const periods = a.periods.length ? a.periods : b.periods;
+  const marketDaily = a.marketDaily ?? b.marketDaily;
+  const dailyReturnDate = a.dailyReturnDate ?? b.dailyReturnDate;
+  const index = { ...a.index, ...b.index };
+  const funds = { ...a.funds, ...b.funds };
+  const order = [...a.order, ...b.order.filter(s => !a.order.includes(s))];
+  const manualSlugs = new Set(b.order);
+  return { periods, marketDaily, funds, order, manualSlugs, index, dailyReturnDate };
+}
+
+// Returns the value for a given "row" (__MARKET__, __INDEX__, or a fund slug) at a given column key
+// (either "daily" or one of PERIOD_KEYS).
+function getCellValue(rowKey, colKey, state) {
+  if (colKey === "daily") {
+    if (rowKey === "__MARKET__") return state.marketDaily;
+    if (rowKey === "__INDEX__") return state.index.daily ?? null;
+    return state.funds[rowKey] ? state.funds[rowKey].dailyReturn : null;
+  }
+  const idx = PERIOD_KEYS.indexOf(colKey);
+  if (rowKey === "__MARKET__") {
+    const p = state.periods.find(p => p.key === colKey);
+    return p ? p.marketSimpleReturn : null;
+  }
+  if (rowKey === "__INDEX__") return state.index[colKey] ?? null;
+  return state.funds[rowKey] ? state.funds[rowKey].simpleReturns[idx] : null;
+}
+
+function renderKpis(state) {
+  const { funds, order } = state;
+  const grid = document.getElementById("kpiGrid");
+  const totalNav = order.reduce((s, slug) => s + (funds[slug].nav || 0), 0);
+  const dailyVals = order.map(s => funds[s].dailyReturn).filter(v => v !== null && isFinite(v));
+  const avgDaily = dailyVals.length ? dailyVals.reduce((s, v) => s + v, 0) / dailyVals.length : null;
+  const weekIdx = PERIOD_KEYS.indexOf("SIMPLE_WEEKLY");
+  let best = null;
+  for (const slug of order) {
+    const v = funds[slug].simpleReturns[weekIdx];
+    if (v !== null && isFinite(v) && (!best || v > best.value)) best = { name: FUND_NAMES_FA[slug] || slug, value: v };
+  }
+
+  const cards = [
+    { label: "تعداد صندوق‌ها", value: toFaDigits(String(order.length)), sub: null, bg: "var(--accent-soft)", fg: "var(--accent)",
+      icon: '<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>' },
+    { label: "مجموع دارایی (NAV)", value: fmtNav(totalNav), sub: "مجموع خالص ارزش دارایی‌ها", bg: "var(--gain-bg)", fg: "var(--gain)",
+      icon: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>' },
+    { label: "میانگین بازدهی روزانه", value: fmtPctText(avgDaily), sub: "میانگین همه صندوق‌ها", bg: (avgDaily ?? 0) < 0 ? "var(--loss-bg)" : "var(--gain-bg)", fg: (avgDaily ?? 0) < 0 ? "var(--loss)" : "var(--gain)",
+      icon: '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' },
+    { label: "بهترین بازدهی هفتگی", value: best ? fmtPctText(best.value) : "—", sub: best ? best.name : "—", bg: "#FFF7ED", fg: "#C2410C",
+      icon: '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>' },
+  ];
+
+  grid.innerHTML = cards.map(c => `
+    <div class="kpi-card">
+      <div>
+        <p class="label">${c.label}</p>
+        <p class="value">${c.value}</p>
+        ${c.sub ? `<p class="subvalue">${c.sub}</p>` : ""}
+      </div>
+      <div class="kpi-icon" style="background:${c.bg};color:${c.fg}">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${c.icon}</svg>
+      </div>
+    </div>
+  `).join("");
+}
+
+// ---------- NAV panel (separate from the return table) ----------
+function renderNavList(state) {
+  const { funds, order, manualSlugs } = state;
+  const host = document.getElementById("navList");
+  const entries = order.filter(slug => funds[slug].nav !== null && isFinite(funds[slug].nav));
+  if (entries.length === 0) { host.innerHTML = '<div class="empty-state">داده‌ای موجود نیست</div>'; return; }
+
+  const maxNav = Math.max(...entries.map(slug => funds[slug].nav));
+  host.innerHTML = entries.map((slug, i) => {
+    const color = FUND_PALETTE[i % FUND_PALETTE.length];
+    const pct = maxNav > 0 ? (funds[slug].nav / maxNav) * 100 : 0;
+    const badge = manualSlugs.has(slug) ? '<span class="badge-manual">دستی</span>' : '';
+    return `
+      <div class="nav-list-row">
+        <div class="name">${FUND_NAMES_FA[slug] || slug}${badge}</div>
+        <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${color}"></div></div>
+        <div class="value">${fmtNav(funds[slug].nav)}</div>
+      </div>`;
+  }).join("");
+}
+
+// ---------- Table (transposed: rows = بازار/شاخص/فands, columns = periods) ----------
+let sortState = { column: null, direction: 'desc' };
+
+function sortRows(rowKeys, state) {
+  if (!sortState.column) return rowKeys;
+  return [...rowKeys].sort((a, b) => {
+    const va = getCellValue(a, sortState.column, state);
+    const vb = getCellValue(b, sortState.column, state);
+    const na = va === null || va === undefined || !isFinite(va);
+    const nb = vb === null || vb === undefined || !isFinite(vb);
+    if (na && nb) return 0;
+    if (na) return 1;
+    if (nb) return -1;
+    return sortState.direction === 'asc' ? va - vb : vb - va;
+  });
+}
+
+function renderTable(state) {
+  const { funds, order, manualSlugs } = state;
+  const host = document.getElementById("tableHost");
+  if (order.length === 0) { host.innerHTML = '<div class="empty-state">هنوز داده‌ای برای نمایش وجود ندارد</div>'; return; }
+
+  function sortIndicator(col) {
+    if (sortState.column !== col) return '';
+    return sortState.direction === 'asc' ? ' <span class="sort-arrow">↑</span>' : ' <span class="sort-arrow">↓</span>';
+  }
+
+  const head = '<tr><th>ردیف</th>' +
+    TABLE_COLUMNS.map(col => `<th class="sortable" data-sort="${col}">${PERIOD_LABELS[col]}${sortIndicator(col)}</th>`).join("") +
+    '</tr>';
+
+  function buildRow(rowKey, label, extraClass, linkUrl, badge) {
+    const nameCell = linkUrl
+      ? `<a href="${linkUrl}" target="_blank" rel="noopener" class="fund-link">${label}</a>${badge || ""}`
+      : `${label}${badge || ""}`;
+    const cells = TABLE_COLUMNS.map(col => `<td>${fmtPct(getCellValue(rowKey, col, state))}</td>`).join("");
+    return `<tr class="${extraClass || ""}"><td>${nameCell}</td>${cells}</tr>`;
+  }
+
+  const marketRow = buildRow("__MARKET__", "بازار", "market-row");
+  const indexRow = buildRow("__INDEX__", "شاخص خودرو", "index-row");
+  const sortedFunds = sortState.column && sortState.column !== "__fixed__" ? sortRows(order, state) : order;
+  const fundRows = sortedFunds.map(slug => {
+    const badge = manualSlugs.has(slug) ? '<span class="badge-manual">دستی</span>' : '';
+    return buildRow(slug, FUND_NAMES_FA[slug] || slug, "", FUND_URLS[slug], badge);
+  }).join("");
+
+  host.innerHTML = `<table><thead>${head}</thead><tbody>${marketRow}${indexRow}${fundRows}</tbody></table>`;
+
+  host.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.getAttribute('data-sort');
+      if (sortState.column === col) {
+        sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortState.column = col;
+        sortState.direction = 'desc';
+      }
+      renderTable(state);
+    });
+  });
+}
+
+// ---------- Period comparison chart (returns only — NAV lives in its own panel now) ----------
+let chartInstance = null;
+function renderChart(state, selectedKey) {
+  const { funds, order } = state;
+  const ctx = document.getElementById("periodChart");
+
+  const marketVal = getCellValue("__MARKET__", selectedKey, state);
+  const indexVal = getCellValue("__INDEX__", selectedKey, state);
+  const fundVals = order.map(slug => getCellValue(slug, selectedKey, state));
+
+  const labels = ["بازار", "شاخص خودرو", ...order.map(s => FUND_NAMES_FA[s] || s)];
+  const data = [marketVal, indexVal, ...fundVals];
+  const colors = ["#94A3B8", "#14B8A6", ...order.map((_, i) => FUND_PALETTE[i % FUND_PALETTE.length])];
+
+  if (chartInstance) chartInstance.destroy();
+  if (data.every(v => v === null || v === undefined || !isFinite(v))) {
+    ctx.getContext("2d").clearRect(0, 0, ctx.width, ctx.height);
+    return;
+  }
+
+  const dotColors = data.map(v => v === null || !isFinite(v) ? RETURN_DOT_FLAT : v > 0 ? RETURN_DOT_GAIN : v < 0 ? RETURN_DOT_LOSS : RETURN_DOT_FLAT);
+
+  chartInstance = new Chart(ctx, {
+    type: "bar",
+    data: { labels, datasets: [{ label: "بازدهی (٪)", data, backgroundColor: colors, borderRadius: 6, maxBarThickness: 56 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: "#FFFFFF", titleColor: "#0F172A", bodyColor: "#334155",
+          borderColor: "#E2E8F0", borderWidth: 1, padding: 12, cornerRadius: 8,
+          titleFont: { family: "Vazirmatn", weight: "700", size: 13 }, bodyFont: { family: "Vazirmatn", size: 12 },
+          callbacks: { label: (c) => ` ${fmtPctText(c.parsed.y)}` },
+        },
+      },
+      scales: {
+        y: { ticks: { font: { family: "Vazirmatn" }, callback: v => v + "٪" }, grid: { color: GRID_COLOR } },
+        x: { ticks: { font: { family: "Vazirmatn" } }, grid: { display: false } },
+      },
+    },
+  });
+}
+
+function setupPeriodSelect(state) {
+  const select = document.getElementById("periodSelect");
+  const options = TABLE_COLUMNS.map(col => ({ value: col, label: PERIOD_LABELS[col] }));
+  select.innerHTML = options.map(o => `<option value="${o.value}">${o.label}</option>`).join("");
+  select.value = "SIMPLE_WEEKLY";
+  select.onchange = () => { renderChart(state, select.value); document.getElementById("chartImgBtn").disabled = !chartInstance; };
+  renderChart(state, select.value);
+  document.getElementById("chartImgBtn").disabled = !chartInstance;
+}
+
+function downloadChartImage() {
+  if (!chartInstance) return;
+  const url = chartInstance.toBase64Image("image/png", 1);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `fund-chart-${new Date().toISOString().slice(0, 10)}.png`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+function exportExcel(state) {
+  const { funds, order } = state;
+  const headers = ["ردیف", ...TABLE_COLUMNS.map(c => PERIOD_LABELS[c])];
+  const rows = [
+    ["بازار", ...TABLE_COLUMNS.map(c => getCellValue("__MARKET__", c, state) ?? "")],
+    ["شاخص خودرو", ...TABLE_COLUMNS.map(c => getCellValue("__INDEX__", c, state) ?? "")],
+    ...order.map(slug => [FUND_NAMES_FA[slug] || slug, ...TABLE_COLUMNS.map(c => getCellValue(slug, c, state) ?? "")]),
+  ];
+  const ws = XLSX.utils.aoa_to_sheet([headers, ...rows]);
+  ws["!cols"] = [{ wch: 18 }, ...TABLE_COLUMNS.map(() => ({ wch: 14 }))];
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "بازدهی صندوق‌ها");
+
+  const navHeaders = ["صندوق", "NAV (تومان)"];
+  const navRows = order.map(slug => [FUND_NAMES_FA[slug] || slug, funds[slug].nav ?? ""]);
+  const navWs = XLSX.utils.aoa_to_sheet([navHeaders, ...navRows]);
+  navWs["!cols"] = [{ wch: 18 }, { wch: 16 }];
+  XLSX.utils.book_append_sheet(wb, navWs, "NAV");
+
+  XLSX.writeFile(wb, `fund-returns-${new Date().toISOString().slice(0, 10)}.xlsx`);
+}
+
+let lastFetchedAt = null;
+
+async function loadData(refreshBtnEl) {
+  const icon = document.getElementById("refreshIcon");
+  if (refreshBtnEl) { refreshBtnEl.disabled = true; icon.classList.add("spin"); }
+
+  let auto = null, manual = null;
+  try { auto = await fetch("auto_data.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null); } catch {}
+  try { manual = await fetch("manual_data.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null); } catch {}
+
+  const autoList = Array.isArray(auto) ? auto : (auto?.data || []);
+  const manualList = Array.isArray(manual) ? manual : (manual?.data || []);
+  const state = mergeDatasets(autoList, manualList);
+
+  renderKpis(state);
+  renderNavList(state);
+  renderTable(state);
+  setupPeriodSelect(state);
+
+  document.getElementById("exportBtn").disabled = state.order.length === 0;
+  document.getElementById("exportBtn").onclick = () => exportExcel(state);
+  document.getElementById("chartImgBtn").onclick = () => downloadChartImage();
+
+  lastFetchedAt = new Date().toISOString();
+  document.getElementById("freshnessText").textContent = `به‌روزرسانی: ${relativeTime(lastFetchedAt)}`;
+
+  if (refreshBtnEl) { refreshBtnEl.disabled = false; icon.classList.remove("spin"); }
+}
+
+document.getElementById("todayDate").textContent = todayJalaliLong();
+document.getElementById("clockNow").textContent = nowTimeFa();
+setInterval(() => {
+  document.getElementById("clockNow").textContent = nowTimeFa();
+  if (lastFetchedAt) document.getElementById("freshnessText").textContent = `به‌روزرسانی: ${relativeTime(lastFetchedAt)}`;
+}, 60_000);
+
+document.getElementById("refreshBtn").addEventListener("click", () => loadData(document.getElementById("refreshBtn")));
+
+loadData();
+</script>
+</body>
+</html>
