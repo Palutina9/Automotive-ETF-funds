@@ -2,7 +2,7 @@ name: Daily Fund Scrape
 
 on:
   schedule:
-    - cron: "30 9 * * 1,2,3,6,0"   # runs daily at 05:30 UTC — adjust for your local time
+    - cron: "15 5 * * 1,2,3,6,0"
   workflow_dispatch:        # lets you trigger it manually too, for testing
 
 jobs:
