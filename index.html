@@ -42,6 +42,20 @@
   }
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px 64px; }
 
+  th.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  th.sortable:hover {
+    background: #F1F5F9;
+  }
+  .sort-arrow {
+    color: var(--accent);
+    font-size: 11px;
+    margin-inline-start: 2px;
+  }
+
   .fund-link {
     color: var(--accent);
     text-decoration: none;
@@ -64,6 +78,24 @@
     max-width: 1180px; margin: 0 auto;
     padding: 14px 24px;
     display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .period-date {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+  .period-date:empty {
+    display: none;
+  }
+  tr.daily-row .period-date {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  tr.nav-row .period-date {
+    display: none;
   }
   .brand { display: flex; align-items: center; gap: 12px; }
   .brand-icon {
@@ -495,25 +527,59 @@ function renderKpis(state) {
   `).join("");
 }
 
+function getSortValue(slug, periodKey, periodIndex, state) {
+  if (slug === '__PERIOD__') return periodKey;
+  if (slug === '__MARKET__') {
+    const p = state.periods.find(p => p.key === periodKey);
+    return p ? p.marketSimpleReturn : null;
+  }
+  if (slug === '__INDEX__') {
+    return state.index[periodKey] ?? null;
+  }
+  return state.funds[slug] ? state.funds[slug].simpleReturns[periodIndex] : null;
+}
+
+function sortPeriods(periodKeys, state) {
+  if (!sortState.column) return periodKeys;
+  const sorted = [...periodKeys].sort((a, b) => {
+    const ia = PERIOD_KEYS.indexOf(a);
+    const ib = PERIOD_KEYS.indexOf(b);
+    const va = getSortValue(sortState.column, a, ia, state);
+    const vb = getSortValue(sortState.column, b, ib, state);
+    // Nulls/NaN go to the end regardless of direction
+    const na = va === null || !isFinite(va);
+    const nb = vb === null || !isFinite(vb);
+    if (na && nb) return 0;
+    if (na) return 1;
+    if (nb) return -1;
+    return sortState.direction === 'asc' ? va - vb : vb - va;
+  });
+  return sorted;
+}
+
 function renderTable(state) {
   const { periods, marketDaily, funds, order, manualSlugs, index, dailyReturnDate } = state;
   const host = document.getElementById("tableHost");
   if (order.length === 0 && periods.length === 0) { host.innerHTML = '<div class="empty-state">هنوز داده‌ای برای نمایش وجود ندارد</div>'; return; }
 
   // Header: دوره | بازه زمانی | بازار | شاخص خودرو | fund1 | fund2 | ...
-  const head = '<tr>' +
-    '<th>دوره</th>' +
-    '<th>بازه زمانی</th>' +
-    '<th>بازار</th>' +
-    '<th>شاخص خودرو</th>' +
+  function sortIndicator(col) {
+    if (sortState.column !== col) return '';
+    return sortState.direction === 'asc' ? ' <span class="sort-arrow">↑</span>' : ' <span class="sort-arrow">↓</span>';
+  }
+
+  var head = '<tr>' +
+    '<th class="sortable" data-sort="__PERIOD__">دوره' + sortIndicator('__PERIOD__') + '</th>' +
+    '<th class="sortable" data-sort="__MARKET__">بازار' + sortIndicator('__MARKET__') + '</th>' +
+    '<th class="sortable" data-sort="__INDEX__">شاخص خودرو' + sortIndicator('__INDEX__') + '</th>' +
     order.map(function(slug) {
       var name = FUND_NAMES_FA[slug] || slug;
       var badge = manualSlugs.has(slug) ? '<span class="badge-manual">دستی</span>' : '';
-      var url = FUND_URLS ? FUND_URLS[slug] : null;
+      var url = (typeof FUND_URLS !== 'undefined' && FUND_URLS) ? FUND_URLS[slug] : null;
       var link = url
         ? '<a href="' + url + '" target="_blank" rel="noopener" class="fund-link">' + name + '</a>'
         : name;
-      return '<th>' + link + badge + '</th>';
+      return '<th class="sortable" data-sort="' + slug + '">' + link + sortIndicator(slug) + badge + '</th>';
     }).join('') +
     '</tr>';
 
@@ -522,7 +588,7 @@ function renderTable(state) {
     ? toFaDigits(dailyReturnDate)
     : new Date().toLocaleDateString("fa-IR");
   var dailyRow = '<tr class="daily-row">' +
-    '<td>بازدهی روزانه</td>' +
+    '<td class="row-label">بازدهی روزانه<span class="period-date">' + dailyDateStr + '</span></td>' +
     '<td class="date-cell">' + dailyDateStr + '</td>' +
     '<td>' + fmtPct(marketDaily) + '</td>' +
     '<td>' + fmtPct(index.daily) + '</td>' +
@@ -531,35 +597,30 @@ function renderTable(state) {
 
   // Period rows — SIMPLE_ALL_DAYS, MIN_SIMPLE_WEEKLY, MAX_SIMPLE_WEEKLY show no dates
   var NO_DATE_PERIODS = new Set(["SIMPLE_ALL_DAYS", "MIN_SIMPLE_WEEKLY", "MAX_SIMPLE_WEEKLY"]);
-  var periodRows = PERIOD_KEYS.map(function(pk, i) {
+  var sortedKeys = sortPeriods(PERIOD_KEYS, state);
+  var periodRows = sortedKeys.map(function(pk) {
+    var i = PERIOD_KEYS.indexOf(pk);
     var periodRow = periods.find(function(p) { return p.key === pk; });
     var marketVal = periodRow ? periodRow.marketSimpleReturn : null;
     var indexVal = index[pk] != null ? index[pk] : null;
     var showDate = periodRow && !NO_DATE_PERIODS.has(pk);
-    var dateCell;
+    var datesub;
     if (showDate) {
-      var fromDate = toFaDigits(periodRow.fromDate);
-      var toDate = toFaDigits(periodRow.toDate);
-      dateCell = '<td class="date-cell">' + fromDate + '<span class="to">تا ' + toDate + '</span></td>';
+      dateSub = toFaDigits(periodRow.fromDate) + ' تا ' + toFaDigits(periodRow.toDate);
     } else {
-      dateCell = '<td class="date-cell">—</td>';
+      dateSub = '';
     }
-    var fundCells = order.map(function(slug) {
-      return '<td>' + fmtPct(funds[slug].simpleReturns[i]) + '</td>';
-    }).join('');
     return '<tr>' +
-      '<td>' + PERIOD_LABELS[pk] + '</td>' +
-      dateCell +
+      '<td class="row-label">' + PERIOD_LABELS[pk] + '<span class="period-date">' + dateSub + '</span></td>' +
       '<td>' + fmtPct(marketVal) + '</td>' +
       '<td>' + fmtPct(indexVal) + '</td>' +
-      fundCells +
+      order.map(function(slug) { return '<td>' + fmtPct(funds[slug].simpleReturns[i]) + '</td>'; }).join('') +
       '</tr>';
   }).join('');
 
   // NAV row (at the bottom) — بازار and شاخص خودرو have no NAV, show —
   var navRow = '<tr class="nav-row">' +
-    '<td>خالص ارزش دارایی (NAV)</td>' +
-    '<td class="date-cell">—</td>' +
+    '<td class="row-label">خالص ارزش دارایی (NAV)</td>' +
     '<td>—</td>' +
     '<td>—</td>' +
     order.map(function(slug) {
@@ -568,10 +629,26 @@ function renderTable(state) {
     '</tr>';
 
   host.innerHTML = '<table><thead>' + head + '</thead><tbody>' + dailyRow + periodRows + navRow + '</tbody></table>';
+    // Wire up sortable headers
+  host.querySelectorAll('th.sortable').forEach(function(th) {
+    th.addEventListener('click', function(e) {
+      // Don't sort if user clicked a link inside the header
+      if (e.target.tagName === 'A') return;
+      var col = th.getAttribute('data-sort');
+      if (sortState.column === col) {
+        sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortState.column = col;
+        sortState.direction = 'desc';
+      }
+      renderTable(state);
+    });
+  });
 }
 
 // Dual-axis chart: NAV bars (left) + return line (right), funds sorted by return
 let chartInstance = null;
+let sortState = { column: null, direction: 'desc' };
 function renderChart(state, selectedKey) {
   const { periods, marketDaily, funds, order, index } = state;
   const ctx = document.getElementById("periodChart");
