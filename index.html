@@ -553,23 +553,41 @@ function renderChart(state, selectedKey) {
     returnValues = order.map(s => funds[s].simpleReturns[idx]);
   }
 
-   // --- Sort funds by return (descending — highest first). ---
-  // بازار and شاخص خودرو stay pinned at the start as benchmarks.
-  const fundEntries = order
-    .map((slug, i) => ({ slug, name: FUND_NAMES_FA[slug] || slug, ret: returnValues[i], nav: funds[slug].nav }))
-    .sort((a, b) => {
-      // Funds with null/NaN returns go to the end.
-      const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
-      const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
-      return bv - av;  // descending
-    });
+  // --- Build list of ALL entries (market + index + funds), then sort by return. ---
+  const allEntries = [
+    { name: "بازار", ret: marketReturn, nav: null, color: MARKET_BAR_COLOR },
+    { name: "شاخص خودرو", ret: indexReturn, nav: null, color: "#14B8A6" }, // teal
+    ...order.map((slug, i) => {
+      // Use the FUND_PALETTE to give each fund its own color (defined below).
+      return { name: FUND_NAMES_FA[slug] || slug, ret: returnValues[i], nav: funds[slug].nav, slug };
+    }),
+  ].sort((a, b) => {
+    // Sort descending by return — null/NaN goes to the end.
+    const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
+    const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
+    return bv - av;
+  });
 
-  // X-axis labels: market + شاخص خودرو + sorted funds.
-  const labels = ["بازار", "شاخص خودرو", ...fundEntries.map(e => e.name)];
-  // NAV data (market and index have no NAV — null).
-  const navData = [null, null, ...fundEntries.map(e => e.nav)];
-  // Return line: market + index + sorted fund returns.
-  const marketData = [marketReturn, indexReturn, ...fundEntries.map(e => e.ret)];
+  // Assign colors after sorting (so funds keep their palette colors regardless of position).
+  const FUND_PALETTE = [
+    "#3B82F6", // blue-500
+    "#8B5CF6", // violet-500
+    "#EC4899", // pink-500
+    "#F59E0B", // amber-500
+    "#10B981", // emerald-500
+    "#06B6D4", // cyan-500
+    "#F97316", // orange-500
+    "#84CC16", // lime-500
+  ];
+  let fundColorIdx = 0;
+  const labels = allEntries.map(e => e.name);
+  const navData = allEntries.map(e => e.nav);
+  const marketData = allEntries.map(e => e.ret);
+  const barColors = allEntries.map(e => {
+    if (e.color) return e.color;          // بازار / شاخص خودرو keep their fixed colors
+    return FUND_PALETTE[fundColorIdx++ % FUND_PALETTE.length];
+  });
+  const barBorders = barColors;
 
   if (chartInstance) chartInstance.destroy();
 
@@ -588,21 +606,6 @@ function renderChart(state, selectedKey) {
     v < 0 ? RETURN_DOT_LOSS :
     RETURN_DOT_FLAT
   );
-
-  // --- Bar colors: market = slate, index = teal, each fund gets its own color. ---
-  const INDEX_BAR_COLOR = "#14B8A6"; // teal-500 for شاخص خودرو
-  const FUND_PALETTE = [
-    "#3B82F6", // blue-500
-    "#8B5CF6", // violet-500
-    "#EC4899", // pink-500
-    "#F59E0B", // amber-500
-    "#10B981", // emerald-500
-    "#06B6D4", // cyan-500
-    "#F97316", // orange-500
-    "#84CC16", // lime-500
-  ];
-  const barColors = [MARKET_BAR_COLOR, INDEX_BAR_COLOR, ...fundEntries.map((_, i) => FUND_PALETTE[i % FUND_PALETTE.length])];
-  const barBorders = barColors;
 
   chartInstance = new Chart(ctx, {
     type: "bar",
