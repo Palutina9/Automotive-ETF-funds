@@ -562,7 +562,7 @@ function renderChart(state, selectedKey) {
     returnValues = order.map(s => funds[s].simpleReturns[idx]);
   }
 
-  // --- Sort funds by return (descending — highest first). ---
+   // --- Sort funds by return (descending — highest first). ---
   // بازار and شاخص خودرو stay pinned at the start as benchmarks.
   const fundEntries = order
     .map((slug, i) => ({ slug, name: FUND_NAMES_FA[slug] || slug, ret: returnValues[i], nav: funds[slug].nav }))
