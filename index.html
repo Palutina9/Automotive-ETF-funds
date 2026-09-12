@@ -196,7 +196,7 @@
       <select class="period-select" id="periodSelect"></select>
     </div>
     <div class="chart-box"><canvas id="periodChart"></canvas></div>
-    <div class="table-caption">بازدهی دوره انتخاب‌شده برای بازار، شاخص خودرو و هر صندوق (٪)</div>
+    <div class="table-caption">میله‌ها: NAV (میلیارد تومان) — خط: بازدهی دوره انتخاب‌شده (٪)، مرتب‌شده بر اساس بازدهی</div>
   </section>
 
   <section class="panel">
@@ -279,8 +279,11 @@ function fmtNav(v) {
 }
 function toFaDigits(s) { return String(s).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[Number(d)]); }
 function todayJalaliLong() {
-  try { return new Intl.DateTimeFormat("fa-IR", { weekday: "long", year: "numeric", month: "long", day: "numeric" }).format(new Date()); }
-  catch { return new Date().toLocaleDateString(); }
+  try {
+    const parts = new Intl.DateTimeFormat("fa-IR", { weekday: "long", year: "numeric", month: "long", day: "numeric" }).formatToParts(new Date());
+    const get = (type) => (parts.find(p => p.type === type) || {}).value || "";
+    return `${get("weekday")}، ${get("day")} ${get("month")} ${get("year")}`;
+  } catch { return new Date().toLocaleDateString(); }
 }
 function nowTimeFa() {
   try { return new Intl.DateTimeFormat("fa-IR", { hour: "2-digit", minute: "2-digit" }).format(new Date()); }
@@ -404,7 +407,9 @@ function renderKpis(state) {
 function renderNavList(state) {
   const { funds, order, manualSlugs } = state;
   const host = document.getElementById("navList");
-  const entries = order.filter(slug => funds[slug].nav !== null && isFinite(funds[slug].nav));
+  const entries = order
+    .filter(slug => funds[slug].nav !== null && isFinite(funds[slug].nav))
+    .sort((a, b) => funds[b].nav - funds[a].nav);
   if (entries.length === 0) { host.innerHTML = '<div class="empty-state">داده‌ای موجود نیست</div>'; return; }
 
   const maxNav = Math.max(...entries.map(slug => funds[slug].nav));
@@ -484,7 +489,7 @@ function renderTable(state) {
   });
 }
 
-// ---------- Period comparison chart (returns only — NAV lives in its own panel now) ----------
+// ---------- Period comparison chart: NAV bars (left axis) + return line (right axis), sorted by return ----------
 let chartInstance = null;
 function renderChart(state, selectedKey) {
   const { funds, order } = state;
@@ -492,37 +497,65 @@ function renderChart(state, selectedKey) {
 
   const marketVal = getCellValue("__MARKET__", selectedKey, state);
   const indexVal = getCellValue("__INDEX__", selectedKey, state);
-  const fundVals = order.map(slug => getCellValue(slug, selectedKey, state));
 
-  const labels = ["بازار", "شاخص خودرو", ...order.map(s => FUND_NAMES_FA[s] || s)];
-  const data = [marketVal, indexVal, ...fundVals];
-  const colors = ["#94A3B8", "#14B8A6", ...order.map((_, i) => FUND_PALETTE[i % FUND_PALETTE.length])];
+  const allEntries = [
+    { name: "بازار", ret: marketVal, nav: null, color: "#94A3B8" },
+    { name: "شاخص خودرو", ret: indexVal, nav: null, color: "#14B8A6" },
+    ...order.map(slug => ({ name: FUND_NAMES_FA[slug] || slug, ret: getCellValue(slug, selectedKey, state), nav: funds[slug].nav })),
+  ].sort((a, b) => {
+    const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
+    const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
+    return bv - av;
+  });
+
+  let fundColorIdx = 0;
+  const labels = allEntries.map(e => e.name);
+  const navData = allEntries.map(e => e.nav);
+  const returnData = allEntries.map(e => e.ret);
+  const barColors = allEntries.map(e => e.color || FUND_PALETTE[fundColorIdx++ % FUND_PALETTE.length]);
 
   if (chartInstance) chartInstance.destroy();
-  if (data.every(v => v === null || v === undefined || !isFinite(v))) {
-    ctx.getContext("2d").clearRect(0, 0, ctx.width, ctx.height);
-    return;
-  }
+  const hasAny = returnData.some(v => v !== null && isFinite(v)) || navData.some(v => v !== null && isFinite(v));
+  if (!hasAny) { ctx.getContext("2d").clearRect(0, 0, ctx.width, ctx.height); return; }
 
-  const dotColors = data.map(v => v === null || !isFinite(v) ? RETURN_DOT_FLAT : v > 0 ? RETURN_DOT_GAIN : v < 0 ? RETURN_DOT_LOSS : RETURN_DOT_FLAT);
+  const dotColors = returnData.map(v => v === null || !isFinite(v) ? RETURN_DOT_FLAT : v > 0 ? RETURN_DOT_GAIN : v < 0 ? RETURN_DOT_LOSS : RETURN_DOT_FLAT);
 
   chartInstance = new Chart(ctx, {
     type: "bar",
-    data: { labels, datasets: [{ label: "بازدهی (٪)", data, backgroundColor: colors, borderRadius: 6, maxBarThickness: 56 }] },
+    data: {
+      labels,
+      datasets: [
+        { type: "bar", label: "NAV (میلیارد تومان)", data: navData, backgroundColor: barColors, borderColor: barColors, borderWidth: 1, borderRadius: 6, maxBarThickness: 56, yAxisID: "yNav", order: 3 },
+        { type: "line", label: "بازدهی (٪)", data: returnData, borderColor: RETURN_LINE_COLOR, backgroundColor: RETURN_LINE_COLOR + "20", borderWidth: 2.5, tension: 0.25, pointRadius: 6, pointHoverRadius: 8, pointBackgroundColor: dotColors, pointBorderColor: "#FFFFFF", pointBorderWidth: 2, fill: false, yAxisID: "yReturn", order: 1, spanGaps: true },
+      ],
+    },
     options: {
       responsive: true, maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
       plugins: {
-        legend: { display: false },
+        legend: { display: true, position: "top", align: "end", labels: { font: { family: "Vazirmatn", size: 12 }, color: "#334155", usePointStyle: true, boxWidth: 8, padding: 16 } },
         tooltip: {
           backgroundColor: "#FFFFFF", titleColor: "#0F172A", bodyColor: "#334155",
           borderColor: "#E2E8F0", borderWidth: 1, padding: 12, cornerRadius: 8,
           titleFont: { family: "Vazirmatn", weight: "700", size: 13 }, bodyFont: { family: "Vazirmatn", size: 12 },
-          callbacks: { label: (c) => ` ${fmtPctText(c.parsed.y)}` },
+          callbacks: {
+            label: (context) => {
+              const v = context.parsed.y;
+              if (v === null || v === undefined || !isFinite(v)) return null;
+              if (context.dataset.yAxisID === "yReturn") return ` ${context.dataset.label}: ${fmtPctText(v)}`;
+              return ` ${context.dataset.label}: ${Math.round(v).toLocaleString("fa-IR")} (${(v / 1e9).toLocaleString("fa-IR", { maximumFractionDigits: 1 })} میلیارد)`;
+            },
+          },
         },
       },
       scales: {
-        y: { ticks: { font: { family: "Vazirmatn" }, callback: v => v + "٪" }, grid: { color: GRID_COLOR } },
-        x: { ticks: { font: { family: "Vazirmatn" } }, grid: { display: false } },
+        x: { grid: { display: false }, ticks: { font: { family: "Vazirmatn", size: 12 }, color: "#334155", maxRotation: 0, autoSkip: false } },
+        yNav: { type: "linear", position: "left", beginAtZero: true, grid: { color: GRID_COLOR, drawBorder: false },
+          ticks: { font: { family: "Vazirmatn", size: 11 }, color: "#64748B", callback: v => (v / 1e9).toLocaleString("fa-IR", { maximumFractionDigits: 0 }) },
+          title: { display: true, text: "NAV (میلیارد تومان)", font: { family: "Vazirmatn", size: 11, weight: "600" }, color: "#64748B" } },
+        yReturn: { type: "linear", position: "right", grid: { display: false },
+          ticks: { font: { family: "Vazirmatn", size: 11 }, color: "#64748B", callback: v => v.toLocaleString("fa-IR", { maximumFractionDigits: 0 }) + "٪" },
+          title: { display: true, text: "بازدهی (٪)", font: { family: "Vazirmatn", size: 11, weight: "600" }, color: "#64748B" } },
       },
     },
   });
