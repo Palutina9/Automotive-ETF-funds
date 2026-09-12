@@ -543,10 +543,10 @@ function renderTable(state) {
         const badge = manualSlugs.has(slug) ? '<span class="badge-manual">دستی</span>' : "";
         const url = FUND_URLS[slug];
         const link = url
-          ? `<a href="${url}" target="_blank" rel="noopener" class="fund-link">${name}</a>`
+          ? '<a href="' + url + '" target="_blank" rel="noopener" class="fund-link">' + name + '</a>'
           : name;
-        return `<th>${link}${badge}</th>`;
-      }).join("")};
+        return '<th>' + link + badge + '</th>';
+      }).join("")}
 
   // NAV row (at the bottom) — شاخص خودرو has no NAV, show —
   const navRow = `<tr class="nav-row">
