@@ -480,15 +480,6 @@ function renderTable(state) {
   const host = document.getElementById("tableHost");
   if (order.length === 0 && periods.length === 0) { host.innerHTML = '<div class="empty-state">هنوز داده‌ای برای نمایش وجود ندارد</div>'; return; }
 
-  const fundEntries = order
-    .map((slug, i) => ({ slug, name: FUND_NAMES_FA[slug] || slug, ret: returnValues[i], nav: funds[slug].nav }))
-    .sort((a, b) => {
-      // Funds with null/NaN returns go to the end.
-      const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
-      const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
-      return bv - av;  // descending
-    });
-
   // Header: دوره | بازه زمانی | بازار | شاخص خودرو | fund1 | fund2 | ...
   const head = `<tr>
     <th>دوره</th>
