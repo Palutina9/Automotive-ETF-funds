@@ -1,21 +1,21 @@
 [
   {
-    "Khodran_fundDailyReturn": 2.103
+    "Khodran_fundDailyReturn": 0.0
   },
   {
-    "Khodran_fundSimpleReturn": 9.835
+    "Khodran_fundSimpleReturn": 5.15
   },
   {
-    "Khodran_fundSimpleReturn": 31.989
+    "Khodran_fundSimpleReturn": 25.032
   },
   {
-    "Khodran_fundSimpleReturn": 50.675
+    "Khodran_fundSimpleReturn": 46.035
   },
   {
-    "Khodran_fundSimpleReturn": 68.82
+    "Khodran_fundSimpleReturn": 64.832
   },
   {
-    "Khodran_fundSimpleReturn": 83.182
+    "Khodran_fundSimpleReturn": 75.763
   },
   {
     "Khodran_fundSimpleReturn": 0.0
@@ -27,28 +27,28 @@
     "Khodran_fundSimpleReturn": -7.37
   },
   {
-    "Khodran_fundNAV": 10131268982268.0
+    "Khodran_fundNAV": 10360123367261.0
   },
   {
-    "TakhtGaz_fundDailyReturn": 2.541
+    "TakhtGaz_fundDailyReturn": 0.0
   },
   {
-    "TakhtGaz_fundSimpleReturn": 9.236
+    "TakhtGaz_fundSimpleReturn": 5.736
   },
   {
-    "TakhtGaz_fundSimpleReturn": 25.845
+    "TakhtGaz_fundSimpleReturn": 21.294
   },
   {
-    "TakhtGaz_fundSimpleReturn": 39.713
+    "TakhtGaz_fundSimpleReturn": 35.502
   },
   {
-    "TakhtGaz_fundSimpleReturn": 56.115
+    "TakhtGaz_fundSimpleReturn": 52.247
   },
   {
-    "TakhtGaz_fundSimpleReturn": 73.359
+    "TakhtGaz_fundSimpleReturn": 66.484
   },
   {
-    "TakhtGaz_fundSimpleReturn": 47.823
+    "TakhtGaz_fundSimpleReturn": 44.131
   },
   {
     "TakhtGaz_fundSimpleReturn": 10.32
@@ -57,16 +57,13 @@
     "TakhtGaz_fundSimpleReturn": -12.04
   },
   {
-    "TakhtGaz_fundNAV": 6294290051738.0
+    "TakhtGaz_fundNAV": 6412456837401.0
   },
   {
-    "AutoCar_fundDailyReturn": 1.881
+    "AutoCar_fundDailyReturn": 0.0
   },
   {
-    "AutoCar_fundSimpleReturn": 9.644
-  },
-  {
-    "AutoCar_fundSimpleReturn": 0.0
+    "AutoCar_fundSimpleReturn": 5.691
   },
   {
     "AutoCar_fundSimpleReturn": 0.0
@@ -78,15 +75,18 @@
     "AutoCar_fundSimpleReturn": 0.0
   },
   {
-    "AutoCar_fundSimpleReturn": 12.738
+    "AutoCar_fundSimpleReturn": 0.0
   },
   {
-    "AutoCar_fundSimpleReturn": 3.64
+    "AutoCar_fundSimpleReturn": 10.756
+  },
+  {
+    "AutoCar_fundSimpleReturn": 4.24
   },
   {
     "AutoCar_fundSimpleReturn": -1.19
   },
   {
-    "AutoCar_fundNAV": 6746328354516.0
+    "AutoCar_fundNAV": 6839843998945.0
   }
 ]
