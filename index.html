@@ -480,14 +480,23 @@ function renderTable(state) {
   const host = document.getElementById("tableHost");
   if (order.length === 0 && periods.length === 0) { host.innerHTML = '<div class="empty-state">هنوز داده‌ای برای نمایش وجود ندارد</div>'; return; }
 
-  // Header: دوره | بازه زمانی | بازار | شاخص خودرو | fund1 | fund2 | ...
-  const head = `<tr>
-    <th>دوره</th>
-    <th>بازه زمانی</th>
-    <th>بازار</th>
-    <th>شاخص خودرو</th>
-    ${order.map(slug => `<th>${FUND_NAMES_FA[slug] || slug}${manualSlugs.has(slug) ? '<span class="badge-manual">دستی</span>' : ""}</th>`).join("")}
-  </tr>`;
+  const fundEntries = order
+    .map((slug, i) => ({ slug, name: FUND_NAMES_FA[slug] || slug, ret: returnValues[i], nav: funds[slug].nav }))
+    .sort((a, b) => {
+      // Funds with null/NaN returns go to the end.
+      const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
+      const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
+      return bv - av;  // descending
+    });
+
+  // X-axis labels: market + شاخص خودرو + sorted funds.
+  const labels = ["بازار", "شاخص خودرو", ...fundEntries.map(e => e.name)];
+  // NAV data (market and index have no NAV — null).
+  const navData = [null, null, ...fundEntries.map(e => e.nav)];
+  // Return line: market + index + sorted fund returns.
+  const marketData = [marketReturn, indexReturn, ...fundEntries.map(e => e.ret)];
+  // Index line (kept for reference, same as before).
+  const indexLineData = [null, indexReturn, ...fundEntries.map(() => null)];
 
   // Daily return row — date comes from JSON (dailyReturnDate), falls back to today
   const dailyDateStr = dailyReturnDate
