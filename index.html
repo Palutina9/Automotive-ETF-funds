@@ -489,14 +489,14 @@ function renderTable(state) {
       return bv - av;  // descending
     });
 
-  // X-axis labels: market + شاخص خودرو + sorted funds.
-  const labels = ["بازار", "شاخص خودرو", ...fundEntries.map(e => e.name)];
-  // NAV data (market and index have no NAV — null).
-  const navData = [null, null, ...fundEntries.map(e => e.nav)];
-  // Return line: market + index + sorted fund returns.
-  const marketData = [marketReturn, indexReturn, ...fundEntries.map(e => e.ret)];
-  // Index line (kept for reference, same as before).
-  const indexLineData = [null, indexReturn, ...fundEntries.map(() => null)];
+  // Header: دوره | بازه زمانی | بازار | شاخص خودرو | fund1 | fund2 | ...
+  const head = `<tr>
+    <th>دوره</th>
+    <th>بازه زمانی</th>
+    <th>بازار</th>
+    <th>شاخص خودرو</th>
+    ${order.map(slug => `<th>${FUND_NAMES_FA[slug] || slug}${manualSlugs.has(slug) ? '<span class="badge-manual">دستی</span>' : ""}</th>`).join("")}
+  </tr>`;
 
   // Daily return row — date comes from JSON (dailyReturnDate), falls back to today
   const dailyDateStr = dailyReturnDate
@@ -543,7 +543,7 @@ function renderTable(state) {
   host.innerHTML = `<table><thead>${head}</thead><tbody>${dailyRow}${periodRows}${navRow}</tbody></table>`;
 }
 
-// Dual-axis chart: NAV bars (left) + return lines (right)
+// Dual-axis chart: NAV bars (left) + return line (right), funds sorted by return
 let chartInstance = null;
 function renderChart(state, selectedKey) {
   const { periods, marketDaily, funds, order, index } = state;
@@ -562,14 +562,23 @@ function renderChart(state, selectedKey) {
     returnValues = order.map(s => funds[s].simpleReturns[idx]);
   }
 
-  // X-axis labels: market + شاخص خودرو + each fund.
-  const labels = ["بازار", "شاخص خودرو", ...order.map(s => FUND_NAMES_FA[s] || s)];
+  // --- Sort funds by return (descending — highest first). ---
+  // بازار and شاخص خودرو stay pinned at the start as benchmarks.
+  const fundEntries = order
+    .map((slug, i) => ({ slug, name: FUND_NAMES_FA[slug] || slug, ret: returnValues[i], nav: funds[slug].nav }))
+    .sort((a, b) => {
+      // Funds with null/NaN returns go to the end.
+      const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
+      const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
+      return bv - av;  // descending
+    });
+
+  // X-axis labels: market + شاخص خودرو + sorted funds.
+  const labels = ["بازار", "شاخص خودرو", ...fundEntries.map(e => e.name)];
   // NAV data (market and index have no NAV — null).
-  const navData = [null, null, ...order.map(s => funds[s].nav)];
-  // Market return line (benchmark).
-  const marketData = [marketReturn, indexReturn, ...returnValues];
-  // Index return line (auto-sector index) — same value at the شاخص خودرو position, null elsewhere.
-  const indexLineData = [null, indexReturn, ...order.map(() => null)];
+  const navData = [null, null, ...fundEntries.map(e => e.nav)];
+  // Return line: market + index + sorted fund returns.
+  const marketData = [marketReturn, indexReturn, ...fundEntries.map(e => e.ret)];
 
   if (chartInstance) chartInstance.destroy();
 
@@ -589,20 +598,19 @@ function renderChart(state, selectedKey) {
     RETURN_DOT_FLAT
   );
 
-  // Bar colors: market = slate, index = teal, each fund gets its own color.
+  // --- Bar colors: market = slate, index = teal, each fund gets its own color. ---
   const INDEX_BAR_COLOR = "#14B8A6"; // teal-500 for شاخص خودرو
   const FUND_PALETTE = [
     "#3B82F6", // blue-500
     "#8B5CF6", // violet-500
-    "#F97316", // orange-500
     "#EC4899", // pink-500
     "#F59E0B", // amber-500
     "#10B981", // emerald-500
     "#06B6D4", // cyan-500
+    "#F97316", // orange-500
     "#84CC16", // lime-500
   ];
-  const barColors = [MARKET_BAR_COLOR, INDEX_BAR_COLOR, ...order.map((_, i) => FUND_PALETTE[i % FUND_PALETTE.length])];
-  // Darken each color slightly for the border (just reuse the same color).
+  const barColors = [MARKET_BAR_COLOR, INDEX_BAR_COLOR, ...fundEntries.map((_, i) => FUND_PALETTE[i % FUND_PALETTE.length])];
   const barBorders = barColors;
 
   chartInstance = new Chart(ctx, {
