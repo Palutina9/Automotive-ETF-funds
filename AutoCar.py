@@ -28,13 +28,14 @@ def fa_to_float(s):
     return -float(s) if negative else float(s)
 
 def akharin_tarikh(n=7):
-    emrooz = fa_to_float(jdatetime.date.today())
-    return [(emrooz - jdatetime.timedelta(days=i)).strftime("%Y%2F%m%2F%d") for i in range(n)]
+    emrooz = jdatetime.date.today()
+    return [(emrooz - jdatetime.timedelta(days=i)).strftime("%Y/%m/%d") for i in range(n)]
 # ---------- Safe request wrappers ----------
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
 }
 dates = akharin_tarikh(7)
+all_data = {}
 
 def safe_get(url, **kwargs):
     try:
@@ -56,8 +57,6 @@ def safe_post(url, **kwargs):
         print(f"FAILED (POST): {url} -> {e}")
         return None
 
-jadval = []
-
 def ajaxetelaat(name, link, payload, navapi):
     resp = safe_post(link, data=payload)
     if resp is None:
@@ -65,7 +64,7 @@ def ajaxetelaat(name, link, payload, navapi):
         return
 
     soup = BeautifulSoup(resp.text, "html.parser")
-    wanted_rows = [3, 4, 5, 6, 7, 8, 9, 12, 13, 14]
+    wanted_rows = [4, 5, 6, 7, 8, 9, 12, 13, 14]
     for i, row in enumerate(soup.find_all("tr"), start=1):
         if i in wanted_rows:
             cells = [td.get_text(strip=True) for td in row.find_all("td")]
@@ -86,6 +85,7 @@ def ajaxetelaat(name, link, payload, navapi):
         print(f"Skipping {name} NAV — site unreachable")
 
 for tarikh in dates:
+    jadval = []
     #Khodran
     name = "Khodran"
     link = "https://mofidsectorfund.com/Reports/FundEfficiencyForDifferentPeriods"
@@ -115,13 +115,13 @@ for tarikh in dates:
         "toDate": tarikh
         }
     ajaxetelaat(name, link, payload, navapi)
+    
+    all_data[tarikh] = jadval
+
 
 
 # ---------- Save results ----------
 with open("auto_data.json", "w", encoding="utf-8") as f:
-    json.dump(jadval, f, ensure_ascii=False, indent=2)
+    json.dump(all_data, f, ensure_ascii=False, indent=2)
 
-print(jadval)
-    
-
-
+print(all_data)
