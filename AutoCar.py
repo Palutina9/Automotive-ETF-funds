@@ -70,7 +70,7 @@ def ajaxetelaat(name, link, payload, navapi):
             cells = [td.get_text(strip=True) for td in row.find_all("td")]
             if cells:
                 value = fa_to_float(cells[-2])
-                if i == wanted_rows[1]:
+                if i == wanted_rows[0]:
                     jadval.append({name + "_fundDailyReturn": value})
                 else:
                     jadval.append({name + "_fundSimpleReturn": value})
