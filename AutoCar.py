@@ -8,6 +8,7 @@ Created on Mon Sep  7 10:38:44 2026
 import requests
 import json
 from bs4 import BeautifulSoup
+import jdatetime
 
 # ---------- Persian/Arabic digit + separator normalizer ----------
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
@@ -26,10 +27,14 @@ def fa_to_float(s):
     s = s.replace(",", "")
     return -float(s) if negative else float(s)
 
+def akharin_tarikh(n=7):
+    emrooz = fa_to_float(jdatetime.date.today())
+    return [(emrooz - jdatetime.timedelta(days=i)).strftime("%Y%2F%m%2F%d") for i in range(n)]
 # ---------- Safe request wrappers ----------
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
 }
+dates = akharin_tarikh(7)
 
 def safe_get(url, **kwargs):
     try:
@@ -80,33 +85,36 @@ def ajaxetelaat(name, link, payload, navapi):
     else:
         print(f"Skipping {name} NAV — site unreachable")
 
+for tarikh in dates:
+    #Khodran
+    name = "Khodran"
+    link = "https://mofidsectorfund.com/Reports/FundEfficiencyForDifferentPeriods"
+    navapi = "https://mofidsectorfund.com/Fund/GetETFNAV?basketId=3"
+    payload = {
+        "basketId": 3,
+        "toDate": tarikh
+        }
+    ajaxetelaat(name, link, payload, navapi)
 
-#Khodran
-name = "Khodran"
-link = "https://mofidsectorfund.com/Reports/FundEfficiencyForDifferentPeriods"
-navapi = "https://mofidsectorfund.com/Fund/GetETFNAV?basketId=3"
-payload = {
-    "basketId": 3
-    }
-ajaxetelaat(name, link, payload, navapi)
+    #TakhtGaz
+    name = "TakhtGaz"
+    link = "https://meyarsectorfund.ir/Reports/FundEfficiencyForDifferentPeriods"
+    navapi = "https://meyarsectorfund.ir/Fund/GetETFNAV?basketId=2"
+    payload = {
+        "basketId": 2,
+        "toDate": tarikh
+        }
+    ajaxetelaat(name, link, payload, navapi)
 
-#TakhtGaz
-name = "TakhtGaz"
-link = "https://meyarsectorfund.ir/Reports/FundEfficiencyForDifferentPeriods"
-navapi = "https://meyarsectorfund.ir/Fund/GetETFNAV?basketId=2"
-payload = {
-    "basketId": 2
-    }
-ajaxetelaat(name, link, payload, navapi)
-
-#AutoCar
-name = "AutoCar"
-link = "https://karamadsectorfund.ir/Reports/FundEfficiencyForDifferentPeriods"
-navapi = "https://karamadsectorfund.ir/Fund/GetETFNAV?basketId=2"
-payload = {
-    "basketId": 2
-    }
-ajaxetelaat(name, link, payload, navapi)
+    #AutoCar
+    name = "AutoCar"
+    link = "https://karamadsectorfund.ir/Reports/FundEfficiencyForDifferentPeriods"
+    navapi = "https://karamadsectorfund.ir/Fund/GetETFNAV?basketId=2"
+    payload = {
+        "basketId": 2,
+        "toDate": tarikh
+        }
+    ajaxetelaat(name, link, payload, navapi)
 
 
 # ---------- Save results ----------
