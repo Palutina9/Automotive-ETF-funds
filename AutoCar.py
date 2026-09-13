@@ -64,13 +64,13 @@ def ajaxetelaat(name, link, payload, navapi):
         return
 
     soup = BeautifulSoup(resp.text, "html.parser")
-    wanted_rows = [4, 5, 6, 7, 8, 9, 12, 13, 14]
+    wanted_rows = [3, 4, 5, 6, 7, 8, 9, 12, 13, 14]
     for i, row in enumerate(soup.find_all("tr"), start=1):
         if i in wanted_rows:
             cells = [td.get_text(strip=True) for td in row.find_all("td")]
             if cells:
                 value = fa_to_float(cells[-2])
-                if i == wanted_rows[0]:
+                if i == wanted_rows[1]:
                     jadval.append({name + "_fundDailyReturn": value})
                 else:
                     jadval.append({name + "_fundSimpleReturn": value})
