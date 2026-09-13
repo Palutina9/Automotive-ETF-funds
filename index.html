@@ -508,7 +508,7 @@ function renderTable(state) {
   });
 }
 
-// ---------- Period comparison chart: NAV bars (left axis) + return line (right axis), sorted by return ----------
+// ---------- Period comparison chart: return bars, sorted by return ----------
 let chartInstance = null;
 function renderChart(state, selectedKey) {
   const { funds, order } = state;
@@ -518,63 +518,98 @@ function renderChart(state, selectedKey) {
   const indexVal = getCellValue("__INDEX__", selectedKey, state);
 
   const allEntries = [
-    { name: "بازار", ret: marketVal, nav: null, color: "#94A3B8" },
-    { name: "شاخص خودرو", ret: indexVal, nav: null, color: "#14B8A6" },
-    ...order.map(slug => ({ name: FUND_NAMES_FA[slug] || slug, ret: getCellValue(slug, selectedKey, state), nav: funds[slug].nav })),
+    { name: "بازار", ret: marketVal, color: "#94A3B8" },
+    { name: "شاخص خودرو", ret: indexVal, color: "#14B8A6" },
+    ...order.map(slug => ({ name: FUND_NAMES_FA[slug] || slug, ret: getCellValue(slug, selectedKey, state), color: null })),
   ].sort((a, b) => {
     const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
     const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
     return bv - av;
   });
 
+  // Assign palette colors to funds (after sorting so colors stay consistent per fund)
   let fundColorIdx = 0;
+  allEntries.forEach(e => {
+    if (!e.color) e.color = FUND_PALETTE[fundColorIdx++ % FUND_PALETTE.length];
+  });
+
   const labels = allEntries.map(e => e.name);
-  const navData = allEntries.map(e => e.nav);
   const returnData = allEntries.map(e => e.ret);
-  const barColors = allEntries.map(e => e.color || FUND_PALETTE[fundColorIdx++ % FUND_PALETTE.length]);
+  const barColors = allEntries.map(e => e.color);
 
   if (chartInstance) chartInstance.destroy();
-  const hasAny = returnData.some(v => v !== null && isFinite(v)) || navData.some(v => v !== null && isFinite(v));
+  const hasAny = returnData.some(v => v !== null && isFinite(v));
   if (!hasAny) { ctx.getContext("2d").clearRect(0, 0, ctx.width, ctx.height); return; }
-
-  const dotColors = returnData.map(v => v === null || !isFinite(v) ? RETURN_DOT_FLAT : v > 0 ? RETURN_DOT_GAIN : v < 0 ? RETURN_DOT_LOSS : RETURN_DOT_FLAT);
 
   chartInstance = new Chart(ctx, {
     type: "bar",
     data: {
       labels,
       datasets: [
-        { type: "bar", label: "NAV (میلیارد تومان)", data: navData, backgroundColor: barColors, borderColor: barColors, borderWidth: 1, borderRadius: 6, maxBarThickness: 56, yAxisID: "yNav", order: 3 },
-        { type: "line", label: "بازدهی (٪)", data: returnData, borderColor: RETURN_LINE_COLOR, backgroundColor: RETURN_LINE_COLOR + "20", borderWidth: 2.5, tension: 0.25, pointRadius: 6, pointHoverRadius: 8, pointBackgroundColor: dotColors, pointBorderColor: "#FFFFFF", pointBorderWidth: 2, fill: false, yAxisID: "yReturn", order: 1, spanGaps: true },
+        {
+          type: "bar",
+          label: "بازدهی (٪)",
+          data: returnData,
+          backgroundColor: barColors,
+          borderColor: barColors,
+          borderWidth: 1,
+          borderRadius: 6,
+          maxBarThickness: 64,
+        },
       ],
     },
     options: {
-      responsive: true, maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: false,
       interaction: { mode: "index", intersect: false },
       plugins: {
-        legend: { display: true, position: "top", align: "end", labels: { font: { family: "Vazirmatn", size: 12 }, color: "#334155", usePointStyle: true, boxWidth: 8, padding: 16 } },
+        legend: { display: false },
         tooltip: {
-          backgroundColor: "#FFFFFF", titleColor: "#0F172A", bodyColor: "#334155",
-          borderColor: "#E2E8F0", borderWidth: 1, padding: 12, cornerRadius: 8,
-          titleFont: { family: "Vazirmatn", weight: "700", size: 13 }, bodyFont: { family: "Vazirmatn", size: 12 },
+          backgroundColor: "#FFFFFF",
+          titleColor: "#0F172A",
+          bodyColor: "#334155",
+          borderColor: "#E2E8F0",
+          borderWidth: 1,
+          padding: 12,
+          cornerRadius: 8,
+          titleFont: { family: "Vazirmatn", weight: "700", size: 13 },
+          bodyFont: { family: "Vazirmatn", size: 12 },
           callbacks: {
             label: (context) => {
               const v = context.parsed.y;
               if (v === null || v === undefined || !isFinite(v)) return null;
-              if (context.dataset.yAxisID === "yReturn") return ` ${context.dataset.label}: ${fmtPctText(v)}`;
-              return ` ${context.dataset.label}: ${Math.round(v).toLocaleString("fa-IR")} (${(v / 1e9).toLocaleString("fa-IR", { maximumFractionDigits: 1 })} میلیارد)`;
+              return ` ${context.dataset.label}: ${fmtPctText(v)}`;
             },
           },
         },
       },
       scales: {
-        x: { grid: { display: false }, ticks: { font: { family: "Vazirmatn", size: 12 }, color: "#334155", maxRotation: 0, autoSkip: false } },
-        yNav: { type: "linear", position: "left", beginAtZero: true, grid: { color: GRID_COLOR, drawBorder: false },
-          ticks: { font: { family: "Vazirmatn", size: 11 }, color: "#64748B", callback: v => (v / 1e9).toLocaleString("fa-IR", { maximumFractionDigits: 0 }) },
-          title: { display: true, text: "NAV (میلیارد تومان)", font: { family: "Vazirmatn", size: 11, weight: "600" }, color: "#64748B" } },
-        yReturn: { type: "linear", position: "right", grid: { display: false },
-          ticks: { font: { family: "Vazirmatn", size: 11 }, color: "#64748B", callback: v => v.toLocaleString("fa-IR", { maximumFractionDigits: 0 }) + "٪" },
-          title: { display: true, text: "بازدهی (٪)", font: { family: "Vazirmatn", size: 11, weight: "600" }, color: "#64748B" } },
+        x: {
+          grid: { display: false },
+          ticks: {
+            font: { family: "Vazirmatn", size: 12 },
+            color: "#334155",
+            maxRotation: 0,
+            autoSkip: false,
+          },
+        },
+        y: {
+          type: "linear",
+          position: "left",
+          beginAtZero: true,
+          grid: { color: GRID_COLOR, drawBorder: false },
+          ticks: {
+            font: { family: "Vazirmatn", size: 11 },
+            color: "#64748B",
+            callback: v => v.toLocaleString("fa-IR", { maximumFractionDigits: 0 }) + "٪",
+          },
+          title: {
+            display: true,
+            text: "بازدهی (٪)",
+            font: { family: "Vazirmatn", size: 11, weight: "600" },
+            color: "#64748B",
+          },
+        },
       },
     },
   });
