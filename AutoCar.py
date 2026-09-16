@@ -10,6 +10,7 @@ import json
 from bs4 import BeautifulSoup
 import jdatetime
 
+
 # ---------- Persian/Arabic digit + separator normalizer ----------
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
 ARABIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
