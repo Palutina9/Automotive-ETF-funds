@@ -1,0 +1,1150 @@
+{
+  "1405/06/25": [
+    {
+      "key": "SIMPLE_WEEKLY",
+      "fromDate": "1405/06/17",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 6.32
+    },
+    {
+      "key": "SIMPLE_MONTHLY",
+      "fromDate": "1405/05/25",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 30.45
+    },
+    {
+      "key": "SIMPLE_MONTHLY3",
+      "fromDate": "1405/03/27",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 46.03
+    },
+    {
+      "key": "SIMPLE_MONTHLY6",
+      "fromDate": "1404/12/28",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 102.53
+    },
+    {
+      "key": "SIMPLE_YEARLY",
+      "fromDate": "1404/06/24",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 180.98
+    },
+    {
+      "key": "SIMPLE_ALL_DAYS",
+      "fromDate": "1402/09/12",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 254.61
+    },
+    {
+      "key": "MAX_SIMPLE_WEEKLY",
+      "fromDate": "1404/01/27",
+      "toDate": "1404/02/03",
+      "marketSimpleReturn": 6.42
+    },
+    {
+      "key": "MIN_SIMPLE_WEEKLY",
+      "fromDate": "1403/05/08",
+      "toDate": "1403/05/15",
+      "marketSimpleReturn": -7.19
+    },
+    {
+      "marketDailyReturn": 1.74
+    },
+    {
+      "dailyReturnDate": "1405/06/24"
+    },
+    {
+      "indexDailyReturn": 2.111658416317345
+    },
+    {
+      "indexWeeklyReturn": -0.6627762488462186
+    },
+    {
+      "indexMonthlyReturn": 26.601024707806626
+    },
+    {
+      "indexQuarterlyReturn": 37.15101105874843
+    },
+    {
+      "indexSixmonthsReturn": 65.836327209367
+    },
+    {
+      "indexAnnualReturn": 78.18160752017708
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 1.57
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 26.05
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 38.85
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 71.78
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 94.31
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 87.84
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 16.4
+    },
+    {
+      "AutoAgah_fundSimpleReturn": -13.61
+    },
+    {
+      "AutoAgah_fundDailyReturn": 1.98
+    },
+    {
+      "AutoAgah_fundNAV": 8219428162678.0
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -0.87
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 26.54
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 36.5
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 69.12
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 88.76
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 66.4
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 27.95
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -18.01
+    },
+    {
+      "AutoDariush_fundDailyReturn": 1.82
+    },
+    {
+      "AutoDariush_fundNAV": 11249259280199.0
+    },
+    {
+      "BehinRo_fundSimpleReturn": 1.03
+    },
+    {
+      "BehinRo_fundSimpleReturn": 22.88
+    },
+    {
+      "BehinRo_fundSimpleReturn": 34.62
+    },
+    {
+      "BehinRo_fundSimpleReturn": 62.7
+    },
+    {
+      "BehinRo_fundSimpleReturn": 79.46
+    },
+    {
+      "BehinRo_fundSimpleReturn": 94.64
+    },
+    {
+      "BehinRo_fundSimpleReturn": 30.15
+    },
+    {
+      "BehinRo_fundSimpleReturn": -19.99
+    },
+    {
+      "BehinRo_fundDailyReturn": 1.87
+    },
+    {
+      "BehinRo_fundNAV": 14347659506909.0
+    }
+  ],
+  "1405/06/24": [
+    {
+      "key": "SIMPLE_WEEKLY",
+      "fromDate": "1405/06/17",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 6.32
+    },
+    {
+      "key": "SIMPLE_MONTHLY",
+      "fromDate": "1405/05/25",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 30.45
+    },
+    {
+      "key": "SIMPLE_MONTHLY3",
+      "fromDate": "1405/03/27",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 46.03
+    },
+    {
+      "key": "SIMPLE_MONTHLY6",
+      "fromDate": "1404/12/28",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 102.53
+    },
+    {
+      "key": "SIMPLE_YEARLY",
+      "fromDate": "1404/06/24",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 180.98
+    },
+    {
+      "key": "SIMPLE_ALL_DAYS",
+      "fromDate": "1402/07/12",
+      "toDate": "1405/06/24",
+      "marketSimpleReturn": 263.42
+    },
+    {
+      "key": "MAX_SIMPLE_WEEKLY",
+      "fromDate": "1405/02/28",
+      "toDate": "1405/03/04",
+      "marketSimpleReturn": 7.52
+    },
+    {
+      "key": "MIN_SIMPLE_WEEKLY",
+      "fromDate": "1405/01/19",
+      "toDate": "1405/01/26",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "marketDailyReturn": -0.51
+    },
+    {
+      "dailyReturnDate": "1405/06/23"
+    },
+    {
+      "indexDailyReturn": -2.5860777678674776
+    },
+    {
+      "indexWeeklyReturn": -0.5124755105198289
+    },
+    {
+      "indexMonthlyReturn": 27.291835336613314
+    },
+    {
+      "indexQuarterlyReturn": 32.62613177355028
+    },
+    {
+      "indexSixmonthsReturn": 62.40684930729371
+    },
+    {
+      "indexAnnualReturn": 74.25879745081741
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 1.03
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 22.88
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 34.62
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 62.7
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 79.46
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 94.64
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 30.15
+    },
+    {
+      "AutoAgah_fundSimpleReturn": -19.99
+    },
+    {
+      "AutoAgah_fundDailyReturn": 1.87
+    },
+    {
+      "AutoAgah_fundNAV": 8219428162678.0
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -0.87
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 26.54
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 36.5
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 69.12
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 88.76
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 66.4
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 27.95
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -18.01
+    },
+    {
+      "AutoDariush_fundDailyReturn": 1.82
+    },
+    {
+      "AutoDariush_fundNAV": 11249259280199.0
+    },
+    {
+      "BehinRo_fundSimpleReturn": 1.03
+    },
+    {
+      "BehinRo_fundSimpleReturn": 22.88
+    },
+    {
+      "BehinRo_fundSimpleReturn": 34.62
+    },
+    {
+      "BehinRo_fundSimpleReturn": 62.7
+    },
+    {
+      "BehinRo_fundSimpleReturn": 79.46
+    },
+    {
+      "BehinRo_fundSimpleReturn": 94.64
+    },
+    {
+      "BehinRo_fundSimpleReturn": 30.15
+    },
+    {
+      "BehinRo_fundSimpleReturn": -19.99
+    },
+    {
+      "BehinRo_fundDailyReturn": 1.87
+    },
+    {
+      "BehinRo_fundNAV": 14347659506909.0
+    }
+  ],
+  "1405/06/23": [
+    {
+      "key": "SIMPLE_WEEKLY",
+      "fromDate": "1405/06/16",
+      "toDate": "1405/06/23",
+      "marketSimpleReturn": 7.03
+    },
+    {
+      "key": "SIMPLE_MONTHLY",
+      "fromDate": "1405/05/24",
+      "toDate": "1405/06/23",
+      "marketSimpleReturn": 28.88
+    },
+    {
+      "key": "SIMPLE_MONTHLY3",
+      "fromDate": "1405/03/26",
+      "toDate": "1405/06/23",
+      "marketSimpleReturn": 44.96
+    },
+    {
+      "key": "SIMPLE_MONTHLY6",
+      "fromDate": "1404/12/27",
+      "toDate": "1405/06/23",
+      "marketSimpleReturn": 99.07
+    },
+    {
+      "key": "SIMPLE_YEARLY",
+      "fromDate": "1404/06/23",
+      "toDate": "1405/06/23",
+      "marketSimpleReturn": 176.18
+    },
+    {
+      "key": "SIMPLE_ALL_DAYS",
+      "fromDate": "1402/07/12",
+      "toDate": "1405/06/23",
+      "marketSimpleReturn": 257.2
+    },
+    {
+      "key": "MAX_SIMPLE_WEEKLY",
+      "fromDate": "1405/02/28",
+      "toDate": "1405/03/04",
+      "marketSimpleReturn": 7.52
+    },
+    {
+      "key": "MIN_SIMPLE_WEEKLY",
+      "fromDate": "1405/01/19",
+      "toDate": "1405/01/26",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "marketDailyReturn": 2.11
+    },
+    {
+      "dailyReturnDate": "1405/06/22"
+    },
+    {
+      "indexDailyReturn": 0.1764835273515364
+    },
+    {
+      "indexWeeklyReturn": 5.089815003631238
+    },
+    {
+      "indexMonthlyReturn": 29.637099443490694
+    },
+    {
+      "indexQuarterlyReturn": 37.10975697985685
+    },
+    {
+      "indexSixmonthsReturn": 66.71831457549392
+    },
+    {
+      "indexAnnualReturn": 83.28424888312077
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 0.94
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 23.95
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 35.46
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 59.71
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 73.74
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 93.63
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 30.15
+    },
+    {
+      "AutoAgah_fundSimpleReturn": -19.99
+    },
+    {
+      "AutoAgah_fundDailyReturn": 1.87
+    },
+    {
+      "AutoAgah_fundNAV": 8219428162678.0
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -0.56
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 27.11
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 37.3
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 66.1
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 81.52
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 66.39
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 27.95
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -18.01
+    },
+    {
+      "AutoDariush_fundDailyReturn": 1.82
+    },
+    {
+      "AutoDariush_fundNAV": 11249259280199.0
+    },
+    {
+      "BehinRo_fundSimpleReturn": 0.94
+    },
+    {
+      "BehinRo_fundSimpleReturn": 23.95
+    },
+    {
+      "BehinRo_fundSimpleReturn": 35.46
+    },
+    {
+      "BehinRo_fundSimpleReturn": 59.71
+    },
+    {
+      "BehinRo_fundSimpleReturn": 73.74
+    },
+    {
+      "BehinRo_fundSimpleReturn": 93.63
+    },
+    {
+      "BehinRo_fundSimpleReturn": 30.15
+    },
+    {
+      "BehinRo_fundSimpleReturn": -19.99
+    },
+    {
+      "BehinRo_fundDailyReturn": 1.87
+    },
+    {
+      "BehinRo_fundNAV": 14347659506909.0
+    }
+  ],
+  "1405/06/22": [
+    {
+      "key": "SIMPLE_WEEKLY",
+      "fromDate": "1405/06/15",
+      "toDate": "1405/06/22",
+      "marketSimpleReturn": 10.53
+    },
+    {
+      "key": "SIMPLE_MONTHLY",
+      "fromDate": "1405/05/23",
+      "toDate": "1405/06/22",
+      "marketSimpleReturn": 29.55
+    },
+    {
+      "key": "SIMPLE_MONTHLY3",
+      "fromDate": "1405/03/25",
+      "toDate": "1405/06/22",
+      "marketSimpleReturn": 49.21
+    },
+    {
+      "key": "SIMPLE_MONTHLY6",
+      "fromDate": "1404/12/26",
+      "toDate": "1405/06/22",
+      "marketSimpleReturn": 100.1
+    },
+    {
+      "key": "SIMPLE_YEARLY",
+      "fromDate": "1404/06/22",
+      "toDate": "1405/06/22",
+      "marketSimpleReturn": 182.51
+    },
+    {
+      "key": "SIMPLE_ALL_DAYS",
+      "fromDate": "1402/07/12",
+      "toDate": "1405/06/22",
+      "marketSimpleReturn": 259.05
+    },
+    {
+      "key": "MAX_SIMPLE_WEEKLY",
+      "fromDate": "1405/02/28",
+      "toDate": "1405/03/04",
+      "marketSimpleReturn": 7.52
+    },
+    {
+      "key": "MIN_SIMPLE_WEEKLY",
+      "fromDate": "1405/01/19",
+      "toDate": "1405/01/26",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "marketDailyReturn": 2.18
+    },
+    {
+      "dailyReturnDate": "1405/06/21"
+    },
+    {
+      "indexDailyReturn": 1.7827607452467524
+    },
+    {
+      "indexWeeklyReturn": 7.030786610771756
+    },
+    {
+      "indexMonthlyReturn": 29.408714379653205
+    },
+    {
+      "indexQuarterlyReturn": 40.81242601703319
+    },
+    {
+      "indexSixmonthsReturn": 66.42460256650378
+    },
+    {
+      "indexAnnualReturn": 79.59179298729137
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 3.84
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 23.78
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 34.93
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 60.72
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 78.88
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 94.98
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 30.15
+    },
+    {
+      "AutoAgah_fundSimpleReturn": -19.99
+    },
+    {
+      "AutoAgah_fundDailyReturn": 1.87
+    },
+    {
+      "AutoAgah_fundNAV": 8219428162678.0
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 2.75
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 28.69
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 36.1
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 67.63
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 87.32
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 67.54
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 27.95
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -18.01
+    },
+    {
+      "AutoDariush_fundDailyReturn": 1.82
+    },
+    {
+      "AutoDariush_fundNAV": 11249259280199.0
+    },
+    {
+      "BehinRo_fundSimpleReturn": 3.84
+    },
+    {
+      "BehinRo_fundSimpleReturn": 23.78
+    },
+    {
+      "BehinRo_fundSimpleReturn": 34.93
+    },
+    {
+      "BehinRo_fundSimpleReturn": 60.72
+    },
+    {
+      "BehinRo_fundSimpleReturn": 78.88
+    },
+    {
+      "BehinRo_fundSimpleReturn": 94.98
+    },
+    {
+      "BehinRo_fundSimpleReturn": 30.15
+    },
+    {
+      "BehinRo_fundSimpleReturn": -19.99
+    },
+    {
+      "BehinRo_fundDailyReturn": 1.87
+    },
+    {
+      "BehinRo_fundNAV": 14347659506909.0
+    }
+  ],
+  "1405/06/21": [
+    {
+      "key": "SIMPLE_WEEKLY",
+      "fromDate": "1405/06/14",
+      "toDate": "1405/06/21",
+      "marketSimpleReturn": 10.24
+    },
+    {
+      "key": "SIMPLE_MONTHLY",
+      "fromDate": "1405/05/22",
+      "toDate": "1405/06/21",
+      "marketSimpleReturn": 26.86
+    },
+    {
+      "key": "SIMPLE_MONTHLY3",
+      "fromDate": "1405/03/24",
+      "toDate": "1405/06/21",
+      "marketSimpleReturn": 51.02
+    },
+    {
+      "key": "SIMPLE_MONTHLY6",
+      "fromDate": "1404/12/25",
+      "toDate": "1405/06/21",
+      "marketSimpleReturn": 95.95
+    },
+    {
+      "key": "SIMPLE_YEARLY",
+      "fromDate": "1404/06/21",
+      "toDate": "1405/06/21",
+      "marketSimpleReturn": 176.8
+    },
+    {
+      "key": "SIMPLE_ALL_DAYS",
+      "fromDate": "1402/07/12",
+      "toDate": "1405/06/21",
+      "marketSimpleReturn": 251.62
+    },
+    {
+      "key": "MAX_SIMPLE_WEEKLY",
+      "fromDate": "1405/02/28",
+      "toDate": "1405/03/04",
+      "marketSimpleReturn": 7.52
+    },
+    {
+      "key": "MIN_SIMPLE_WEEKLY",
+      "fromDate": "1405/01/19",
+      "toDate": "1405/01/26",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "marketDailyReturn": 0.0
+    },
+    {
+      "dailyReturnDate": "1405/06/20"
+    },
+    {
+      "indexDailyReturn": -2.056493218399988
+    },
+    {
+      "indexWeeklyReturn": 7.075292875832541
+    },
+    {
+      "indexMonthlyReturn": 28.637991391166125
+    },
+    {
+      "indexQuarterlyReturn": 46.5098124971394
+    },
+    {
+      "indexSixmonthsReturn": 63.50961729467118
+    },
+    {
+      "indexAnnualReturn": 76.44617975807687
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 6.94
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 25.27
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 40.44
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 62.68
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 78.9
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 92.32
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 30.15
+    },
+    {
+      "AutoAgah_fundSimpleReturn": -19.99
+    },
+    {
+      "AutoAgah_fundDailyReturn": 1.87
+    },
+    {
+      "AutoAgah_fundNAV": 8219428162678.0
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 7.26
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 31.39
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 42.99
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 71.16
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 88.1
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 66.2
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 27.95
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -18.01
+    },
+    {
+      "AutoDariush_fundDailyReturn": 1.82
+    },
+    {
+      "AutoDariush_fundNAV": 11249259280199.0
+    },
+    {
+      "BehinRo_fundSimpleReturn": 6.94
+    },
+    {
+      "BehinRo_fundSimpleReturn": 25.27
+    },
+    {
+      "BehinRo_fundSimpleReturn": 40.44
+    },
+    {
+      "BehinRo_fundSimpleReturn": 62.68
+    },
+    {
+      "BehinRo_fundSimpleReturn": 78.9
+    },
+    {
+      "BehinRo_fundSimpleReturn": 92.32
+    },
+    {
+      "BehinRo_fundSimpleReturn": 30.15
+    },
+    {
+      "BehinRo_fundSimpleReturn": -19.99
+    },
+    {
+      "BehinRo_fundDailyReturn": 1.87
+    },
+    {
+      "BehinRo_fundNAV": 14347659506909.0
+    }
+  ],
+  "1405/06/20": [
+    {
+      "key": "SIMPLE_WEEKLY",
+      "fromDate": "1405/06/13",
+      "toDate": "1405/06/20",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "key": "SIMPLE_MONTHLY",
+      "fromDate": "1405/05/21",
+      "toDate": "1405/06/20",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "key": "SIMPLE_MONTHLY3",
+      "fromDate": "1405/03/23",
+      "toDate": "1405/06/20",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "key": "SIMPLE_MONTHLY6",
+      "fromDate": "1404/12/24",
+      "toDate": "1405/06/20",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "key": "SIMPLE_YEARLY",
+      "fromDate": "1404/06/20",
+      "toDate": "1405/06/20",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "key": "SIMPLE_ALL_DAYS",
+      "fromDate": "1402/07/12",
+      "toDate": "1405/06/20",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "key": "MAX_SIMPLE_WEEKLY",
+      "fromDate": "1405/02/28",
+      "toDate": "1405/03/04",
+      "marketSimpleReturn": 7.52
+    },
+    {
+      "key": "MIN_SIMPLE_WEEKLY",
+      "fromDate": "1405/01/19",
+      "toDate": "1405/01/26",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "marketDailyReturn": 0.0
+    },
+    {
+      "dailyReturnDate": "1405/06/19"
+    },
+    {
+      "indexDailyReturn": 2.2661569725700437
+    },
+    {
+      "indexWeeklyReturn": 7.463081903008249
+    },
+    {
+      "indexMonthlyReturn": 34.09259791116764
+    },
+    {
+      "indexQuarterlyReturn": 49.58603924998856
+    },
+    {
+      "indexSixmonthsReturn": 66.94278433308928
+    },
+    {
+      "indexAnnualReturn": 83.8901566065456
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 5.29
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 21.95
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 40.65
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 58.35
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 74.19
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 92.95
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 30.15
+    },
+    {
+      "AutoAgah_fundSimpleReturn": -19.99
+    },
+    {
+      "AutoAgah_fundDailyReturn": 1.87
+    },
+    {
+      "AutoAgah_fundNAV": 8219428162678.0
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 5.89
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 28.59
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 43.92
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 67.79
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 84.08
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 67.83
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 27.95
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -18.01
+    },
+    {
+      "AutoDariush_fundDailyReturn": 1.82
+    },
+    {
+      "AutoDariush_fundNAV": 11249259280199.0
+    },
+    {
+      "BehinRo_fundSimpleReturn": 5.29
+    },
+    {
+      "BehinRo_fundSimpleReturn": 21.95
+    },
+    {
+      "BehinRo_fundSimpleReturn": 40.65
+    },
+    {
+      "BehinRo_fundSimpleReturn": 58.35
+    },
+    {
+      "BehinRo_fundSimpleReturn": 74.19
+    },
+    {
+      "BehinRo_fundSimpleReturn": 92.95
+    },
+    {
+      "BehinRo_fundSimpleReturn": 30.15
+    },
+    {
+      "BehinRo_fundSimpleReturn": -19.99
+    },
+    {
+      "BehinRo_fundDailyReturn": 1.87
+    },
+    {
+      "BehinRo_fundNAV": 14347659506909.0
+    }
+  ],
+  "1405/06/19": [
+    {
+      "key": "SIMPLE_WEEKLY",
+      "fromDate": "1405/06/12",
+      "toDate": "1405/06/19",
+      "marketSimpleReturn": 9.51
+    },
+    {
+      "key": "SIMPLE_MONTHLY",
+      "fromDate": "1405/05/20",
+      "toDate": "1405/06/19",
+      "marketSimpleReturn": 24.16
+    },
+    {
+      "key": "SIMPLE_MONTHLY3",
+      "fromDate": "1405/03/22",
+      "toDate": "1405/06/19",
+      "marketSimpleReturn": 55.07
+    },
+    {
+      "key": "SIMPLE_MONTHLY6",
+      "fromDate": "1404/12/23",
+      "toDate": "1405/06/19",
+      "marketSimpleReturn": 91.77
+    },
+    {
+      "key": "SIMPLE_YEARLY",
+      "fromDate": "1404/06/19",
+      "toDate": "1405/06/19",
+      "marketSimpleReturn": 170.89
+    },
+    {
+      "key": "SIMPLE_ALL_DAYS",
+      "fromDate": "1402/07/12",
+      "toDate": "1405/06/19",
+      "marketSimpleReturn": 244.11
+    },
+    {
+      "key": "MAX_SIMPLE_WEEKLY",
+      "fromDate": "1405/02/28",
+      "toDate": "1405/03/04",
+      "marketSimpleReturn": 7.52
+    },
+    {
+      "key": "MIN_SIMPLE_WEEKLY",
+      "fromDate": "1405/01/19",
+      "toDate": "1405/01/26",
+      "marketSimpleReturn": 0.0
+    },
+    {
+      "marketDailyReturn": 0.67
+    },
+    {
+      "dailyReturnDate": "1405/06/18"
+    },
+    {
+      "indexDailyReturn": 2.8994451182209438
+    },
+    {
+      "indexWeeklyReturn": 5.163985374771481
+    },
+    {
+      "indexMonthlyReturn": 28.42628147883551
+    },
+    {
+      "indexQuarterlyReturn": 47.33565041889389
+    },
+    {
+      "indexSixmonthsReturn": 63.24343191840766
+    },
+    {
+      "indexAnnualReturn": 84.79872013569646
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 5.36
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 22.09
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 41.47
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 58.34
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 74.23
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 93.02
+    },
+    {
+      "AutoAgah_fundSimpleReturn": 30.15
+    },
+    {
+      "AutoAgah_fundSimpleReturn": -19.99
+    },
+    {
+      "AutoAgah_fundDailyReturn": 1.87
+    },
+    {
+      "AutoAgah_fundNAV": 8219428162678.0
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 5.88
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 28.59
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 45.41
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 67.8
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 84.09
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 67.84
+    },
+    {
+      "AutoDariush_fundSimpleReturn": 27.95
+    },
+    {
+      "AutoDariush_fundSimpleReturn": -18.01
+    },
+    {
+      "AutoDariush_fundDailyReturn": 1.82
+    },
+    {
+      "AutoDariush_fundNAV": 11249259280199.0
+    },
+    {
+      "BehinRo_fundSimpleReturn": 5.36
+    },
+    {
+      "BehinRo_fundSimpleReturn": 22.09
+    },
+    {
+      "BehinRo_fundSimpleReturn": 41.47
+    },
+    {
+      "BehinRo_fundSimpleReturn": 58.34
+    },
+    {
+      "BehinRo_fundSimpleReturn": 74.23
+    },
+    {
+      "BehinRo_fundSimpleReturn": 93.02
+    },
+    {
+      "BehinRo_fundSimpleReturn": 30.15
+    },
+    {
+      "BehinRo_fundSimpleReturn": -19.99
+    },
+    {
+      "BehinRo_fundDailyReturn": 1.87
+    },
+    {
+      "BehinRo_fundNAV": 14347659506909.0
+    }
+  ]
+}
