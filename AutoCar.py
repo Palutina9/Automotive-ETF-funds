@@ -9,6 +9,8 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import jdatetime
+import openpyxl
+from io import BytesIO
 
 
 # ---------- Persian/Arabic digit + separator normalizer ----------
@@ -57,6 +59,45 @@ def safe_post(url, **kwargs):
     except requests.exceptions.RequestException as e:
         print(f"FAILED (POST): {url} -> {e}")
         return None
+
+def fetch_fund_history(download_url, from_date="8/22/2026"):
+
+    url = f"{download_url}?exportType=Excel&fromDate={from_date}"
+    resp = safe_get(url)
+    if resp is None:
+        return []
+
+    try:
+        wb = openpyxl.load_workbook(BytesIO(resp.content), read_only=True)
+        ws = wb.active
+    except Exception as e:
+        print(f"  ERROR opening Excel: {e}")
+        return []
+
+    result = []
+    # Read from row 5 onwards. Column I (index 8) = NAV, Column M (index 12) = date.
+    for row in ws.iter_rows(min_row=5, values_only=True):
+        if len(row) < 13:
+            continue
+        nav = row[8]
+        date = row[12]
+
+        if nav is None or date is None:
+            continue
+        try:
+            nav_float = float(nav)
+        except (ValueError, TypeError):
+            continue
+        date_str = str(date).strip()
+        if date_str and date_str != "nan":
+            result.append({"date": date_str, "nav": nav_float})
+
+    wb.close()
+
+    result.sort(key=lambda x: x["date"])
+
+    print(f"  Fetched {len(result)} days of history")
+    return result
 
 def ajaxetelaat(name, link, payload, navapi):
     resp = safe_post(link, data=payload)
@@ -120,9 +161,27 @@ for tarikh in dates:
     all_data[tarikh] = jadval
 
 
+# ---------- Fetch AutoCar historical NAV for cumulative return chart ----------
+print("Fetching AutoCar history...")
+autocar_history = fetch_fund_history(
+    "https://karamadsectorfund.ir/Download/DownloadNavChartList",
+    from_date="8/22/2026"
+)
 
-# ---------- Save results ----------
+# ---------- Build the output JSON ----------
+output = {
+    "dates": all_data,
+    "fundHistory": {}
+}
+
+if autocar_history:
+    output["fundHistory"]["AutoCar"] = autocar_history
+
 with open("auto_data.json", "w", encoding="utf-8") as f:
-    json.dump(all_data, f, ensure_ascii=False, indent=2)
+    json.dump(output, f, ensure_ascii=False, indent=2)
 
-print(all_data)
+print(f"Wrote {len(all_data)} dates and {len(output['fundHistory'])} fund histories to auto_data.json")
+
+print(output)
+
+
