@@ -212,6 +212,15 @@
   </section>
 
   <section class="panel">
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      بازدهی مرکب — اتوکار در برابر شاخص خودرو
+    </h2>
+    <div class="chart-box"><canvas id="cumChart"></canvas></div>
+    <div class="table-caption">بازدهی انباشته — صندوق اتوکار در برابر شاخص بازار</div>
+  </section>
+  
+  <section class="panel">
     <div class="panel-head">
       <h2>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
@@ -307,7 +316,7 @@ function relativeTime(iso) {
 
 // ---------- Parsing ----------
 function parseDataset(list) {
-  const periods = []; let marketDaily = null; let dailyReturnDate = null; const funds = {}; const order = []; const index = {};
+  const periods = []; let marketDaily = null; let dailyReturnDate = null; const funds = {}; const order = []; const index = {}; const fundHistory = {};
   if (!Array.isArray(list)) return { periods, marketDaily, funds, order, index, dailyReturnDate };
   const ensureFund = (slug) => {
     if (!funds[slug]) { funds[slug] = { simpleReturns: new Array(PERIOD_KEYS.length).fill(null), nav: null, dailyReturn: null }; order.push(slug); }
@@ -339,8 +348,13 @@ function parseDataset(list) {
     } else if ((m = entryKey.match(/^(.+)_fundDailyReturn$/))) {
       ensureFund(m[1]).dailyReturn = typeof value === "number" ? value : null;
     }
+    } else if ((m = entryKey.match(/^(.+)_fundHistory$/))) {
+      fundHistory[m[1]] = Array.isArray(value) ? value : [];
+    } else if (entryKey === "indexHistory") {
+      fundHistory["indexHistory"] = Array.isArray(value) ? value : [];
+    }
   }
-  return { periods, marketDaily, funds, order, index, dailyReturnDate };
+  return { periods, marketDaily, funds, order, index, dailyReturnDate, fundHistory };
 }
 
 function mergeDatasets(auto, manual) {
@@ -352,7 +366,8 @@ function mergeDatasets(auto, manual) {
   const funds = { ...a.funds, ...b.funds };
   const order = [...a.order, ...b.order.filter(s => !a.order.includes(s))];
   const manualSlugs = new Set(b.order);
-  return { periods, marketDaily, funds, order, manualSlugs, index, dailyReturnDate };
+  const fundHistory = { ...a.fundHistory, ...b.fundHistory };
+  return { periods, marketDaily, funds, order, manualSlugs, index, dailyReturnDate, fundHistory };
 }
 
 // Returns the value for a given "row" (__MARKET__, __INDEX__, or a fund slug) at a given column key
@@ -677,6 +692,7 @@ function renderForDate(dateKey) {
   renderNavList(state);
   renderTable(state);
   setupPeriodSelect(state);
+  renderCumulativeChart(state);
   document.getElementById("exportBtn").disabled = state.order.length === 0;
   document.getElementById("exportBtn").onclick = () => exportExcel(state);
   document.getElementById("chartImgBtn").onclick = () => downloadChartImage();
