@@ -795,9 +795,12 @@ function normalizeByDate(obj) {
 }
 
 let autoByDate = {}, manualByDate = {};
+let globalFundHistory = {};
+let globalIndexHistory = [];
 
 function renderForDate(dateKey) {
   const state = mergeDatasets(autoByDate[dateKey] || [], manualByDate[dateKey] || []);
+  state.fundHistory = { ...globalFundHistory, indexHistory: globalIndexHistory };
   renderKpis(state);
   renderNavList(state);
   renderTable(state);
@@ -825,8 +828,10 @@ async function loadData(refreshBtnEl) {
   try { autoRaw = await fetch("auto_data.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null); } catch {}
   try { manualRaw = await fetch("manual_data.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null); } catch {}
 
-  autoByDate = normalizeByDate(autoRaw);
-  manualByDate = normalizeByDate(manualRaw);
+  autoByDate = normalizeByDate(autoRaw && autoRaw.dates ? autoRaw.dates : autoRaw);
+  manualByDate = normalizeByDate(manualRaw && manualRaw.dates ? manualRaw.dates : manualRaw);
+  globalFundHistory = (autoRaw && autoRaw.fundHistory) || {};
+  globalIndexHistory = (manualRaw && manualRaw.indexHistory) || [];
 
   const dateKeys = Array.from(new Set([...Object.keys(autoByDate), ...Object.keys(manualByDate)])).sort().reverse();
 
