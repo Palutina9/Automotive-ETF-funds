@@ -355,7 +355,118 @@ function parseDataset(list) {
   }
   return { periods, marketDaily, funds, order, index, dailyReturnDate, fundHistory };
 }
+let cumChartInstance = null;
 
+function renderCumulativeChart(state) {
+  const ctx = document.getElementById("cumChart");
+  if (!ctx) return;
+
+  const history = state.fundHistory ? state.fundHistory["AutoCar"] : null;
+  if (!history || history.length === 0) {
+    if (cumChartInstance) { cumChartInstance.destroy(); cumChartInstance = null; }
+    const c = ctx.getContext("2d");
+    c.clearRect(0, 0, ctx.width, ctx.height);
+    return;
+  }
+
+  const firstNav = history[0].nav;
+  const fundCum = history.map(d => ({ date: d.date, ret: (d.nav / firstNav - 1) * 100 }));
+
+  const indexHistory = state.fundHistory ? state.fundHistory["indexHistory"] : null;
+  let indexCum = null;
+  if (indexHistory && indexHistory.length > 0) {
+    const firstIndex = indexHistory[0].value;
+    indexCum = indexHistory.map(d => ({ date: d.date, ret: (d.value / firstIndex - 1) * 100 }));
+  }
+
+  const allDates = [...new Set([
+    ...fundCum.map(d => d.date),
+    ...(indexCum ? indexCum.map(d => d.date) : [])
+  ])].sort();
+
+  const fundByName = {};
+  fundCum.forEach(d => fundByName[d.date] = d.ret);
+  const indexByName = {};
+  if (indexCum) indexCum.forEach(d => indexByName[d.date] = d.ret);
+
+  const fundData = allDates.map(d => fundByName[d] ?? null);
+  const indexData = allDates.map(d => indexByName[d] ?? null);
+  const labels = allDates.map(d => toFaDigits(d));
+
+  const fundColor = "#EC4899";
+
+  if (cumChartInstance) cumChartInstance.destroy();
+
+  const datasets = [{
+    type: "line",
+    label: "اتوکار",
+    data: fundData,
+    borderColor: fundColor,
+    backgroundColor: fundColor + "20",
+    borderWidth: 2.5,
+    tension: 0.25,
+    pointRadius: 0,
+    pointHoverRadius: 5,
+    pointBackgroundColor: fundColor,
+    fill: false,
+    yAxisID: "y",
+    spanGaps: true,
+  }];
+
+  if (indexCum) {
+    datasets.push({
+      type: "line",
+      label: "شاخص خودرو",
+      data: indexData,
+      borderColor: "#94A3B8",
+      borderWidth: 2,
+      borderDash: [5, 5],
+      tension: 0.25,
+      pointRadius: 0,
+      pointHoverRadius: 5,
+      pointBackgroundColor: "#94A3B8",
+      fill: false,
+      yAxisID: "y",
+      spanGaps: true,
+    });
+  }
+
+  cumChartInstance = new Chart(ctx, {
+    type: "line",
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { display: true, position: "top", align: "end",
+          labels: { font: { family: "Vazirmatn", size: 12 }, color: "#334155", usePointStyle: true, boxWidth: 8, padding: 16 } },
+        tooltip: {
+          backgroundColor: "#FFFFFF", titleColor: "#0F172A", bodyColor: "#334155",
+          borderColor: "#E2E8F0", borderWidth: 1, padding: 12, cornerRadius: 8,
+          titleFont: { family: "Vazirmatn", weight: "700", size: 13 },
+          bodyFont: { family: "Vazirmatn", size: 12 },
+          callbacks: {
+            label: function(context) {
+              var v = context.parsed.y;
+              if (v === null) return null;
+              var sign = v >= 0 ? "+" : "";
+              return " " + context.dataset.label + ": " + sign + v.toLocaleString("fa-IR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "٪";
+            },
+          },
+        },
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { family: "Vazirmatn", size: 10 }, color: "#64748B", maxRotation: 45, autoSkip: true, maxTicksLimit: 10 } },
+        y: { type: "linear", position: "left", grid: { color: GRID_COLOR, drawBorder: false },
+          ticks: { font: { family: "Vazirmatn", size: 11 }, color: "#64748B",
+            callback: function(v) { return (v >= 0 ? "+" : "") + v.toLocaleString("fa-IR", { maximumFractionDigits: 0 }) + "٪"; } },
+          title: { display: true, text: "بازدهی مرکب (٪)", font: { family: "Vazirmatn", size: 11, weight: "600" }, color: "#64748B" },
+        },
+      },
+    },
+  });
+}
 function mergeDatasets(auto, manual) {
   const a = parseDataset(auto), b = parseDataset(manual);
   const periods = a.periods.length ? a.periods : b.periods;
