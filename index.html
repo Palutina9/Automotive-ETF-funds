@@ -372,8 +372,9 @@ function renderCumulativeChart(state) {
   const firstNav = history[0].nav;
   const fundCum = history.map(d => ({ date: d.date, ret: (d.nav / firstNav - 1) * 100 }));
 
-  const indexHistory = state.fundHistory ? state.fundHistory["indexHistory"] : null;
-  let indexCum = null;
+  const CUM_INDEX_START_DATE = "1405-05-31";
+  const rawIndexHistory = state.fundHistory ? state.fundHistory["indexHistory"] : null;
+  const indexHistory = rawIndexHistory ? rawIndexHistory.filter(d => d.date >= CUM_INDEX_START_DATE) : null;  let indexCum = null;
   if (indexHistory && indexHistory.length > 0) {
     const firstIndex = indexHistory[0].value;
     indexCum = indexHistory.map(d => ({ date: d.date, ret: (d.value / firstIndex - 1) * 100 }));
