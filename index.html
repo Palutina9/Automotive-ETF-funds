@@ -347,7 +347,6 @@ function parseDataset(list) {
       ensureFund(m[1]).nav = typeof value === "number" ? value : null;
     } else if ((m = entryKey.match(/^(.+)_fundDailyReturn$/))) {
       ensureFund(m[1]).dailyReturn = typeof value === "number" ? value : null;
-    }
     } else if ((m = entryKey.match(/^(.+)_fundHistory$/))) {
       fundHistory[m[1]] = Array.isArray(value) ? value : [];
     } else if (entryKey === "indexHistory") {
