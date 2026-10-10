@@ -1,0 +1,2206 @@
+{
+  "dates": {
+    "1405/07/18": [
+      {
+        "indexDailyReturn": 0.0
+      },
+      {
+        "indexWeeklyReturn": 3.8858127320044824
+      },
+      {
+        "indexMonthlyReturn": -1.2063833664534829
+      },
+      {
+        "indexQuarterlyReturn": 33.930478892857316
+      },
+      {
+        "indexSixmonthsReturn": 61.53706446907652
+      },
+      {
+        "indexAnnualReturn": 65.29960942604504
+      },
+      {
+        "key": "SIMPLE_WEEKLY",
+        "fromDate": "1405/07/10",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 4.69
+      },
+      {
+        "key": "SIMPLE_MONTHLY",
+        "fromDate": "1405/06/18",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 14.16
+      },
+      {
+        "key": "SIMPLE_MONTHLY3",
+        "fromDate": "1405/04/20",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 56.89
+      },
+      {
+        "key": "SIMPLE_MONTHLY6",
+        "fromDate": "1405/01/23",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 118.93
+      },
+      {
+        "key": "SIMPLE_YEARLY",
+        "fromDate": "1404/07/17",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 177.88
+      },
+      {
+        "key": "SIMPLE_ALL_DAYS",
+        "fromDate": "1402/09/12",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 283.32
+      },
+      {
+        "key": "MAX_SIMPLE_WEEKLY",
+        "fromDate": "1404/01/27",
+        "toDate": "1404/02/03",
+        "marketSimpleReturn": 6.42
+      },
+      {
+        "key": "MIN_SIMPLE_WEEKLY",
+        "fromDate": "1403/05/08",
+        "toDate": "1403/05/15",
+        "marketSimpleReturn": -7.19
+      },
+      {
+        "marketDailyReturn": 0.0
+      },
+      {
+        "dailyReturnDate": "1405/07/17"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 2.93
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 2.22
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 37.18
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 69.96
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 80.72
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 89.2
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
+      },
+      {
+        "AutoAgah_fundDailyReturn": -0.01
+      },
+      {
+        "AutoAgah_fundNAV": 7662711239048.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 2.47
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 3.4
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 43.17
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 73.36
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 82.76
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 73.57
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 27.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -18.01
+      },
+      {
+        "AutoDariush_fundDailyReturn": -0.01
+      },
+      {
+        "AutoDariush_fundNAV": 10743651509236.0
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.84
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.37
+      },
+      {
+        "BehinRo_fundSimpleReturn": 35.44
+      },
+      {
+        "BehinRo_fundSimpleReturn": 102.35
+      },
+      {
+        "BehinRo_fundSimpleReturn": 65.49
+      },
+      {
+        "BehinRo_fundSimpleReturn": 97.09
+      },
+      {
+        "BehinRo_fundSimpleReturn": 30.15
+      },
+      {
+        "BehinRo_fundSimpleReturn": -19.99
+      },
+      {
+        "BehinRo_fundDailyReturn": -0.01
+      },
+      {
+        "BehinRo_fundNAV": 14272359724627.0
+      }
+    ],
+    "1405/07/17": [
+      {
+        "indexDailyReturn": 0.0
+      },
+      {
+        "indexWeeklyReturn": 3.8858127320044824
+      },
+      {
+        "indexMonthlyReturn": -3.238067392734449
+      },
+      {
+        "indexQuarterlyReturn": 30.62326892054073
+      },
+      {
+        "indexSixmonthsReturn": 61.53706446907652
+      },
+      {
+        "indexAnnualReturn": 65.29960942604504
+      },
+      {
+        "key": "SIMPLE_WEEKLY",
+        "fromDate": "1405/07/10",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 4.69
+      },
+      {
+        "key": "SIMPLE_MONTHLY",
+        "fromDate": "1405/06/18",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 14.16
+      },
+      {
+        "key": "SIMPLE_MONTHLY3",
+        "fromDate": "1405/04/20",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 56.89
+      },
+      {
+        "key": "SIMPLE_MONTHLY6",
+        "fromDate": "1405/01/23",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 118.93
+      },
+      {
+        "key": "SIMPLE_YEARLY",
+        "fromDate": "1404/07/17",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 177.88
+      },
+      {
+        "key": "SIMPLE_ALL_DAYS",
+        "fromDate": "1402/09/12",
+        "toDate": "1405/07/17",
+        "marketSimpleReturn": 283.32
+      },
+      {
+        "key": "MAX_SIMPLE_WEEKLY",
+        "fromDate": "1404/01/27",
+        "toDate": "1404/02/03",
+        "marketSimpleReturn": 6.42
+      },
+      {
+        "key": "MIN_SIMPLE_WEEKLY",
+        "fromDate": "1403/05/08",
+        "toDate": "1403/05/15",
+        "marketSimpleReturn": -7.19
+      },
+      {
+        "marketDailyReturn": 0.0
+      },
+      {
+        "dailyReturnDate": "1405/07/17"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 2.93
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 2.22
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 37.18
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 69.96
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 80.72
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 89.2
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
+      },
+      {
+        "AutoAgah_fundDailyReturn": -0.01
+      },
+      {
+        "AutoAgah_fundNAV": 7662711239048.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 2.47
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 3.4
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 43.17
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 73.36
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 82.76
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 73.57
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 27.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -18.01
+      },
+      {
+        "AutoDariush_fundDailyReturn": -0.01
+      },
+      {
+        "AutoDariush_fundNAV": 10743651509236.0
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.84
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.37
+      },
+      {
+        "BehinRo_fundSimpleReturn": 35.44
+      },
+      {
+        "BehinRo_fundSimpleReturn": 102.35
+      },
+      {
+        "BehinRo_fundSimpleReturn": 65.49
+      },
+      {
+        "BehinRo_fundSimpleReturn": 97.09
+      },
+      {
+        "BehinRo_fundSimpleReturn": 30.15
+      },
+      {
+        "BehinRo_fundSimpleReturn": -19.99
+      },
+      {
+        "BehinRo_fundDailyReturn": -0.01
+      },
+      {
+        "BehinRo_fundNAV": 14272359724627.0
+      }
+    ],
+    "1405/07/16": [
+      {
+        "indexDailyReturn": 1.0383681467702313
+      },
+      {
+        "indexWeeklyReturn": 3.8858127320044824
+      },
+      {
+        "indexMonthlyReturn": -1.0452901101613743
+      },
+      {
+        "indexQuarterlyReturn": 30.62326892054073
+      },
+      {
+        "indexSixmonthsReturn": 61.53706446907652
+      },
+      {
+        "indexAnnualReturn": 67.62192500456428
+      },
+      {
+        "key": "SIMPLE_WEEKLY",
+        "fromDate": "1405/07/09",
+        "toDate": "1405/07/16",
+        "marketSimpleReturn": 4.69
+      },
+      {
+        "key": "SIMPLE_MONTHLY",
+        "fromDate": "1405/06/17",
+        "toDate": "1405/07/16",
+        "marketSimpleReturn": 14.93
+      },
+      {
+        "key": "SIMPLE_MONTHLY3",
+        "fromDate": "1405/04/19",
+        "toDate": "1405/07/16",
+        "marketSimpleReturn": 53.8
+      },
+      {
+        "key": "SIMPLE_MONTHLY6",
+        "fromDate": "1405/01/22",
+        "toDate": "1405/07/16",
+        "marketSimpleReturn": 118.93
+      },
+      {
+        "key": "SIMPLE_YEARLY",
+        "fromDate": "1404/07/16",
+        "toDate": "1405/07/16",
+        "marketSimpleReturn": 177.88
+      },
+      {
+        "key": "SIMPLE_ALL_DAYS",
+        "fromDate": "1402/09/12",
+        "toDate": "1405/07/16",
+        "marketSimpleReturn": 283.32
+      },
+      {
+        "key": "MAX_SIMPLE_WEEKLY",
+        "fromDate": "1404/01/27",
+        "toDate": "1404/02/03",
+        "marketSimpleReturn": 6.42
+      },
+      {
+        "key": "MIN_SIMPLE_WEEKLY",
+        "fromDate": "1403/05/08",
+        "toDate": "1403/05/15",
+        "marketSimpleReturn": -7.19
+      },
+      {
+        "marketDailyReturn": 0.0
+      },
+      {
+        "dailyReturnDate": "1405/07/17"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 2.93
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 0.33
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 37.48
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 69.95
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 80.71
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 89.21
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
+      },
+      {
+        "AutoAgah_fundDailyReturn": -0.01
+      },
+      {
+        "AutoAgah_fundNAV": 7662711239048.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 2.47
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 1.56
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 42.33
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 73.35
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 82.75
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 73.58
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 27.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -18.01
+      },
+      {
+        "AutoDariush_fundDailyReturn": -0.01
+      },
+      {
+        "AutoDariush_fundNAV": 10743651509236.0
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.84
+      },
+      {
+        "BehinRo_fundSimpleReturn": 0.43
+      },
+      {
+        "BehinRo_fundSimpleReturn": 35.22
+      },
+      {
+        "BehinRo_fundSimpleReturn": 62.02
+      },
+      {
+        "BehinRo_fundSimpleReturn": 65.49
+      },
+      {
+        "BehinRo_fundSimpleReturn": 97.1
+      },
+      {
+        "BehinRo_fundSimpleReturn": 30.15
+      },
+      {
+        "BehinRo_fundSimpleReturn": -19.99
+      },
+      {
+        "BehinRo_fundDailyReturn": -0.01
+      },
+      {
+        "BehinRo_fundNAV": 14272359724627.0
+      }
+    ],
+    "1405/07/15": [
+      {
+        "indexDailyReturn": 3.876902638556613
+      },
+      {
+        "indexWeeklyReturn": 6.383964864738588
+      },
+      {
+        "indexMonthlyReturn": 1.8238473949892493
+      },
+      {
+        "indexQuarterlyReturn": 30.62326892054073
+      },
+      {
+        "indexSixmonthsReturn": 61.53706446907652
+      },
+      {
+        "indexAnnualReturn": 71.68718123497601
+      },
+      {
+        "key": "SIMPLE_WEEKLY",
+        "fromDate": "1405/07/08",
+        "toDate": "1405/07/15",
+        "marketSimpleReturn": 4.69
+      },
+      {
+        "key": "SIMPLE_MONTHLY",
+        "fromDate": "1405/06/16",
+        "toDate": "1405/07/15",
+        "marketSimpleReturn": 17.71
+      },
+      {
+        "key": "SIMPLE_MONTHLY3",
+        "fromDate": "1405/04/18",
+        "toDate": "1405/07/15",
+        "marketSimpleReturn": 53.8
+      },
+      {
+        "key": "SIMPLE_MONTHLY6",
+        "fromDate": "1405/01/21",
+        "toDate": "1405/07/15",
+        "marketSimpleReturn": 118.93
+      },
+      {
+        "key": "SIMPLE_YEARLY",
+        "fromDate": "1404/07/15",
+        "toDate": "1405/07/15",
+        "marketSimpleReturn": 177.31
+      },
+      {
+        "key": "SIMPLE_ALL_DAYS",
+        "fromDate": "1402/09/12",
+        "toDate": "1405/07/15",
+        "marketSimpleReturn": 283.32
+      },
+      {
+        "key": "MAX_SIMPLE_WEEKLY",
+        "fromDate": "1404/01/27",
+        "toDate": "1404/02/03",
+        "marketSimpleReturn": 6.42
+      },
+      {
+        "key": "MIN_SIMPLE_WEEKLY",
+        "fromDate": "1403/05/08",
+        "toDate": "1403/05/15",
+        "marketSimpleReturn": -7.19
+      },
+      {
+        "marketDailyReturn": 0.0
+      },
+      {
+        "dailyReturnDate": "1405/07/17"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 2.93
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 2.69
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 37.48
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 69.95
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 81.75
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 86.92
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
+      },
+      {
+        "AutoAgah_fundDailyReturn": -0.01
+      },
+      {
+        "AutoAgah_fundNAV": 7662711239048.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 2.47
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 3.74
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 42.34
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 73.36
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 83.77
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 72.39
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 27.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -18.01
+      },
+      {
+        "AutoDariush_fundDailyReturn": -0.01
+      },
+      {
+        "AutoDariush_fundNAV": 10743651509236.0
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.8
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.2
+      },
+      {
+        "BehinRo_fundSimpleReturn": 35.18
+      },
+      {
+        "BehinRo_fundSimpleReturn": 61.96
+      },
+      {
+        "BehinRo_fundSimpleReturn": 67.88
+      },
+      {
+        "BehinRo_fundSimpleReturn": 94.4
+      },
+      {
+        "BehinRo_fundSimpleReturn": 30.15
+      },
+      {
+        "BehinRo_fundSimpleReturn": -19.99
+      },
+      {
+        "BehinRo_fundDailyReturn": -0.01
+      },
+      {
+        "BehinRo_fundNAV": 14272359724627.0
+      }
+    ],
+    "1405/07/14": [
+      {
+        "indexDailyReturn": 1.3204038543851004
+      },
+      {
+        "indexWeeklyReturn": 4.593597590974322
+      },
+      {
+        "indexMonthlyReturn": 2.8198703126112132
+      },
+      {
+        "indexQuarterlyReturn": 28.932625411937018
+      },
+      {
+        "indexSixmonthsReturn": 59.87695311391485
+      },
+      {
+        "indexAnnualReturn": 70.6981126930407
+      },
+      {
+        "key": "SIMPLE_WEEKLY",
+        "fromDate": "1405/07/07",
+        "toDate": "1405/07/14",
+        "marketSimpleReturn": 5.03
+      },
+      {
+        "key": "SIMPLE_MONTHLY",
+        "fromDate": "1405/06/15",
+        "toDate": "1405/07/14",
+        "marketSimpleReturn": 18.64
+      },
+      {
+        "key": "SIMPLE_MONTHLY3",
+        "fromDate": "1405/04/17",
+        "toDate": "1405/07/14",
+        "marketSimpleReturn": 50.89
+      },
+      {
+        "key": "SIMPLE_MONTHLY6",
+        "fromDate": "1405/01/20",
+        "toDate": "1405/07/14",
+        "marketSimpleReturn": 114.79
+      },
+      {
+        "key": "SIMPLE_YEARLY",
+        "fromDate": "1404/07/14",
+        "toDate": "1405/07/14",
+        "marketSimpleReturn": 175.96
+      },
+      {
+        "key": "SIMPLE_ALL_DAYS",
+        "fromDate": "1402/09/12",
+        "toDate": "1405/07/14",
+        "marketSimpleReturn": 276.07
+      },
+      {
+        "key": "MAX_SIMPLE_WEEKLY",
+        "fromDate": "1404/01/27",
+        "toDate": "1404/02/03",
+        "marketSimpleReturn": 6.42
+      },
+      {
+        "key": "MIN_SIMPLE_WEEKLY",
+        "fromDate": "1403/05/08",
+        "toDate": "1403/05/15",
+        "marketSimpleReturn": -7.19
+      },
+      {
+        "marketDailyReturn": 0.0
+      },
+      {
+        "dailyReturnDate": "1405/07/17"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 4.88
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 3.69
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 35.8
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 67.86
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 85.53
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 86.28
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
+      },
+      {
+        "AutoAgah_fundDailyReturn": -0.01
+      },
+      {
+        "AutoAgah_fundNAV": 7662711239048.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 4.4
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 5.06
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 40.79
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 71.48
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 86.56
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 66.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 27.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -18.01
+      },
+      {
+        "AutoDariush_fundDailyReturn": -0.01
+      },
+      {
+        "AutoDariush_fundNAV": 10743651509236.0
+      },
+      {
+        "BehinRo_fundSimpleReturn": 4.63
+      },
+      {
+        "BehinRo_fundSimpleReturn": 3.2
+      },
+      {
+        "BehinRo_fundSimpleReturn": 33.5
+      },
+      {
+        "BehinRo_fundSimpleReturn": 59.94
+      },
+      {
+        "BehinRo_fundSimpleReturn": 71.89
+      },
+      {
+        "BehinRo_fundSimpleReturn": 89.27
+      },
+      {
+        "BehinRo_fundSimpleReturn": 30.15
+      },
+      {
+        "BehinRo_fundSimpleReturn": -19.99
+      },
+      {
+        "BehinRo_fundDailyReturn": -0.01
+      },
+      {
+        "BehinRo_fundNAV": 14272359724627.0
+      }
+    ],
+    "1405/07/13": [
+      {
+        "indexDailyReturn": -0.4121710400776364
+      },
+      {
+        "indexWeeklyReturn": 4.053615271123973
+      },
+      {
+        "indexMonthlyReturn": 1.835491496194101
+      },
+      {
+        "indexQuarterlyReturn": 28.90674068759483
+      },
+      {
+        "indexSixmonthsReturn": 55.50816434251077
+      },
+      {
+        "indexAnnualReturn": 69.668118782452
+      },
+      {
+        "key": "SIMPLE_WEEKLY",
+        "fromDate": "1405/07/06",
+        "toDate": "1405/07/13",
+        "marketSimpleReturn": 4.43
+      },
+      {
+        "key": "SIMPLE_MONTHLY",
+        "fromDate": "1405/06/14",
+        "toDate": "1405/07/13",
+        "marketSimpleReturn": 18.01
+      },
+      {
+        "key": "SIMPLE_MONTHLY3",
+        "fromDate": "1405/04/16",
+        "toDate": "1405/07/13",
+        "marketSimpleReturn": 46.66
+      },
+      {
+        "key": "SIMPLE_MONTHLY6",
+        "fromDate": "1405/01/19",
+        "toDate": "1405/07/13",
+        "marketSimpleReturn": 109.75
+      },
+      {
+        "key": "SIMPLE_YEARLY",
+        "fromDate": "1404/07/13",
+        "toDate": "1405/07/13",
+        "marketSimpleReturn": 172.94
+      },
+      {
+        "key": "SIMPLE_ALL_DAYS",
+        "fromDate": "1402/09/12",
+        "toDate": "1405/07/13",
+        "marketSimpleReturn": 267.24
+      },
+      {
+        "key": "MAX_SIMPLE_WEEKLY",
+        "fromDate": "1404/01/27",
+        "toDate": "1404/02/03",
+        "marketSimpleReturn": 6.42
+      },
+      {
+        "key": "MIN_SIMPLE_WEEKLY",
+        "fromDate": "1403/05/08",
+        "toDate": "1403/05/15",
+        "marketSimpleReturn": -7.19
+      },
+      {
+        "marketDailyReturn": 0.0
+      },
+      {
+        "dailyReturnDate": "1405/07/17"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 1.41
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 2.47
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 29.01
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 63.01
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 78.6
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 80.61
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
+      },
+      {
+        "AutoAgah_fundDailyReturn": -0.01
+      },
+      {
+        "AutoAgah_fundNAV": 7662711239048.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 1.5
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 4.44
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 34.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 66.73
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 80.29
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 65.67
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 27.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -18.01
+      },
+      {
+        "AutoDariush_fundDailyReturn": -0.01
+      },
+      {
+        "AutoDariush_fundNAV": 10743651509236.0
+      },
+      {
+        "BehinRo_fundSimpleReturn": 1.63
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.14
+      },
+      {
+        "BehinRo_fundSimpleReturn": 26.85
+      },
+      {
+        "BehinRo_fundSimpleReturn": 55.53
+      },
+      {
+        "BehinRo_fundSimpleReturn": 67.37
+      },
+      {
+        "BehinRo_fundSimpleReturn": 88.06
+      },
+      {
+        "BehinRo_fundSimpleReturn": 30.15
+      },
+      {
+        "BehinRo_fundSimpleReturn": -19.99
+      },
+      {
+        "BehinRo_fundDailyReturn": -0.01
+      },
+      {
+        "BehinRo_fundNAV": 14272359724627.0
+      }
+    ],
+    "1405/07/12": [
+      {
+        "indexDailyReturn": 1.4782586478130897
+      },
+      {
+        "indexWeeklyReturn": 7.00894111488736
+      },
+      {
+        "indexMonthlyReturn": 3.3320200999048524
+      },
+      {
+        "indexQuarterlyReturn": 30.801096199762412
+      },
+      {
+        "indexSixmonthsReturn": 57.79344241825726
+      },
+      {
+        "indexAnnualReturn": 77.03326127307865
+      },
+      {
+        "key": "SIMPLE_WEEKLY",
+        "fromDate": "1405/07/05",
+        "toDate": "1405/07/12",
+        "marketSimpleReturn": 7.0
+      },
+      {
+        "key": "SIMPLE_MONTHLY",
+        "fromDate": "1405/06/13",
+        "toDate": "1405/07/12",
+        "marketSimpleReturn": 19.67
+      },
+      {
+        "key": "SIMPLE_MONTHLY3",
+        "fromDate": "1405/04/15",
+        "toDate": "1405/07/12",
+        "marketSimpleReturn": 50.04
+      },
+      {
+        "key": "SIMPLE_MONTHLY6",
+        "fromDate": "1405/01/18",
+        "toDate": "1405/07/12",
+        "marketSimpleReturn": 109.57
+      },
+      {
+        "key": "SIMPLE_YEARLY",
+        "fromDate": "1404/07/12",
+        "toDate": "1405/07/12",
+        "marketSimpleReturn": 178.63
+      },
+      {
+        "key": "SIMPLE_ALL_DAYS",
+        "fromDate": "1402/09/12",
+        "toDate": "1405/07/12",
+        "marketSimpleReturn": 266.92
+      },
+      {
+        "key": "MAX_SIMPLE_WEEKLY",
+        "fromDate": "1404/01/27",
+        "toDate": "1404/02/03",
+        "marketSimpleReturn": 6.42
+      },
+      {
+        "key": "MIN_SIMPLE_WEEKLY",
+        "fromDate": "1403/05/08",
+        "toDate": "1403/05/15",
+        "marketSimpleReturn": -7.19
+      },
+      {
+        "marketDailyReturn": 0.0
+      },
+      {
+        "dailyReturnDate": "1405/07/17"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 1.91
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 3.53
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 32.14
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 62.6
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 81.13
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 80.98
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
+      },
+      {
+        "AutoAgah_fundDailyReturn": -0.01
+      },
+      {
+        "AutoAgah_fundNAV": 7662711239048.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 2.35
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 4.82
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 36.9
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 65.9
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 82.89
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 66.14
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 27.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -18.01
+      },
+      {
+        "AutoDariush_fundDailyReturn": -0.01
+      },
+      {
+        "AutoDariush_fundNAV": 10743651509236.0
+      },
+      {
+        "BehinRo_fundSimpleReturn": 2.64
+      },
+      {
+        "BehinRo_fundSimpleReturn": 3.05
+      },
+      {
+        "BehinRo_fundSimpleReturn": 29.91
+      },
+      {
+        "BehinRo_fundSimpleReturn": 55.16
+      },
+      {
+        "BehinRo_fundSimpleReturn": 70.69
+      },
+      {
+        "BehinRo_fundSimpleReturn": 88.83
+      },
+      {
+        "BehinRo_fundSimpleReturn": 30.15
+      },
+      {
+        "BehinRo_fundSimpleReturn": -19.99
+      },
+      {
+        "BehinRo_fundDailyReturn": -0.01
+      },
+      {
+        "BehinRo_fundNAV": 14272359724627.0
+      }
+    ]
+  },
+  "indexHistory": [
+    {
+      "date": "1404/06/15",
+      "value": 305787.0
+    },
+    {
+      "date": "1404/06/16",
+      "value": 311283.0
+    },
+    {
+      "date": "1404/06/17",
+      "value": 319910.0
+    },
+    {
+      "date": "1404/06/18",
+      "value": 326550.0
+    },
+    {
+      "date": "1404/06/22",
+      "value": 320536.0
+    },
+    {
+      "date": "1404/06/23",
+      "value": 328419.0
+    },
+    {
+      "date": "1404/06/24",
+      "value": 327971.0
+    },
+    {
+      "date": "1404/06/25",
+      "value": 320455.0
+    },
+    {
+      "date": "1404/06/26",
+      "value": 313250.0
+    },
+    {
+      "date": "1404/06/29",
+      "value": 306238.0
+    },
+    {
+      "date": "1404/06/30",
+      "value": 299084.0
+    },
+    {
+      "date": "1404/06/31",
+      "value": 304825.0
+    },
+    {
+      "date": "1404/07/01",
+      "value": 302309.0
+    },
+    {
+      "date": "1404/07/02",
+      "value": 295190.0
+    },
+    {
+      "date": "1404/07/05",
+      "value": 299978.0
+    },
+    {
+      "date": "1404/07/06",
+      "value": 307719.0
+    },
+    {
+      "date": "1404/07/07",
+      "value": 316444.0
+    },
+    {
+      "date": "1404/07/08",
+      "value": 317631.0
+    },
+    {
+      "date": "1404/07/09",
+      "value": 314089.0
+    },
+    {
+      "date": "1404/07/12",
+      "value": 322977.0
+    },
+    {
+      "date": "1404/07/13",
+      "value": 330047.0
+    },
+    {
+      "date": "1404/07/14",
+      "value": 331553.0
+    },
+    {
+      "date": "1404/07/15",
+      "value": 339594.0
+    },
+    {
+      "date": "1404/07/16",
+      "value": 344365.0
+    },
+    {
+      "date": "1404/07/19",
+      "value": 349542.0
+    },
+    {
+      "date": "1404/07/20",
+      "value": 354914.0
+    },
+    {
+      "date": "1404/07/21",
+      "value": 359460.0
+    },
+    {
+      "date": "1404/07/22",
+      "value": 366517.0
+    },
+    {
+      "date": "1404/07/23",
+      "value": 366626.0
+    },
+    {
+      "date": "1404/07/26",
+      "value": 377316.0
+    },
+    {
+      "date": "1404/07/27",
+      "value": 382773.0
+    },
+    {
+      "date": "1404/07/28",
+      "value": 384351.0
+    },
+    {
+      "date": "1404/07/29",
+      "value": 376795.0
+    },
+    {
+      "date": "1404/07/30",
+      "value": 380899.0
+    },
+    {
+      "date": "1404/08/03",
+      "value": 374991.0
+    },
+    {
+      "date": "1404/08/04",
+      "value": 380530.0
+    },
+    {
+      "date": "1404/08/05",
+      "value": 386072.0
+    },
+    {
+      "date": "1404/08/06",
+      "value": 385057.0
+    },
+    {
+      "date": "1404/08/07",
+      "value": 391370.0
+    },
+    {
+      "date": "1404/08/10",
+      "value": 397052.0
+    },
+    {
+      "date": "1404/08/11",
+      "value": 400363.0
+    },
+    {
+      "date": "1404/08/12",
+      "value": 406106.0
+    },
+    {
+      "date": "1404/08/13",
+      "value": 398721.0
+    },
+    {
+      "date": "1404/08/14",
+      "value": 396071.0
+    },
+    {
+      "date": "1404/08/17",
+      "value": 396078.0
+    },
+    {
+      "date": "1404/08/18",
+      "value": 384954.0
+    },
+    {
+      "date": "1404/08/19",
+      "value": 374662.0
+    },
+    {
+      "date": "1404/08/20",
+      "value": 373506.0
+    },
+    {
+      "date": "1404/08/21",
+      "value": 373549.0
+    },
+    {
+      "date": "1404/08/24",
+      "value": 375607.0
+    },
+    {
+      "date": "1404/08/25",
+      "value": 378906.0
+    },
+    {
+      "date": "1404/08/26",
+      "value": 380181.0
+    },
+    {
+      "date": "1404/08/27",
+      "value": 373910.0
+    },
+    {
+      "date": "1404/08/28",
+      "value": 375916.0
+    },
+    {
+      "date": "1404/09/01",
+      "value": 378983.0
+    },
+    {
+      "date": "1404/09/02",
+      "value": 388174.0
+    },
+    {
+      "date": "1404/09/04",
+      "value": 398074.0
+    },
+    {
+      "date": "1404/09/05",
+      "value": 391631.0
+    },
+    {
+      "date": "1404/09/08",
+      "value": 383403.0
+    },
+    {
+      "date": "1404/09/09",
+      "value": 381471.0
+    },
+    {
+      "date": "1404/09/10",
+      "value": 385175.0
+    },
+    {
+      "date": "1404/09/11",
+      "value": 393691.0
+    },
+    {
+      "date": "1404/09/12",
+      "value": 395744.0
+    },
+    {
+      "date": "1404/09/15",
+      "value": 405122.0
+    },
+    {
+      "date": "1404/09/16",
+      "value": 399504.0
+    },
+    {
+      "date": "1404/09/17",
+      "value": 402497.0
+    },
+    {
+      "date": "1404/09/18",
+      "value": 412349.0
+    },
+    {
+      "date": "1404/09/19",
+      "value": 419741.0
+    },
+    {
+      "date": "1404/09/22",
+      "value": 429603.0
+    },
+    {
+      "date": "1404/09/23",
+      "value": 425807.0
+    },
+    {
+      "date": "1404/09/24",
+      "value": 434930.0
+    },
+    {
+      "date": "1404/09/25",
+      "value": 430085.0
+    },
+    {
+      "date": "1404/09/26",
+      "value": 426639.0
+    },
+    {
+      "date": "1404/09/29",
+      "value": 438878.0
+    },
+    {
+      "date": "1404/09/30",
+      "value": 441350.0
+    },
+    {
+      "date": "1404/10/01",
+      "value": 443456.0
+    },
+    {
+      "date": "1404/10/02",
+      "value": 446900.0
+    },
+    {
+      "date": "1404/10/03",
+      "value": 459416.0
+    },
+    {
+      "date": "1404/10/06",
+      "value": 465146.0
+    },
+    {
+      "date": "1404/10/07",
+      "value": 466048.0
+    },
+    {
+      "date": "1404/10/08",
+      "value": 454199.0
+    },
+    {
+      "date": "1404/10/09",
+      "value": 440731.0
+    },
+    {
+      "date": "1404/10/10",
+      "value": 434343.0
+    },
+    {
+      "date": "1404/10/14",
+      "value": 421824.0
+    },
+    {
+      "date": "1404/10/15",
+      "value": 432666.0
+    },
+    {
+      "date": "1404/10/16",
+      "value": 445065.0
+    },
+    {
+      "date": "1404/10/17",
+      "value": 433551.0
+    },
+    {
+      "date": "1404/10/20",
+      "value": 421305.0
+    },
+    {
+      "date": "1404/10/21",
+      "value": 410114.0
+    },
+    {
+      "date": "1404/10/22",
+      "value": 419123.0
+    },
+    {
+      "date": "1404/10/23",
+      "value": 430265.0
+    },
+    {
+      "date": "1404/10/24",
+      "value": 418519.0
+    },
+    {
+      "date": "1404/10/28",
+      "value": 427396.0
+    },
+    {
+      "date": "1404/10/29",
+      "value": 431793.0
+    },
+    {
+      "date": "1404/10/30",
+      "value": 431925.0
+    },
+    {
+      "date": "1404/11/01",
+      "value": 443636.0
+    },
+    {
+      "date": "1404/11/04",
+      "value": 431082.0
+    },
+    {
+      "date": "1404/11/05",
+      "value": 418584.0
+    },
+    {
+      "date": "1404/11/06",
+      "value": 406493.0
+    },
+    {
+      "date": "1404/11/07",
+      "value": 403252.0
+    },
+    {
+      "date": "1404/11/08",
+      "value": 400988.0
+    },
+    {
+      "date": "1404/11/11",
+      "value": 398490.0
+    },
+    {
+      "date": "1404/11/12",
+      "value": 396239.0
+    },
+    {
+      "date": "1404/11/13",
+      "value": 397113.0
+    },
+    {
+      "date": "1404/11/14",
+      "value": 395068.0
+    },
+    {
+      "date": "1404/11/18",
+      "value": 397458.0
+    },
+    {
+      "date": "1404/11/19",
+      "value": 396432.0
+    },
+    {
+      "date": "1404/11/20",
+      "value": 394107.0
+    },
+    {
+      "date": "1404/11/21",
+      "value": 395920.0
+    },
+    {
+      "date": "1404/11/25",
+      "value": 381915.0
+    },
+    {
+      "date": "1404/11/26",
+      "value": 371610.0
+    },
+    {
+      "date": "1404/11/27",
+      "value": 375511.0
+    },
+    {
+      "date": "1404/11/28",
+      "value": 375077.0
+    },
+    {
+      "date": "1404/11/29",
+      "value": 370959.0
+    },
+    {
+      "date": "1404/12/02",
+      "value": 360111.0
+    },
+    {
+      "date": "1404/12/03",
+      "value": 350433.0
+    },
+    {
+      "date": "1404/12/04",
+      "value": 354772.0
+    },
+    {
+      "date": "1404/12/05",
+      "value": 349521.0
+    },
+    {
+      "date": "1404/12/06",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/09",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/11",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/12",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/13",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/16",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/17",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/18",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/19",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/23",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/24",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/25",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/26",
+      "value": 352386.0
+    },
+    {
+      "date": "1404/12/27",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/05",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/08",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/09",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/10",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/11",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/15",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/16",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/17",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/18",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/19",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/22",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/23",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/24",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/26",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/29",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/30",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/01/31",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/01",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/02",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/05",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/06",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/07",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/08",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/09",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/12",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/13",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/14",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/15",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/16",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/19",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/20",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/21",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/22",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/23",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/26",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/27",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/28",
+      "value": 352386.0
+    },
+    {
+      "date": "1405/02/29",
+      "value": 343623.0
+    },
+    {
+      "date": "1405/02/30",
+      "value": 339957.0
+    },
+    {
+      "date": "1405/03/02",
+      "value": 350622.0
+    },
+    {
+      "date": "1405/03/03",
+      "value": 363106.0
+    },
+    {
+      "date": "1405/03/04",
+      "value": 371873.0
+    },
+    {
+      "date": "1405/03/05",
+      "value": 377054.0
+    },
+    {
+      "date": "1405/03/09",
+      "value": 387894.0
+    },
+    {
+      "date": "1405/03/10",
+      "value": 399309.0
+    },
+    {
+      "date": "1405/03/11",
+      "value": 399937.0
+    },
+    {
+      "date": "1405/03/12",
+      "value": 394089.0
+    },
+    {
+      "date": "1405/03/13",
+      "value": 383434.0
+    },
+    {
+      "date": "1405/03/16",
+      "value": 379363.0
+    },
+    {
+      "date": "1405/03/17",
+      "value": 390342.0
+    },
+    {
+      "date": "1405/03/18",
+      "value": 379408.0
+    },
+    {
+      "date": "1405/03/19",
+      "value": 390433.0
+    },
+    {
+      "date": "1405/03/20",
+      "value": 393274.0
+    },
+    {
+      "date": "1405/03/23",
+      "value": 404691.0
+    },
+    {
+      "date": "1405/03/24",
+      "value": 416481.0
+    },
+    {
+      "date": "1405/03/25",
+      "value": 428483.0
+    },
+    {
+      "date": "1405/03/26",
+      "value": 431513.0
+    },
+    {
+      "date": "1405/03/27",
+      "value": 426088.0
+    },
+    {
+      "date": "1405/03/30",
+      "value": 431187.0
+    },
+    {
+      "date": "1405/03/31",
+      "value": 438639.0
+    },
+    {
+      "date": "1405/04/01",
+      "value": 429521.0
+    },
+    {
+      "date": "1405/04/02",
+      "value": 438561.0
+    },
+    {
+      "date": "1405/04/06",
+      "value": 427894.0
+    },
+    {
+      "date": "1405/04/07",
+      "value": 416061.0
+    },
+    {
+      "date": "1405/04/08",
+      "value": 407909.0
+    },
+    {
+      "date": "1405/04/09",
+      "value": 414079.0
+    },
+    {
+      "date": "1405/04/10",
+      "value": 425105.0
+    },
+    {
+      "date": "1405/04/16",
+      "value": 436960.0
+    },
+    {
+      "date": "1405/04/17",
+      "value": 435783.0
+    },
+    {
+      "date": "1405/04/20",
+      "value": 425022.0
+    },
+    {
+      "date": "1405/04/21",
+      "value": 412871.0
+    },
+    {
+      "date": "1405/04/22",
+      "value": 403658.0
+    },
+    {
+      "date": "1405/04/23",
+      "value": 397310.0
+    },
+    {
+      "date": "1405/04/24",
+      "value": 391653.0
+    },
+    {
+      "date": "1405/04/27",
+      "value": 383900.0
+    },
+    {
+      "date": "1405/04/28",
+      "value": 369682.0
+    },
+    {
+      "date": "1405/04/29",
+      "value": 374913.0
+    },
+    {
+      "date": "1405/04/30",
+      "value": 376255.0
+    },
+    {
+      "date": "1405/04/31",
+      "value": 375495.0
+    },
+    {
+      "date": "1405/05/03",
+      "value": 381617.0
+    },
+    {
+      "date": "1405/05/04",
+      "value": 394790.0
+    },
+    {
+      "date": "1405/05/05",
+      "value": 402179.0
+    },
+    {
+      "date": "1405/05/06",
+      "value": 403323.0
+    },
+    {
+      "date": "1405/05/07",
+      "value": 395719.0
+    },
+    {
+      "date": "1405/05/10",
+      "value": 401376.0
+    },
+    {
+      "date": "1405/05/11",
+      "value": 411248.0
+    },
+    {
+      "date": "1405/05/12",
+      "value": 422982.0
+    },
+    {
+      "date": "1405/05/14",
+      "value": 435221.0
+    },
+    {
+      "date": "1405/05/17",
+      "value": 447920.0
+    },
+    {
+      "date": "1405/05/18",
+      "value": 438714.0
+    },
+    {
+      "date": "1405/05/19",
+      "value": 447912.0
+    },
+    {
+      "date": "1405/05/20",
+      "value": 453182.0
+    },
+    {
+      "date": "1405/05/24",
+      "value": 449596.0
+    },
+    {
+      "date": "1405/05/25",
+      "value": 461595.0
+    },
+    {
+      "date": "1405/05/26",
+      "value": 474834.0
+    },
+    {
+      "date": "1405/05/27",
+      "value": 479739.0
+    },
+    {
+      "date": "1405/05/28",
+      "value": 486254.0
+    },
+    {
+      "date": "1405/05/31",
+      "value": 499603.0
+    },
+    {
+      "date": "1405/06/01",
+      "value": 511588.0
+    },
+    {
+      "date": "1405/06/02",
+      "value": 517546.0
+    },
+    {
+      "date": "1405/06/03",
+      "value": 525890.0
+    },
+    {
+      "date": "1405/06/04",
+      "value": 539986.0
+    },
+    {
+      "date": "1405/06/07",
+      "value": 551473.0
+    },
+    {
+      "date": "1405/06/09",
+      "value": 547000.0
+    },
+    {
+      "date": "1405/06/10",
+      "value": 547428.0
+    },
+    {
+      "date": "1405/06/11",
+      "value": 538112.0
+    },
+    {
+      "date": "1405/06/14",
+      "value": 547933.0
+    },
+    {
+      "date": "1405/06/15",
+      "value": 559038.0
+    },
+    {
+      "date": "1405/06/16",
+      "value": 575247.0
+    },
+    {
+      "date": "1405/06/17",
+      "value": 588283.0
+    },
+    {
+      "date": "1405/06/18",
+      "value": 576185.0
+    },
+    {
+      "date": "1405/06/21",
+      "value": 586457.0
+    },
+    {
+      "date": "1405/06/22",
+      "value": 587492.0
+    },
+    {
+      "date": "1405/06/23",
+      "value": 572299.0
+    },
+    {
+      "date": "1405/06/24",
+      "value": 584384.0
+    },
+    {
+      "date": "1405/06/25",
+      "value": 574964.0
+    },
+    {
+      "date": "1405/06/28",
+      "value": 562946.0
+    },
+    {
+      "date": "1405/06/29",
+      "value": 548712.0
+    },
+    {
+      "date": "1405/06/30",
+      "value": 545220.0
+    },
+    {
+      "date": "1405/06/31",
+      "value": 531963.0
+    },
+    {
+      "date": "1405/07/01",
+      "value": 533364.0
+    },
+    {
+      "date": "1405/07/04",
+      "value": 519622.0
+    },
+    {
+      "date": "1405/07/05",
+      "value": 526641.0
+    },
+    {
+      "date": "1405/07/06",
+      "value": 538641.0
+    },
+    {
+      "date": "1405/07/07",
+      "value": 535075.0
+    },
+    {
+      "date": "1405/07/08",
+      "value": 547942.0
+    },
+    {
+      "date": "1405/07/11",
+      "value": 550257.0
+    },
+    {
+      "date": "1405/07/12",
+      "value": 556042.0
+    },
+    {
+      "date": "1405/07/13",
+      "value": 547989.0
+    },
+    {
+      "date": "1405/07/14",
+      "value": 563384.0
+    },
+    {
+      "date": "1405/07/15",
+      "value": 569234.0
+    }
+  ]
+}
