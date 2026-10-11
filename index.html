@@ -255,7 +255,7 @@
   <section class="panel">
     <h2>
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-      بازدهی مرکب — اتوکار در برابر شاخص خودرو
+      بازدهی از آغاز تأسیس — اتوکار در برابر شاخص خودرو
     </h2>
     <div class="chart-box"><canvas id="cumChart"></canvas></div>
     <div class="table-caption">بازدهی انباشته — صندوق اتوکار در برابر شاخص بازار</div>
@@ -683,11 +683,6 @@ function buildChartFilters(state) {
   const entities = [
     { key: "__MARKET__", name: "بازار", color: "#94A3B8" },
     { key: "__INDEX__", name: "شاخص خودرو", color: "#14B8A6" },
-    ...state.order.map((slug, i) => ({
-      key: slug,
-      name: FUND_NAMES_FA[slug] || slug,
-      color: FUND_PALETTE[i % FUND_PALETTE.length]
-    }))
   ];
 
   // Initialize filters (all checked by default)
