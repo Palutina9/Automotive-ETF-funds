@@ -742,12 +742,6 @@ function renderChart(state, selectedKey) {
     return bv - av;
   });
 
-  // Assign palette colors to funds (after sorting so colors stay consistent per fund)
-  let fundColorIdx = 0;
-  allEntries.forEach(e => {
-    if (!e.color) e.color = FUND_PALETTE[fundColorIdx++ % FUND_PALETTE.length];
-  });
-
   const labels = allEntries.map(e => e.name);
   const returnData = allEntries.map(e => e.ret);
   const barColors = allEntries.map(e => e.color);
