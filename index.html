@@ -723,7 +723,7 @@ function renderChart(state, selectedKey) {
   const marketVal = getCellValue("__MARKET__", selectedKey, state);
   const indexVal = getCellValue("__INDEX__", selectedKey, state);
 
-    // --- Build list of ALL entries, then filter + sort by return ---
+  // --- Build list of ALL entries, then filter + sort by return ---
   let fundColorIdx = 0;
   const allEntries = [
     { key: "__MARKET__", name: "بازار", ret: marketVal, nav: null, color: "#94A3B8" },
