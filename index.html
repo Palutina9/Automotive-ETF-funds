@@ -95,6 +95,46 @@
 
   .chart-box { height: 340px; position: relative; }
   .chart-box.small { height: 260px; }
+  .chart-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    background: #F8FAFC;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    }
+  .chart-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--muted);
+    transition: all 0.15s;
+  }
+  .chart-filter-chip.active {
+    border-color: currentColor;
+    background: currentColor + "10";
+  }
+  .chart-filter-chip:hover {
+    border-color: var(--line-strong);
+  }
+  .chart-filter-chip .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+  .chart-filter-chip input { display: none; }
 
   .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--line); }
   table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
@@ -192,13 +232,14 @@
   <section class="kpi-grid" id="kpiGrid"></section>
 
   <section class="panel">
-    <div class="panel-head">
+        <div class="panel-head">
       <h2>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
         مقایسه بازدهی
       </h2>
       <select class="period-select" id="periodSelect"></select>
     </div>
+    <div class="chart-filters" id="chartFilters"></div>
     <div class="chart-box"><canvas id="periodChart"></canvas></div>
     <div class="table-caption">میله‌ها: بازدهی دوره انتخاب‌شده (٪) — ، مرتب‌شده بر اساس بازدهی</div>
   </section>
@@ -561,6 +602,7 @@ function renderNavList(state) {
 
 // ---------- Table (transposed: rows = بازار/شاخص/فands, columns = periods) ----------
 let sortState = { column: null, direction: 'desc' };
+let chartFilters = {};  // { "__MARKET__": true, "__INDEX__": true, "Khodran": true, ... }
 
 function sortRows(rowKeys, state) {
   if (!sortState.column) return rowKeys;
@@ -633,7 +675,45 @@ function renderTable(state) {
     });
   });
 }
+function buildChartFilters(state) {
+  const host = document.getElementById("chartFilters");
+  if (!host) return;
 
+  // Build list of entities: بازار + شاخص خودرو + funds
+  const entities = [
+    { key: "__MARKET__", name: "بازار", color: "#94A3B8" },
+    { key: "__INDEX__", name: "شاخص خودرو", color: "#14B8A6" },
+    ...state.order.map((slug, i) => ({
+      key: slug,
+      name: FUND_NAMES_FA[slug] || slug,
+      color: FUND_PALETTE[i % FUND_PALETTE.length]
+    }))
+  ];
+
+  // Initialize filters (all checked by default)
+  if (Object.keys(chartFilters).length === 0) {
+    entities.forEach(e => { chartFilters[e.key] = true; });
+  }
+
+  host.innerHTML = entities.map(e => {
+    const isActive = chartFilters[e.key];
+    return '<label class="chart-filter-chip' + (isActive ? ' active' : '') + '" style="color:' + e.color + '">' +
+      '<span class="dot"></span>' +
+      '<span style="color: var(--ink)">' + e.name + '</span>' +
+      '</label>';
+  }).join("");
+
+  // Wire up click handlers
+  host.querySelectorAll('.chart-filter-chip').forEach((chip, i) => {
+    chip.addEventListener('click', function() {
+      const key = entities[i].key;
+      chartFilters[key] = !chartFilters[key];
+      // Re-render chart with current period selection
+      const sel = document.getElementById("periodSelect");
+      renderChart(state, sel.value);
+    });
+  });
+}
 // ---------- Period comparison chart: return bars, sorted by return ----------
 let chartInstance = null;
 function renderChart(state, selectedKey) {
@@ -643,11 +723,20 @@ function renderChart(state, selectedKey) {
   const marketVal = getCellValue("__MARKET__", selectedKey, state);
   const indexVal = getCellValue("__INDEX__", selectedKey, state);
 
+    // --- Build list of ALL entries, then filter + sort by return ---
+  let fundColorIdx = 0;
   const allEntries = [
-    { name: "بازار", ret: marketVal, color: "#94A3B8" },
-    { name: "شاخص خودرو", ret: indexVal, color: "#14B8A6" },
-    ...order.map(slug => ({ name: FUND_NAMES_FA[slug] || slug, ret: getCellValue(slug, selectedKey, state), color: null })),
-  ].sort((a, b) => {
+    { key: "__MARKET__", name: "بازار", ret: marketVal, nav: null, color: "#94A3B8" },
+    { key: "__INDEX__", name: "شاخص خودرو", ret: indexVal, nav: null, color: "#14B8A6" },
+    ...order.map(slug => {
+      const color = FUND_PALETTE[fundColorIdx++ % FUND_PALETTE.length];
+      return { key: slug, name: FUND_NAMES_FA[slug] || slug, ret: getCellValue(slug, selectedKey, state), nav: funds[slug].nav, color: color };
+    }),
+  ]
+  // Filter out unchecked entities
+  .filter(e => chartFilters[e.key] !== false)
+  // Sort descending by return
+  .sort((a, b) => {
     const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
     const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
     return bv - av;
@@ -806,6 +895,7 @@ function renderForDate(dateKey) {
   renderNavList(state);
   renderTable(state);
   setupPeriodSelect(state);
+  buildChartFilters(state);
   renderCumulativeChart(state);
   document.getElementById("exportBtn").disabled = state.order.length === 0;
   document.getElementById("exportBtn").onclick = () => exportExcel(state);
