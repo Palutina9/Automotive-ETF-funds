@@ -545,7 +545,19 @@ function mergeDatasets(auto, manual) {
   const marketDaily = a.marketDaily ?? b.marketDaily;
   const dailyReturnDate = a.dailyReturnDate ?? b.dailyReturnDate;
   const index = { ...a.index, ...b.index };
-  const funds = { ...a.funds, ...b.funds };
+  // Deep merge funds — preserve tseReturns and other fields from both datasets
+  const allFundSlugs = new Set([...Object.keys(a.funds), ...Object.keys(b.funds)]);
+  const funds = {};
+  for (const slug of allFundSlugs) {
+    const fa = a.funds[slug] || {};
+    const fb = b.funds[slug] || {};
+    funds[slug] = {
+      simpleReturns: fa.simpleReturns || fb.simpleReturns || new Array(PERIOD_KEYS.length).fill(null),
+      nav: fa.nav ?? fb.nav ?? null,
+      dailyReturn: fa.dailyReturn ?? fb.dailyReturn ?? null,
+      tseReturns: { ...(fa.tseReturns || {}), ...(fb.tseReturns || {}) },
+    };
+  }
   const order = [...a.order, ...b.order.filter(s => !a.order.includes(s))];
   const manualSlugs = new Set(b.order);
   const fundHistory = { ...a.fundHistory, ...b.fundHistory };
