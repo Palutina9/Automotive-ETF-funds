@@ -2,6 +2,114 @@
   "dates": {
     "1405/08/16": [
       {
+        "AutoCar_tseDailyReturn": 0.0
+      },
+      {
+        "AutoCar_tseWeeklyReturn": 2.775327407206351
+      },
+      {
+        "AutoCar_tseMonthlyReturn": -7.431854296540766
+      },
+      {
+        "AutoCar_tseQuarterlyReturn": 18.866739915240935
+      },
+      {
+        "AutoCar_tseSixmonthsReturn": 54.53525150494848
+      },
+      {
+        "AutoCar_tseAnnualReturn": 42.48353715898401
+      },
+      {
+        "Khodran_tseDailyReturn": 0.0
+      },
+      {
+        "Khodran_tseWeeklyReturn": 2.775327407206351
+      },
+      {
+        "Khodran_tseMonthlyReturn": -7.431854296540766
+      },
+      {
+        "Khodran_tseQuarterlyReturn": 18.866739915240935
+      },
+      {
+        "Khodran_tseSixmonthsReturn": 54.53525150494848
+      },
+      {
+        "Khodran_tseAnnualReturn": 42.48353715898401
+      },
+      {
+        "AutoAgah_tseDailyReturn": 0.0
+      },
+      {
+        "AutoAgah_tseWeeklyReturn": 3.113615664845173
+      },
+      {
+        "AutoAgah_tseMonthlyReturn": -3.8073491928632115
+      },
+      {
+        "AutoAgah_tseQuarterlyReturn": 29.318960593946315
+      },
+      {
+        "AutoAgah_tseSixmonthsReturn": 65.13217866909754
+      },
+      {
+        "AutoAgah_tseAnnualReturn": 55.36020583190394
+      },
+      {
+        "AutoDariush_tseDailyReturn": 0.0
+      },
+      {
+        "AutoDariush_tseWeeklyReturn": 0.7838745800671892
+      },
+      {
+        "AutoDariush_tseMonthlyReturn": -5.77560635142209
+      },
+      {
+        "AutoDariush_tseQuarterlyReturn": 29.859719438877757
+      },
+      {
+        "AutoDariush_tseSixmonthsReturn": 62.7159501807955
+      },
+      {
+        "AutoDariush_tseAnnualReturn": 50.88013411567477
+      },
+      {
+        "TakhtGaz_tseDailyReturn": 0.0
+      },
+      {
+        "TakhtGaz_tseWeeklyReturn": 0.6301751300652159
+      },
+      {
+        "TakhtGaz_tseMonthlyReturn": -2.381290872903042
+      },
+      {
+        "TakhtGaz_tseQuarterlyReturn": 15.103511859860866
+      },
+      {
+        "TakhtGaz_tseSixmonthsReturn": 42.22245236122618
+      },
+      {
+        "TakhtGaz_tseAnnualReturn": 31.002575598588187
+      },
+      {
+        "BehinRo_tseDailyReturn": 0.0
+      },
+      {
+        "BehinRo_tseWeeklyReturn": 2.136120895352801
+      },
+      {
+        "BehinRo_tseMonthlyReturn": -8.879878357830714
+      },
+      {
+        "BehinRo_tseQuarterlyReturn": 17.319237796919865
+      },
+      {
+        "BehinRo_tseSixmonthsReturn": 46.15071945370295
+      },
+      {
+        "BehinRo_tseAnnualReturn": 34.46522064323111
+      },
+      {
         "Khodran_fundDailyReturn": 0.0
       },
       {
@@ -29,7 +137,7 @@
         "Khodran_fundSimpleReturn": -7.37
       },
       {
-        "Khodran_fundNAV": 9435224349349.0
+        "Khodran_fundNAV": 9450827325146.0
       },
       {
         "TakhtGaz_fundDailyReturn": 0.0
@@ -59,7 +167,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7118644785448.0
+        "TakhtGaz_fundNAV": 7119134447705.0
       },
       {
         "AutoCar_fundDailyReturn": 0.0
@@ -89,11 +197,119 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4872944626667.0
+        "AutoCar_fundNAV": 4867081096632.0
       }
     ],
     "1405/08/15": [
       {
+        "AutoCar_tseDailyReturn": 0.0
+      },
+      {
+        "AutoCar_tseWeeklyReturn": 0.6980918821886842
+      },
+      {
+        "AutoCar_tseMonthlyReturn": -7.431854296540766
+      },
+      {
+        "AutoCar_tseQuarterlyReturn": 15.538942711114501
+      },
+      {
+        "AutoCar_tseSixmonthsReturn": 54.53525150494848
+      },
+      {
+        "AutoCar_tseAnnualReturn": 42.48353715898401
+      },
+      {
+        "Khodran_tseDailyReturn": 0.0
+      },
+      {
+        "Khodran_tseWeeklyReturn": 0.6980918821886842
+      },
+      {
+        "Khodran_tseMonthlyReturn": -7.431854296540766
+      },
+      {
+        "Khodran_tseQuarterlyReturn": 15.538942711114501
+      },
+      {
+        "Khodran_tseSixmonthsReturn": 54.53525150494848
+      },
+      {
+        "Khodran_tseAnnualReturn": 42.48353715898401
+      },
+      {
+        "AutoAgah_tseDailyReturn": 0.0
+      },
+      {
+        "AutoAgah_tseWeeklyReturn": 1.621227420621564
+      },
+      {
+        "AutoAgah_tseMonthlyReturn": -3.8073491928632115
+      },
+      {
+        "AutoAgah_tseQuarterlyReturn": 26.052466773363026
+      },
+      {
+        "AutoAgah_tseSixmonthsReturn": 65.13217866909754
+      },
+      {
+        "AutoAgah_tseAnnualReturn": 55.36020583190394
+      },
+      {
+        "AutoDariush_tseDailyReturn": 0.0
+      },
+      {
+        "AutoDariush_tseWeeklyReturn": -0.7231278342934183
+      },
+      {
+        "AutoDariush_tseMonthlyReturn": -5.77560635142209
+      },
+      {
+        "AutoDariush_tseQuarterlyReturn": 28.38801711840228
+      },
+      {
+        "AutoDariush_tseSixmonthsReturn": 62.7159501807955
+      },
+      {
+        "AutoDariush_tseAnnualReturn": 50.88013411567477
+      },
+      {
+        "TakhtGaz_tseDailyReturn": 0.0
+      },
+      {
+        "TakhtGaz_tseWeeklyReturn": 0.5785850300278307
+      },
+      {
+        "TakhtGaz_tseMonthlyReturn": -2.381290872903042
+      },
+      {
+        "TakhtGaz_tseQuarterlyReturn": 12.307818122342166
+      },
+      {
+        "TakhtGaz_tseSixmonthsReturn": 42.22245236122618
+      },
+      {
+        "TakhtGaz_tseAnnualReturn": 31.002575598588187
+      },
+      {
+        "BehinRo_tseDailyReturn": 0.0
+      },
+      {
+        "BehinRo_tseWeeklyReturn": -0.5641592920353983
+      },
+      {
+        "BehinRo_tseMonthlyReturn": -8.879878357830714
+      },
+      {
+        "BehinRo_tseQuarterlyReturn": 16.43782383419689
+      },
+      {
+        "BehinRo_tseSixmonthsReturn": 46.15071945370295
+      },
+      {
+        "BehinRo_tseAnnualReturn": 34.46522064323111
+      },
+      {
         "Khodran_fundDailyReturn": 0.0
       },
       {
@@ -121,7 +337,7 @@
         "Khodran_fundSimpleReturn": -7.37
       },
       {
-        "Khodran_fundNAV": 9435224349349.0
+        "Khodran_fundNAV": 9450827325146.0
       },
       {
         "TakhtGaz_fundDailyReturn": 0.0
@@ -151,7 +367,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7118644785448.0
+        "TakhtGaz_fundNAV": 7119134447705.0
       },
       {
         "AutoCar_fundDailyReturn": 0.0
@@ -181,10 +397,118 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4872944626667.0
+        "AutoCar_fundNAV": 4867081096632.0
       }
     ],
     "1405/08/14": [
+      {
+        "AutoCar_tseDailyReturn": 0.0
+      },
+      {
+        "AutoCar_tseWeeklyReturn": 0.6980918821886842
+      },
+      {
+        "AutoCar_tseMonthlyReturn": -6.483082242529019
+      },
+      {
+        "AutoCar_tseQuarterlyReturn": 18.997485857950974
+      },
+      {
+        "AutoCar_tseSixmonthsReturn": 54.53525150494848
+      },
+      {
+        "AutoCar_tseAnnualReturn": 42.48353715898401
+      },
+      {
+        "Khodran_tseDailyReturn": 0.0
+      },
+      {
+        "Khodran_tseWeeklyReturn": 0.6980918821886842
+      },
+      {
+        "Khodran_tseMonthlyReturn": -6.483082242529019
+      },
+      {
+        "Khodran_tseQuarterlyReturn": 18.997485857950974
+      },
+      {
+        "Khodran_tseSixmonthsReturn": 54.53525150494848
+      },
+      {
+        "Khodran_tseAnnualReturn": 42.48353715898401
+      },
+      {
+        "AutoAgah_tseDailyReturn": 0.0
+      },
+      {
+        "AutoAgah_tseWeeklyReturn": 1.621227420621564
+      },
+      {
+        "AutoAgah_tseMonthlyReturn": -2.951891138969249
+      },
+      {
+        "AutoAgah_tseQuarterlyReturn": 29.828710671540172
+      },
+      {
+        "AutoAgah_tseSixmonthsReturn": 65.13217866909754
+      },
+      {
+        "AutoAgah_tseAnnualReturn": 55.36020583190394
+      },
+      {
+        "AutoDariush_tseDailyReturn": 0.0
+      },
+      {
+        "AutoDariush_tseWeeklyReturn": -0.7231278342934183
+      },
+      {
+        "AutoDariush_tseMonthlyReturn": -4.40785979819437
+      },
+      {
+        "AutoDariush_tseQuarterlyReturn": 32.234103338502976
+      },
+      {
+        "AutoDariush_tseSixmonthsReturn": 62.7159501807955
+      },
+      {
+        "AutoDariush_tseAnnualReturn": 50.88013411567477
+      },
+      {
+        "TakhtGaz_tseDailyReturn": 0.0
+      },
+      {
+        "TakhtGaz_tseWeeklyReturn": 0.5785850300278307
+      },
+      {
+        "TakhtGaz_tseMonthlyReturn": -0.7802904414420924
+      },
+      {
+        "TakhtGaz_tseQuarterlyReturn": 15.675539083557952
+      },
+      {
+        "TakhtGaz_tseSixmonthsReturn": 42.22245236122618
+      },
+      {
+        "TakhtGaz_tseAnnualReturn": 31.002575598588187
+      },
+      {
+        "BehinRo_tseDailyReturn": 0.0
+      },
+      {
+        "BehinRo_tseWeeklyReturn": -0.5641592920353983
+      },
+      {
+        "BehinRo_tseMonthlyReturn": -7.095240556043615
+      },
+      {
+        "BehinRo_tseQuarterlyReturn": 19.925288506437195
+      },
+      {
+        "BehinRo_tseSixmonthsReturn": 46.15071945370295
+      },
+      {
+        "BehinRo_tseAnnualReturn": 34.46522064323111
+      },
       {
         "Khodran_fundDailyReturn": 0.0
       },
@@ -213,7 +537,7 @@
         "Khodran_fundSimpleReturn": -7.37
       },
       {
-        "Khodran_fundNAV": 9435224349349.0
+        "Khodran_fundNAV": 9450827325146.0
       },
       {
         "TakhtGaz_fundDailyReturn": 0.13
@@ -243,7 +567,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7118644785448.0
+        "TakhtGaz_fundNAV": 7119134447705.0
       },
       {
         "AutoCar_fundDailyReturn": 0.073
@@ -273,10 +597,118 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4872944626667.0
+        "AutoCar_fundNAV": 4867081096632.0
       }
     ],
     "1405/08/13": [
+      {
+        "AutoCar_tseDailyReturn": 1.0406937958639093
+      },
+      {
+        "AutoCar_tseWeeklyReturn": 0.6980918821886842
+      },
+      {
+        "AutoCar_tseMonthlyReturn": -4.054225262891169
+      },
+      {
+        "AutoCar_tseQuarterlyReturn": 18.997485857950974
+      },
+      {
+        "AutoCar_tseSixmonthsReturn": 54.53525150494848
+      },
+      {
+        "AutoCar_tseAnnualReturn": 39.9815157116451
+      },
+      {
+        "Khodran_tseDailyReturn": 1.0406937958639093
+      },
+      {
+        "Khodran_tseWeeklyReturn": 0.6980918821886842
+      },
+      {
+        "Khodran_tseMonthlyReturn": -4.054225262891169
+      },
+      {
+        "Khodran_tseQuarterlyReturn": 18.997485857950974
+      },
+      {
+        "Khodran_tseSixmonthsReturn": 54.53525150494848
+      },
+      {
+        "Khodran_tseAnnualReturn": 39.9815157116451
+      },
+      {
+        "AutoAgah_tseDailyReturn": 1.8784095382711883
+      },
+      {
+        "AutoAgah_tseWeeklyReturn": 1.621227420621564
+      },
+      {
+        "AutoAgah_tseMonthlyReturn": -0.42873632715879734
+      },
+      {
+        "AutoAgah_tseQuarterlyReturn": 29.828710671540172
+      },
+      {
+        "AutoAgah_tseSixmonthsReturn": 65.13217866909754
+      },
+      {
+        "AutoAgah_tseAnnualReturn": 53.257191201353635
+      },
+      {
+        "AutoDariush_tseDailyReturn": 1.0983524712930606
+      },
+      {
+        "AutoDariush_tseWeeklyReturn": -0.7231278342934183
+      },
+      {
+        "AutoDariush_tseMonthlyReturn": -1.9014169795325178
+      },
+      {
+        "AutoDariush_tseQuarterlyReturn": 32.234103338502976
+      },
+      {
+        "AutoDariush_tseSixmonthsReturn": 62.7159501807955
+      },
+      {
+        "AutoDariush_tseAnnualReturn": 47.95871769111334
+      },
+      {
+        "TakhtGaz_tseDailyReturn": 0.8815103210166751
+      },
+      {
+        "TakhtGaz_tseWeeklyReturn": 0.5785850300278307
+      },
+      {
+        "TakhtGaz_tseMonthlyReturn": 1.9751986336971856
+      },
+      {
+        "TakhtGaz_tseQuarterlyReturn": 15.675539083557952
+      },
+      {
+        "TakhtGaz_tseSixmonthsReturn": 42.22245236122618
+      },
+      {
+        "TakhtGaz_tseAnnualReturn": 28.74285178588169
+      },
+      {
+        "BehinRo_tseDailyReturn": 0.21181716833890749
+      },
+      {
+        "BehinRo_tseWeeklyReturn": -0.5641592920353983
+      },
+      {
+        "BehinRo_tseMonthlyReturn": -4.716981132075472
+      },
+      {
+        "BehinRo_tseQuarterlyReturn": 19.925288506437195
+      },
+      {
+        "BehinRo_tseSixmonthsReturn": 46.15071945370295
+      },
+      {
+        "BehinRo_tseAnnualReturn": 34.56586826347306
+      },
       {
         "Khodran_fundDailyReturn": 0.777
       },
@@ -305,7 +737,7 @@
         "Khodran_fundSimpleReturn": -7.37
       },
       {
-        "Khodran_fundNAV": 9435224349349.0
+        "Khodran_fundNAV": 9450827325146.0
       },
       {
         "TakhtGaz_fundDailyReturn": 1.077
@@ -335,7 +767,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7114358553300.0
+        "TakhtGaz_fundNAV": 7119134447705.0
       },
       {
         "AutoCar_fundDailyReturn": 0.945
@@ -365,10 +797,118 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4871273998500.0
+        "AutoCar_fundNAV": 4867081096632.0
       }
     ],
     "1405/08/12": [
+      {
+        "AutoCar_tseDailyReturn": 2.8614561174775273
+      },
+      {
+        "AutoCar_tseWeeklyReturn": 0.020017348368586107
+      },
+      {
+        "AutoCar_tseMonthlyReturn": -7.337578042900414
+      },
+      {
+        "AutoCar_tseQuarterlyReturn": 17.771841609050913
+      },
+      {
+        "AutoCar_tseSixmonthsReturn": 52.943577186001434
+      },
+      {
+        "AutoCar_tseAnnualReturn": 36.89497716894977
+      },
+      {
+        "Khodran_tseDailyReturn": 2.8614561174775273
+      },
+      {
+        "Khodran_tseWeeklyReturn": 0.020017348368586107
+      },
+      {
+        "Khodran_tseMonthlyReturn": -7.337578042900414
+      },
+      {
+        "Khodran_tseQuarterlyReturn": 17.771841609050913
+      },
+      {
+        "Khodran_tseSixmonthsReturn": 52.943577186001434
+      },
+      {
+        "Khodran_tseAnnualReturn": 36.89497716894977
+      },
+      {
+        "AutoAgah_tseDailyReturn": 2.9588882455124494
+      },
+      {
+        "AutoAgah_tseWeeklyReturn": 0.1407974769092138
+      },
+      {
+        "AutoAgah_tseMonthlyReturn": -4.822824108767798
+      },
+      {
+        "AutoAgah_tseQuarterlyReturn": 27.434960223607824
+      },
+      {
+        "AutoAgah_tseSixmonthsReturn": 62.087511394712855
+      },
+      {
+        "AutoAgah_tseAnnualReturn": 47.31565865782933
+      },
+      {
+        "AutoDariush_tseDailyReturn": 2.259093809827696
+      },
+      {
+        "AutoDariush_tseWeeklyReturn": 1.0467902635893556
+      },
+      {
+        "AutoDariush_tseMonthlyReturn": -2.707953855494839
+      },
+      {
+        "AutoDariush_tseQuarterlyReturn": 30.797485919516777
+      },
+      {
+        "AutoDariush_tseSixmonthsReturn": 60.94817195660907
+      },
+      {
+        "AutoDariush_tseAnnualReturn": 45.18437981335508
+      },
+      {
+        "TakhtGaz_tseDailyReturn": 1.0241187384044528
+      },
+      {
+        "TakhtGaz_tseWeeklyReturn": -2.0717933961585495
+      },
+      {
+        "TakhtGaz_tseMonthlyReturn": -0.5987586710478277
+      },
+      {
+        "TakhtGaz_tseQuarterlyReturn": 14.66475741239892
+      },
+      {
+        "TakhtGaz_tseSixmonthsReturn": 40.979701739850874
+      },
+      {
+        "TakhtGaz_tseAnnualReturn": 26.373932417378388
+      },
+      {
+        "BehinRo_tseDailyReturn": 1.5337596921161356
+      },
+      {
+        "BehinRo_tseWeeklyReturn": 0.48168477652066766
+      },
+      {
+        "BehinRo_tseMonthlyReturn": -6.790668675637762
+      },
+      {
+        "BehinRo_tseQuarterlyReturn": 19.67180308184911
+      },
+      {
+        "BehinRo_tseSixmonthsReturn": 45.841801479554505
+      },
+      {
+        "BehinRo_tseAnnualReturn": 31.524926686217007
+      },
       {
         "Khodran_fundDailyReturn": 1.887
       },
@@ -397,7 +937,7 @@
         "Khodran_fundSimpleReturn": -7.37
       },
       {
-        "Khodran_fundNAV": 9435224349349.0
+        "Khodran_fundNAV": 9450827325146.0
       },
       {
         "TakhtGaz_fundDailyReturn": 1.432
@@ -427,7 +967,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7114358553300.0
+        "TakhtGaz_fundNAV": 7119134447705.0
       },
       {
         "AutoCar_fundDailyReturn": 1.737
@@ -457,10 +997,118 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4871273998500.0
+        "AutoCar_fundNAV": 4867081096632.0
       }
     ],
     "1405/08/11": [
+      {
+        "AutoCar_tseDailyReturn": 1.2857937169863776
+      },
+      {
+        "AutoCar_tseWeeklyReturn": -4.433077578857629
+      },
+      {
+        "AutoCar_tseMonthlyReturn": -10.082063305978899
+      },
+      {
+        "AutoCar_tseQuarterlyReturn": 17.90453074433657
+      },
+      {
+        "AutoCar_tseSixmonthsReturn": 48.6889092949699
+      },
+      {
+        "AutoCar_tseAnnualReturn": 33.82001836547291
+      },
+      {
+        "Khodran_tseDailyReturn": 1.2857937169863776
+      },
+      {
+        "Khodran_tseWeeklyReturn": -4.433077578857629
+      },
+      {
+        "Khodran_tseMonthlyReturn": -10.082063305978899
+      },
+      {
+        "Khodran_tseQuarterlyReturn": 17.90453074433657
+      },
+      {
+        "Khodran_tseSixmonthsReturn": 48.6889092949699
+      },
+      {
+        "Khodran_tseAnnualReturn": 33.82001836547291
+      },
+      {
+        "AutoAgah_tseDailyReturn": 0.9941520467836258
+      },
+      {
+        "AutoAgah_tseWeeklyReturn": -3.6433632762372374
+      },
+      {
+        "AutoAgah_tseMonthlyReturn": -5.9880239520958085
+      },
+      {
+        "AutoAgah_tseQuarterlyReturn": 27.482099357791395
+      },
+      {
+        "AutoAgah_tseSixmonthsReturn": 57.42935278030994
+      },
+      {
+        "AutoAgah_tseAnnualReturn": 45.00419815281276
+      },
+      {
+        "AutoDariush_tseDailyReturn": 0.45515738188345406
+      },
+      {
+        "AutoDariush_tseWeeklyReturn": -3.3253130976617933
+      },
+      {
+        "AutoDariush_tseMonthlyReturn": -6.759490658098298
+      },
+      {
+        "AutoDariush_tseQuarterlyReturn": 31.559063050961296
+      },
+      {
+        "AutoDariush_tseSixmonthsReturn": 57.39252711932503
+      },
+      {
+        "AutoDariush_tseAnnualReturn": 40.70216395797791
+      },
+      {
+        "TakhtGaz_tseDailyReturn": 0.5597014925373134
+      },
+      {
+        "TakhtGaz_tseWeeklyReturn": -4.938271604938271
+      },
+      {
+        "TakhtGaz_tseMonthlyReturn": 0.3799165673420739
+      },
+      {
+        "TakhtGaz_tseQuarterlyReturn": 16.89945345710072
+      },
+      {
+        "TakhtGaz_tseSixmonthsReturn": 39.55053852526926
+      },
+      {
+        "TakhtGaz_tseAnnualReturn": 26.94300518134715
+      },
+      {
+        "BehinRo_tseDailyReturn": 2.322214500810748
+      },
+      {
+        "BehinRo_tseWeeklyReturn": -3.863104630284564
+      },
+      {
+        "BehinRo_tseMonthlyReturn": -6.130797428677682
+      },
+      {
+        "BehinRo_tseQuarterlyReturn": 21.38636988183567
+      },
+      {
+        "BehinRo_tseSixmonthsReturn": 43.63872855865377
+      },
+      {
+        "BehinRo_tseAnnualReturn": 32.949586155003765
+      },
       {
         "Khodran_fundDailyReturn": 1.72
       },
@@ -489,7 +1137,7 @@
         "Khodran_fundSimpleReturn": -7.37
       },
       {
-        "Khodran_fundNAV": 9435224349349.0
+        "Khodran_fundNAV": 9450827325146.0
       },
       {
         "TakhtGaz_fundDailyReturn": 0.624
@@ -519,7 +1167,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7114358553300.0
+        "TakhtGaz_fundNAV": 7119134447705.0
       },
       {
         "AutoCar_fundDailyReturn": 1.468
@@ -549,10 +1197,118 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4871273998500.0
+        "AutoCar_fundNAV": 4867081096632.0
       }
     ],
     "1405/08/10": [
+      {
+        "AutoCar_tseDailyReturn": -2.368188912261654
+      },
+      {
+        "AutoCar_tseWeeklyReturn": -5.061035961728803
+      },
+      {
+        "AutoCar_tseMonthlyReturn": -11.458461538461538
+      },
+      {
+        "AutoCar_tseQuarterlyReturn": 16.40776699029126
+      },
+      {
+        "AutoCar_tseSixmonthsReturn": 46.801346801346796
+      },
+      {
+        "AutoCar_tseAnnualReturn": 32.36430542778289
+      },
+      {
+        "Khodran_tseDailyReturn": -2.368188912261654
+      },
+      {
+        "Khodran_tseWeeklyReturn": -5.061035961728803
+      },
+      {
+        "Khodran_tseMonthlyReturn": -11.458461538461538
+      },
+      {
+        "Khodran_tseQuarterlyReturn": 16.40776699029126
+      },
+      {
+        "Khodran_tseSixmonthsReturn": 46.801346801346796
+      },
+      {
+        "Khodran_tseAnnualReturn": 32.36430542778289
+      },
+      {
+        "AutoAgah_tseDailyReturn": -2.663934426229508
+      },
+      {
+        "AutoAgah_tseWeeklyReturn": -4.196313518964648
+      },
+      {
+        "AutoAgah_tseMonthlyReturn": -7.024793388429752
+      },
+      {
+        "AutoAgah_tseQuarterlyReturn": 26.227208976157083
+      },
+      {
+        "AutoAgah_tseSixmonthsReturn": 55.87967183226983
+      },
+      {
+        "AutoAgah_tseAnnualReturn": 44.303797468354425
+      },
+      {
+        "AutoDariush_tseDailyReturn": -2.955082742316785
+      },
+      {
+        "AutoDariush_tseWeeklyReturn": -3.83453547870045
+      },
+      {
+        "AutoDariush_tseMonthlyReturn": -8.349001175088132
+      },
+      {
+        "AutoDariush_tseQuarterlyReturn": 30.962975400889935
+      },
+      {
+        "AutoDariush_tseSixmonthsReturn": 56.6793893129771
+      },
+      {
+        "AutoDariush_tseAnnualReturn": 40.73439191627571
+      },
+      {
+        "TakhtGaz_tseDailyReturn": -1.8099215944896316
+      },
+      {
+        "TakhtGaz_tseWeeklyReturn": -4.565201908695961
+      },
+      {
+        "TakhtGaz_tseMonthlyReturn": 1.76957545378598
+      },
+      {
+        "TakhtGaz_tseQuarterlyReturn": 16.24880714843411
+      },
+      {
+        "TakhtGaz_tseSixmonthsReturn": 38.77381938690969
+      },
+      {
+        "TakhtGaz_tseAnnualReturn": 28.94534257120862
+      },
+      {
+        "BehinRo_tseDailyReturn": -1.8975116464038175
+      },
+      {
+        "BehinRo_tseWeeklyReturn": -6.890973794888386
+      },
+      {
+        "BehinRo_tseMonthlyReturn": -10.319397559075565
+      },
+      {
+        "BehinRo_tseQuarterlyReturn": 18.63149216817807
+      },
+      {
+        "BehinRo_tseSixmonthsReturn": 40.37883098935046
+      },
+      {
+        "BehinRo_tseAnnualReturn": 29.34831460674157
+      },
       {
         "Khodran_fundDailyReturn": -1.196
       },
@@ -581,7 +1337,7 @@
         "Khodran_fundSimpleReturn": -7.37
       },
       {
-        "Khodran_fundNAV": 9428723964916.0
+        "Khodran_fundNAV": 9450827325146.0
       },
       {
         "TakhtGaz_fundDailyReturn": -1.16
@@ -611,7 +1367,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7114358553300.0
+        "TakhtGaz_fundNAV": 7119134447705.0
       },
       {
         "AutoCar_fundDailyReturn": -0.938
@@ -641,7 +1397,7 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4871273998500.0
+        "AutoCar_fundNAV": 4867081096632.0
       }
     ]
   },
