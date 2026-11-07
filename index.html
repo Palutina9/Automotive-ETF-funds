@@ -551,8 +551,11 @@ function mergeDatasets(auto, manual) {
   for (const slug of allFundSlugs) {
     const fa = a.funds[slug] || {};
     const fb = b.funds[slug] || {};
+    // Merge simpleReturns element-by-element — take non-null from either source
+    const srA = fa.simpleReturns || new Array(PERIOD_KEYS.length).fill(null);
+    const srB = fb.simpleReturns || new Array(PERIOD_KEYS.length).fill(null);
     funds[slug] = {
-      simpleReturns: fa.simpleReturns || fb.simpleReturns || new Array(PERIOD_KEYS.length).fill(null),
+      simpleReturns: srA.map((v, i) => (v !== null && v !== undefined) ? v : srB[i]),
       nav: fa.nav ?? fb.nav ?? null,
       dailyReturn: fa.dailyReturn ?? fb.dailyReturn ?? null,
       tseReturns: { ...(fa.tseReturns || {}), ...(fb.tseReturns || {}) },
