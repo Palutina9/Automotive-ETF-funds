@@ -235,15 +235,27 @@
         <div class="panel-head">
       <h2>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
-        مقایسه بازدهی
+         مقایسه بازدهی بر اساس NAV
       </h2>
       <select class="period-select" id="periodSelect"></select>
     </div>
     <div class="chart-filters" id="chartFilters"></div>
     <div class="chart-box"><canvas id="periodChart"></canvas></div>
-    <div class="table-caption">میله‌ها: بازدهی دوره انتخاب‌شده (٪) — ، مرتب‌شده بر اساس بازدهی</div>
+    <div class="table-caption">میله‌ها: بازدهی دوره انتخاب‌شده (٪) — ، مرتب‌شده بر اساس بازدهی NAV</div>
   </section>
 
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><path d="M3 3v18h18"/><path d="M7 17V11"/><path d="M12 17V5"/><path d="M17 17V8"/></svg>
+        مقایسه بازدهی بر اساس قیمت تابلو
+      </h2>
+      <select class="period-select" id="tsePeriodSelect"></select>
+    </div>
+    <div class="chart-box"><canvas id="tseChart"></canvas></div>
+    <div class="table-caption">میله‌ها: بازدهی قیمتی دوره انتخاب‌شده (٪) — مرتب‌شده بر اساس بازدهی</div>
+  </section>
   <section class="panel">
     <h2>
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent)"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
@@ -288,6 +300,14 @@ const INDEX_KEY_MAP = {
   indexQuarterlyReturn: "SIMPLE_MONTHLY3",
   indexSixmonthsReturn: "SIMPLE_MONTHLY6",
   indexAnnualReturn: "SIMPLE_YEARLY",
+};
+const TSE_KEY_MAP = {
+  tseDailyReturn: "daily",
+  tseWeeklyReturn: "SIMPLE_WEEKLY",
+  tseMonthlyReturn: "SIMPLE_MONTHLY",
+  tseQuarterlyReturn: "SIMPLE_MONTHLY3",
+  tseSixmonthsReturn: "SIMPLE_MONTHLY6",
+  tseAnnualReturn: "SIMPLE_YEARLY",
 };
 const PERIOD_KEYS = ["SIMPLE_WEEKLY", "SIMPLE_MONTHLY", "SIMPLE_MONTHLY3", "SIMPLE_MONTHLY6", "SIMPLE_YEARLY", "SIMPLE_ALL_DAYS", "MAX_SIMPLE_WEEKLY", "MIN_SIMPLE_WEEKLY"];
 // Columns shown in the transposed table, in order: daily first, then the period keys.
@@ -360,7 +380,7 @@ function parseDataset(list) {
   const periods = []; let marketDaily = null; let dailyReturnDate = null; const funds = {}; const order = []; const index = {}; const fundHistory = {};
   if (!Array.isArray(list)) return { periods, marketDaily, funds, order, index, dailyReturnDate };
   const ensureFund = (slug) => {
-    if (!funds[slug]) { funds[slug] = { simpleReturns: new Array(PERIOD_KEYS.length).fill(null), nav: null, dailyReturn: null }; order.push(slug); }
+    if (!funds[slug]) { funds[slug] = { simpleReturns: new Array(PERIOD_KEYS.length).fill(null), nav: null, dailyReturn: null, tseReturns: {} }; order.push(slug); }
     return funds[slug];
   };
   for (const obj of list) {
@@ -390,6 +410,16 @@ function parseDataset(list) {
       ensureFund(m[1]).dailyReturn = typeof value === "number" ? value : null;
     } else if ((m = entryKey.match(/^(.+)_fundHistory$/))) {
       fundHistory[m[1]] = Array.isArray(value) ? value : [];
+    } else if (entryKey.includes("_tse") && TSE_KEY_MAP[entryKey.replace(/^(.+)_tse/, "tse")]) {
+      // TSE returns: {FundSlug}_tseDailyReturn, _tseWeeklyReturn, etc.
+      const m2 = entryKey.match(/^(.+)_tse(Daily|Weekly|Monthly|Quarterly|Sixmonths|Annual)Return$/);
+      if (m2) {
+        const slug = m2[1];
+        const periodKey = TSE_KEY_MAP["tse" + m2[2] + "Return"];
+        ensureFund(slug);  // make sure fund exists
+        if (!funds[slug].tseReturns) funds[slug].tseReturns = {};
+        funds[slug].tseReturns[periodKey] = typeof value === "number" ? value : null;
+      }
     } else if (entryKey === "indexHistory") {
       fundHistory["indexHistory"] = Array.isArray(value) ? value : [];
     }
@@ -709,6 +739,96 @@ function buildChartFilters(state) {
     });
   });
 }
+let tseChartInstance = null;
+const TSE_PERIOD_KEYS = ["daily", "SIMPLE_WEEKLY", "SIMPLE_MONTHLY", "SIMPLE_MONTHLY3", "SIMPLE_MONTHLY6", "SIMPLE_YEARLY"];
+
+function renderTseChart(state, selectedKey) {
+  const { funds, order } = state;
+  const ctx = document.getElementById("tseChart");
+  if (!ctx) return;
+
+  // Build entries from funds that have TSE returns
+  let fundColorIdx = 0;
+  const allEntries = order
+    .map(slug => {
+      const color = FUND_PALETTE[fundColorIdx++ % FUND_PALETTE.length];
+      const ret = funds[slug].tseReturns ? (funds[slug].tseReturns[selectedKey] ?? null) : null;
+      return { key: slug, name: FUND_NAMES_FA[slug] || slug, ret: ret, color: color };
+    })
+    .filter(e => e.ret !== null && isFinite(e.ret))  // hide funds without TSE data
+    .sort((a, b) => {
+      const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
+      const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
+      return bv - av;
+    });
+
+  if (tseChartInstance) tseChartInstance.destroy();
+
+  if (allEntries.length === 0) {
+    const c = ctx.getContext("2d");
+    c.clearRect(0, 0, ctx.width, ctx.height);
+    return;
+  }
+
+  const labels = allEntries.map(e => e.name);
+  const returnData = allEntries.map(e => e.ret);
+  const barColors = allEntries.map(e => e.color);
+
+  tseChartInstance = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        type: "bar",
+        label: "بازدهی TSE (٪)",
+        data: returnData,
+        backgroundColor: barColors,
+        borderColor: barColors,
+        borderWidth: 1,
+        borderRadius: 6,
+        maxBarThickness: 64,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: "#FFFFFF", titleColor: "#0F172A", bodyColor: "#334155",
+          borderColor: "#E2E8F0", borderWidth: 1, padding: 12, cornerRadius: 8,
+          titleFont: { family: "Vazirmatn", weight: "700", size: 13 },
+          bodyFont: { family: "Vazirmatn", size: 12 },
+          callbacks: {
+            label: (context) => {
+              const v = context.parsed.y;
+              if (v === null || v === undefined || !isFinite(v)) return null;
+              return " " + context.dataset.label + ": " + fmtPctText(v);
+            },
+          },
+        },
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { family: "Vazirmatn", size: 12 }, color: "#334155", maxRotation: 0, autoSkip: false } },
+        y: { type: "linear", position: "left", beginAtZero: true, grid: { color: GRID_COLOR, drawBorder: false },
+          ticks: { font: { family: "Vazirmatn", size: 11 }, color: "#64748B", callback: v => v.toLocaleString("fa-IR", { maximumFractionDigits: 0 }) + "٪" },
+          title: { display: true, text: "بازدهی TSE (٪)", font: { family: "Vazirmatn", size: 11, weight: "600" }, color: "#64748B" },
+        },
+      },
+    },
+  });
+}
+
+function setupTsePeriodSelect(state) {
+  const select = document.getElementById("tsePeriodSelect");
+  if (!select) return;
+  const options = TSE_PERIOD_KEYS.map(k => ({ value: k, label: PERIOD_LABELS[k] }));
+  select.innerHTML = options.map(o => '<option value="' + o.value + '">' + o.label + '</option>').join("");
+  select.value = "SIMPLE_YEARLY";
+  select.onchange = () => renderTseChart(state, select.value);
+  renderTseChart(state, select.value);
+}
 // ---------- Period comparison chart: return bars, sorted by return ----------
 let chartInstance = null;
 function renderChart(state, selectedKey) {
@@ -886,6 +1006,7 @@ function renderForDate(dateKey) {
   setupPeriodSelect(state);
   buildChartFilters(state);
   renderCumulativeChart(state);
+  setupTsePeriodSelect(state);
   document.getElementById("exportBtn").disabled = state.order.length === 0;
   document.getElementById("exportBtn").onclick = () => exportExcel(state);
   document.getElementById("chartImgBtn").onclick = () => downloadChartImage();
