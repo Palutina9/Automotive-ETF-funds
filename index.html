@@ -762,20 +762,23 @@ function renderTseChart(state, selectedKey) {
   const ctx = document.getElementById("tseChart");
   if (!ctx) return;
 
-  // Build entries from funds that have TSE returns
+  // Build entries: شاخص خودرو + funds that have TSE returns
   let fundColorIdx = 0;
-  const allEntries = order
-    .map(slug => {
+  const indexVal = state.index[selectedKey] ?? null;
+  const allEntries = [
+    { key: "__INDEX__", name: "شاخص خودرو", ret: indexVal, color: "#14B8A6" },
+    ...order.map(slug => {
       const color = FUND_PALETTE[fundColorIdx++ % FUND_PALETTE.length];
       const ret = funds[slug].tseReturns ? (funds[slug].tseReturns[selectedKey] ?? null) : null;
       return { key: slug, name: FUND_NAMES_FA[slug] || slug, ret: ret, color: color };
-    })
-    .filter(e => e.ret !== null && isFinite(e.ret))  // hide funds without TSE data
-    .sort((a, b) => {
-      const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
-      const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
-      return bv - av;
-    });
+    }),
+  ]
+  .filter(e => e.ret !== null && isFinite(e.ret))
+  .sort((a, b) => {
+    const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
+    const bv = b.ret === null || !isFinite(b.ret) ? -Infinity : b.ret;
+    return bv - av;
+  });
 
   if (tseChartInstance) tseChartInstance.destroy();
 
