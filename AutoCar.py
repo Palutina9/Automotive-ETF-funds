@@ -11,8 +11,6 @@ from bs4 import BeautifulSoup
 import jdatetime
 import openpyxl
 from io import BytesIO
-import finpy_tse as fpy
-
 
 # ---------- Persian/Arabic digit + separator normalizer ----------
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
@@ -131,15 +129,11 @@ def ajaxetelaat(name, link, payload, navapi):
 
 for tarikh in dates:
     jadval = []
-    asof_date = jdatetime.datetime.strptime(tarikh, "%Y/%m/%d").date()
-    for slug, (e_dates, e_values) in etf_data.items():
-        for suffix, days_back in doreha.items():
-            r = get_index_return(e_dates, e_values, asof_date, days_back)
-            jadval.append({f"{slug}_tse{suffix}": r})
+    
     #Khodran
     name = "Khodran"
     link = "https://mofidsectorfund.com/Reports/FundEfficiencyForDifferentPeriods"
-    navapi = "https://mofidsectorfund.com/Fund/GetETFNAV?basketId=3"
+    navapi = "https://mofidsectorfund.com/Fund/GetNAV?basketId=3"
     payload = {
         "basketId": 3,
         "toDate": tarikh
@@ -149,7 +143,7 @@ for tarikh in dates:
     #TakhtGaz
     name = "TakhtGaz"
     link = "https://meyarsectorfund.ir/Reports/FundEfficiencyForDifferentPeriods"
-    navapi = "https://meyarsectorfund.ir/Fund/GetETFNAV?basketId=2"
+    navapi = "https://meyarsectorfund.ir/Fund/GetNAV?basketId=2"
     payload = {
         "basketId": 2,
         "toDate": tarikh
@@ -159,7 +153,7 @@ for tarikh in dates:
     #AutoCar
     name = "AutoCar"
     link = "https://karamadsectorfund.ir/Reports/FundEfficiencyForDifferentPeriods"
-    navapi = "https://karamadsectorfund.ir/Fund/GetETFNAV?basketId=2"
+    navapi = "https://karamadsectorfund.ir/Fund/GetNAV?basketId=2"
     payload = {
         "basketId": 2,
         "toDate": tarikh
