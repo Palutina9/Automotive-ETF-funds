@@ -127,44 +127,7 @@ def ajaxetelaat(name, link, payload, navapi):
     else:
         print(f"Skipping {name} NAV — site unreachable")
 
-def fetch_etf_series(ticker, start, end):
-    try:
-        df = fpy.Get_Price_History(
-            stock=ticker, start_date=start, end_date=end,
-            ignore_date=False, adjust_price=True,
-            show_weekday=False, double_date=False,
-        )
-    except Exception as e:
-        print(f"FAILED {ticker}: {e}")
-        return None
-    if df is None or df.empty:
-        print(f"EMPTY {ticker}")
-        return None
-    dates = [jdatetime.datetime.strptime(d, "%Y-%m-%d").date() for d in df.index]
-    return dates, df["Adj Final"].tolist()
 
-ETFS = {
-    "AutoCar": "خودران",
-    "Khodran": "خودران",
-    "AutoAgah": "اتوآگاه",
-    "AutoDariush": "اتوداريوش",
-    "TakhtGaz": "تخت گاز",
-    "BehinRo": "بهين رو"
-}
-
-doreha = {
-    "DailyReturn": 1, "WeeklyReturn": 7, "MonthlyReturn": 30,
-    "QuarterlyReturn": 90, "SixmonthsReturn": 180, "AnnualReturn": 365,
-}
-
-start_date = (jdatetime.date.today() - jdatetime.timedelta(days=400)).strftime("%Y-%m-%d")
-end_date = jdatetime.date.today().strftime("%Y-%m-%d")
-
-etf_data = {}
-for slug, ticker in ETFS.items():
-    series = fetch_etf_series(ticker, start_date, end_date)
-    if series is not None:
-        etf_data[slug] = series
 
 for tarikh in dates:
     jadval = []
