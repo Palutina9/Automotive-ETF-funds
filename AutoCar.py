@@ -136,7 +136,8 @@ for tarikh in dates:
     navapi = "https://mofidsectorfund.com/Fund/GetNAV?basketId=3"
     payload = {
         "basketId": 3,
-        "toDate": tarikh
+        "toDate": tarikh,
+        "_": 1794122638815
         }
     ajaxetelaat(name, link, payload, navapi)
 
@@ -146,7 +147,8 @@ for tarikh in dates:
     navapi = "https://meyarsectorfund.ir/Fund/GetNAV?basketId=2"
     payload = {
         "basketId": 2,
-        "toDate": tarikh
+        "toDate": tarikh,
+        "_": 1794122872890
         }
     ajaxetelaat(name, link, payload, navapi)
 
@@ -156,7 +158,8 @@ for tarikh in dates:
     navapi = "https://karamadsectorfund.ir/Fund/GetNAV?basketId=2"
     payload = {
         "basketId": 2,
-        "toDate": tarikh
+        "toDate": tarikh,
+        "_": 1794122934431
         }
     ajaxetelaat(name, link, payload, navapi)
     
