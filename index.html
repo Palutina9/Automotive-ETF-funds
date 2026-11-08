@@ -1017,8 +1017,11 @@ let globalIndexHistory = [];
 
 function renderForDate(dateKey) {
   const state = mergeDatasets(autoByDate[dateKey] || [], manualByDate[dateKey] || []);
-  state.fundHistory = { ...globalFundHistory, indexHistory: globalIndexHistory };
-  renderKpis(state);
+  state.fundHistory = {
+    ...(window._autoFundHistory || {}),
+    ...(window._manualFundHistory || {}),
+    ...(state.fundHistory || {})
+  };
   renderNavList(state);
   renderTable(state);
   setupPeriodSelect(state);
