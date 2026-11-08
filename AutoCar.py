@@ -133,7 +133,7 @@ for tarikh in dates:
     #Khodran
     name = "Khodran"
     link = "https://mofidsectorfund.com/Reports/FundEfficiencyForDifferentPeriods"
-    navapi = "https://mofidsectorfund.com/Fund/GetNAV?basketId=3"
+    navapi = "https://mofidsectorfund.com/Fund/GetETFNAV?basketId=3"
     payload = {
         "basketId": 3,
         "toDate": tarikh,
@@ -144,7 +144,7 @@ for tarikh in dates:
     #TakhtGaz
     name = "TakhtGaz"
     link = "https://meyarsectorfund.ir/Reports/FundEfficiencyForDifferentPeriods"
-    navapi = "https://meyarsectorfund.ir/Fund/GetNAV?basketId=2"
+    navapi = "https://meyarsectorfund.ir/Fund/GetETFNAV?basketId=2"
     payload = {
         "basketId": 2,
         "toDate": tarikh,
@@ -155,7 +155,7 @@ for tarikh in dates:
     #AutoCar
     name = "AutoCar"
     link = "https://karamadsectorfund.ir/Reports/FundEfficiencyForDifferentPeriods"
-    navapi = "https://karamadsectorfund.ir/Fund/GetNAV?basketId=2"
+    navapi = "https://karamadsectorfund.ir/Fund/GetETFNAV?basketId=2"
     payload = {
         "basketId": 2,
         "toDate": tarikh,
