@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 import jdatetime
 import openpyxl
 from io import BytesIO
+import datetime as DT
+
 
 # ---------- Persian/Arabic digit + separator normalizer ----------
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
@@ -41,7 +43,7 @@ all_data = {}
 
 def safe_get(url, **kwargs):
     try:
-        resp = requests.get(url, timeout=10, headers=headers, **kwargs)
+        resp = requests.get(url, timeout=10, **kwargs)
         resp.raise_for_status()
         print(f"OK: {url}")
         return resp
@@ -58,6 +60,36 @@ def safe_post(url, **kwargs):
     except requests.exceptions.RequestException as e:
         print(f"FAILED (POST): {url} -> {e}")
         return None
+def apietelaat(name, api_periodic, api_daily, navapi, params, params2):
+    response = safe_get(api_periodic, headers= headers, params= params)
+    if response is None:
+        print(f"Skipping {name} periodic — unreachable")
+        return
+    data = response.json()
+    rows = data
+    for row in rows:
+        jadval.append({
+            name + "_fundSimpleReturn": row['fundEfficiency']
+            })
+
+    roozaneh = safe_get(api_daily, params=params2)
+    if roozaneh is not None:
+        data_daily = roozaneh.json()[-1]
+        print(data_daily)
+        jadval.append({
+            name + "_fundDailyReturn": data_daily['fundEfficiency'],
+            })
+    else:
+        print(f"Skipping {name} daily — unreachable")
+    
+    navnum = safe_get(navapi, params=params)
+    if navnum is not None:
+        jadval.append({
+            name + "_fundNAV": navnum.json()['etfRedemptionNetAssetValue'],
+            })
+    else:
+        print(f"Skipping {name} NAV — unreachable")
+
 
 def fetch_fund_history(download_url, from_date="8/22/2026"):
 
@@ -129,17 +161,21 @@ def ajaxetelaat(name, link, payload, navapi):
 
 for tarikh in dates:
     jadval = []
-    
+    tarikh_mi = DT.date.today()
+    week_ago = tarikh_mi - DT.timedelta(days=7)
     #Khodran
     name = "Khodran"
-    link = "https://mofidsectorfund.com/Reports/FundEfficiencyForDifferentPeriods"
-    navapi = "https://mofidsectorfund.com/Fund/GetETFNAV?basketId=3"
-    payload = {
-        "basketId": 3,
-        "toDate": tarikh,
-        "_": 1794122638815
+    api_periodic = "https://p.mofidfund.com/vhive/HivePortal/15/15/FundEfficiency/PeriodicalEfficiency"
+    api_daily = "https://p.mofidfund.com/vhive/HivePortal/15/15/FundEfficiency/DailyEfficiency"
+    navapi = "https://p.mofidfund.com/vhive/HivePortal/15/15/Nav/GetNavStatistics"
+    params = {
+        "DateTo": tarikh_mi
         }
-    ajaxetelaat(name, link, payload, navapi)
+    params2 = {
+        "DateFrom": week_ago,
+        "DateTo": tarikh_mi
+        }
+    apietelaat(name, api_periodic, api_daily, navapi, params, params2)
 
     #TakhtGaz
     name = "TakhtGaz"
