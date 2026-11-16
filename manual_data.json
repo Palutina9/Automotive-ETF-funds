@@ -1,167 +1,167 @@
 {
   "dates": {
-    "1405/08/24": [
+    "1405/08/25": [
       {
-        "DailyReturn": -1.9189699413790335
+        "DailyReturn": 2.195471290119423
       },
       {
-        "WeeklyReturn": 2.047648738563229
+        "WeeklyReturn": 5.033247396255459
       },
       {
-        "MonthlyReturn": -4.98473628052413
+        "MonthlyReturn": -2.8987034443317805
       },
       {
-        "QuarterlyReturn": 16.617063341619083
+        "QuarterlyReturn": 15.85439152547726
       },
       {
-        "SixmonthsReturn": 52.758078769170005
+        "SixmonthsReturn": 60.09296218303981
       },
       {
-        "AnnualReturn": 44.103677742566056
+        "AnnualReturn": 46.46065374093967
       },
       {
-        "AutoCar_tseDailyReturn": -2.1028914757791966
+        "AutoCar_tseDailyReturn": 2.467715125942974
       },
       {
-        "AutoCar_tseWeeklyReturn": 0.9226401703335699
+        "AutoCar_tseWeeklyReturn": 4.457768508863399
       },
       {
-        "AutoCar_tseMonthlyReturn": -5.691547087905462
+        "AutoCar_tseMonthlyReturn": -3.364283130350899
       },
       {
-        "AutoCar_tseQuarterlyReturn": 21.30283055447848
+        "AutoCar_tseQuarterlyReturn": 20.701860079825288
       },
       {
-        "AutoCar_tseSixmonthsReturn": 59.59595959595959
+        "AutoCar_tseSixmonthsReturn": 61.84994446127436
       },
       {
-        "AutoCar_tseAnnualReturn": 52.903225806451616
+        "AutoCar_tseAnnualReturn": 55.460717749757514
       },
       {
-        "Khodran_tseDailyReturn": -2.1028914757791966
+        "Khodran_tseDailyReturn": 2.467715125942974
       },
       {
-        "Khodran_tseWeeklyReturn": 0.9226401703335699
+        "Khodran_tseWeeklyReturn": 4.457768508863399
       },
       {
-        "Khodran_tseMonthlyReturn": -5.691547087905462
+        "Khodran_tseMonthlyReturn": -3.364283130350899
       },
       {
-        "Khodran_tseQuarterlyReturn": 21.30283055447848
+        "Khodran_tseQuarterlyReturn": 20.701860079825288
       },
       {
-        "Khodran_tseSixmonthsReturn": 59.59595959595959
+        "Khodran_tseSixmonthsReturn": 61.84994446127436
       },
       {
-        "Khodran_tseAnnualReturn": 52.903225806451616
+        "Khodran_tseAnnualReturn": 55.460717749757514
       },
       {
-        "AutoAgah_tseDailyReturn": -2.0559769814281976
+        "AutoAgah_tseDailyReturn": 1.816045294306164
       },
       {
-        "AutoAgah_tseWeeklyReturn": 2.603167643996273
+        "AutoAgah_tseWeeklyReturn": 5.88235294117647
       },
       {
-        "AutoAgah_tseMonthlyReturn": -2.858921807710268
+        "AutoAgah_tseMonthlyReturn": -1.0947958283609194
       },
       {
-        "AutoAgah_tseQuarterlyReturn": 25.29781823049123
+        "AutoAgah_tseQuarterlyReturn": 23.859649122807017
       },
       {
-        "AutoAgah_tseSixmonthsReturn": 70.66545123062899
+        "AutoAgah_tseSixmonthsReturn": 78.0829596412556
       },
       {
-        "AutoAgah_tseAnnualReturn": 68.36330935251799
+        "AutoAgah_tseAnnualReturn": 70.65353625783348
       },
       {
-        "AutoDariush_tseDailyReturn": -2.9746946408742914
+        "AutoDariush_tseDailyReturn": 1.186604023611613
       },
       {
-        "AutoDariush_tseWeeklyReturn": -0.06621320652501053
+        "AutoDariush_tseWeeklyReturn": 2.796475339615714
       },
       {
-        "AutoDariush_tseMonthlyReturn": -6.604410441044105
+        "AutoDariush_tseMonthlyReturn": -5.4961746174617465
       },
       {
-        "AutoDariush_tseQuarterlyReturn": 25.915813424345846
+        "AutoDariush_tseQuarterlyReturn": 23.703976435935196
       },
       {
-        "AutoDariush_tseSixmonthsReturn": 66.75371635194858
+        "AutoDariush_tseSixmonthsReturn": 73.48962098523185
       },
       {
-        "AutoDariush_tseAnnualReturn": 62.95641931684335
+        "AutoDariush_tseAnnualReturn": 63.11292358481406
       },
       {
-        "TakhtGaz_tseDailyReturn": -0.424890350877193
+        "TakhtGaz_tseDailyReturn": 2.4707501720578113
       },
       {
-        "TakhtGaz_tseWeeklyReturn": 3.335466894246497
+        "TakhtGaz_tseWeeklyReturn": 6.892095627826836
       },
       {
-        "TakhtGaz_tseMonthlyReturn": -0.21975003433594287
+        "TakhtGaz_tseMonthlyReturn": 2.245570663370416
       },
       {
-        "TakhtGaz_tseQuarterlyReturn": 20.460951749295308
+        "TakhtGaz_tseQuarterlyReturn": 19.888879942024317
       },
       {
-        "TakhtGaz_tseSixmonthsReturn": 50.47638773819387
+        "TakhtGaz_tseSixmonthsReturn": 58.61297539149888
       },
       {
-        "TakhtGaz_tseAnnualReturn": 45.27094581083783
+        "TakhtGaz_tseAnnualReturn": 48.32635983263599
       },
       {
-        "BehinRo_tseDailyReturn": -1.3457611143111483
+        "BehinRo_tseDailyReturn": 2.213375796178344
       },
       {
-        "BehinRo_tseWeeklyReturn": 1.7608296424327536
+        "BehinRo_tseWeeklyReturn": 6.698803191489362
       },
       {
-        "BehinRo_tseMonthlyReturn": -4.5592705167173255
+        "BehinRo_tseMonthlyReturn": -2.4468085106382977
       },
       {
-        "BehinRo_tseQuarterlyReturn": 17.904749984354464
+        "BehinRo_tseQuarterlyReturn": 18.907070083359063
       },
       {
-        "BehinRo_tseSixmonthsReturn": 53.15827981464921
+        "BehinRo_tseSixmonthsReturn": 61.22739450770261
       },
       {
-        "BehinRo_tseAnnualReturn": 50.47923322683706
+        "BehinRo_tseAnnualReturn": 52.2292490118577
       },
       {
         "key": "SIMPLE_WEEKLY",
-        "fromDate": "1405/08/16",
-        "toDate": "1405/08/23",
-        "marketSimpleReturn": 3.34
+        "fromDate": "1405/08/17",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 4.64
       },
       {
         "key": "SIMPLE_MONTHLY",
-        "fromDate": "1405/07/23",
-        "toDate": "1405/08/23",
-        "marketSimpleReturn": -0.85
+        "fromDate": "1405/07/24",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 0.47
       },
       {
         "key": "SIMPLE_MONTHLY3",
-        "fromDate": "1405/05/25",
-        "toDate": "1405/08/23",
-        "marketSimpleReturn": 44.87
+        "fromDate": "1405/05/26",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 43.54
       },
       {
         "key": "SIMPLE_MONTHLY6",
-        "fromDate": "1405/02/28",
-        "toDate": "1405/08/23",
-        "marketSimpleReturn": 124.94
+        "fromDate": "1405/02/29",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 127.79
       },
       {
         "key": "SIMPLE_YEARLY",
-        "fromDate": "1404/08/23",
-        "toDate": "1405/08/23",
-        "marketSimpleReturn": 169.59
+        "fromDate": "1404/08/24",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 172.6
       },
       {
         "key": "SIMPLE_ALL_DAYS",
         "fromDate": "1402/09/12",
-        "toDate": "1405/08/23",
-        "marketSimpleReturn": 293.83
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 299.1
       },
       {
         "key": "MAX_SIMPLE_WEEKLY",
@@ -176,28 +176,28 @@
         "marketSimpleReturn": -7.19
       },
       {
-        "marketDailyReturn": -0.87
+        "marketDailyReturn": 1.34
       },
       {
-        "dailyReturnDate": "1405/08/23"
+        "dailyReturnDate": "1405/08/24"
       },
       {
-        "AutoAgah_fundSimpleReturn": 2.38
+        "AutoAgah_fundSimpleReturn": 6.35
       },
       {
-        "AutoAgah_fundSimpleReturn": -2.56
+        "AutoAgah_fundSimpleReturn": -0.16
       },
       {
-        "AutoAgah_fundSimpleReturn": 23.57
+        "AutoAgah_fundSimpleReturn": 23.53
       },
       {
-        "AutoAgah_fundSimpleReturn": 80.23
+        "AutoAgah_fundSimpleReturn": 77.54
       },
       {
-        "AutoAgah_fundSimpleReturn": 67.88
+        "AutoAgah_fundSimpleReturn": 70.99
       },
       {
-        "AutoAgah_fundSimpleReturn": 85.1
+        "AutoAgah_fundSimpleReturn": 87.78
       },
       {
         "AutoAgah_fundSimpleReturn": 16.4
@@ -206,28 +206,28 @@
         "AutoAgah_fundSimpleReturn": -13.61
       },
       {
-        "AutoAgah_fundDailyReturn": -1.0
+        "AutoAgah_fundDailyReturn": 2.46
       },
       {
-        "AutoAgah_fundNAV": 7271148268029.0
+        "AutoAgah_fundNAV": 7450213541353.0
       },
       {
-        "AutoDariush_fundSimpleReturn": -0.73
+        "AutoDariush_fundSimpleReturn": 4.15
       },
       {
-        "AutoDariush_fundSimpleReturn": -6.45
+        "AutoDariush_fundSimpleReturn": -4.22
       },
       {
-        "AutoDariush_fundSimpleReturn": 22.95
+        "AutoDariush_fundSimpleReturn": 23.11
       },
       {
-        "AutoDariush_fundSimpleReturn": 100.55
+        "AutoDariush_fundSimpleReturn": 85.26
       },
       {
-        "AutoDariush_fundSimpleReturn": 60.7
+        "AutoDariush_fundSimpleReturn": 63.15
       },
       {
-        "AutoDariush_fundSimpleReturn": 63.02
+        "AutoDariush_fundSimpleReturn": 64.63
       },
       {
         "AutoDariush_fundSimpleReturn": 27.95
@@ -236,28 +236,28 @@
         "AutoDariush_fundSimpleReturn": -18.01
       },
       {
-        "AutoDariush_fundDailyReturn": -1.51
+        "AutoDariush_fundDailyReturn": 2.38
       },
       {
-        "AutoDariush_fundNAV": 9338875206758.0
+        "AutoDariush_fundNAV": 9561314957094.0
       },
       {
-        "BehinRo_fundSimpleReturn": 1.64
+        "BehinRo_fundSimpleReturn": 5.9
       },
       {
-        "BehinRo_fundSimpleReturn": -4.89
+        "BehinRo_fundSimpleReturn": -2.61
       },
       {
-        "BehinRo_fundSimpleReturn": 15.8
+        "BehinRo_fundSimpleReturn": 15.93
       },
       {
-        "BehinRo_fundSimpleReturn": 92.24
+        "BehinRo_fundSimpleReturn": 61.91
       },
       {
-        "BehinRo_fundSimpleReturn": 47.85
+        "BehinRo_fundSimpleReturn": 51.03
       },
       {
-        "BehinRo_fundSimpleReturn": 85.89
+        "BehinRo_fundSimpleReturn": 88.97
       },
       {
         "BehinRo_fundSimpleReturn": 30.15
@@ -266,34 +266,330 @@
         "BehinRo_fundSimpleReturn": -19.99
       },
       {
-        "BehinRo_fundDailyReturn": -1.42
+        "BehinRo_fundDailyReturn": 2.4
       },
       {
-        "BehinRo_fundNAV": 13940950610198.0
+        "BehinRo_fundNAV": 14274966734701.0
       },
       {
-        "Khodran_fundSimpleReturn": 1.56
+        "Khodran_fundSimpleReturn": 6.38
       },
       {
-        "Khodran_fundSimpleReturn": -2.92
+        "Khodran_fundSimpleReturn": -0.36
       },
       {
-        "Khodran_fundSimpleReturn": 19.05
+        "Khodran_fundSimpleReturn": 19.24
       },
       {
-        "Khodran_fundSimpleReturn": 89.19
+        "Khodran_fundSimpleReturn": 71.65
       },
       {
-        "Khodran_fundSimpleReturn": 53.39
+        "Khodran_fundSimpleReturn": 56.92
       },
       {
-        "Khodran_fundSimpleReturn": 58.67
+        "Khodran_fundSimpleReturn": 62.84
       },
       {
-        "Khodran_fundDailyReturn": -1.6183
+        "Khodran_fundDailyReturn": 2.6281
       },
       {
-        "Khodran_fundNAV": 9759540786029.0
+        "Khodran_fundNAV": 9798872545437.0
+      }
+    ],
+    "1405/08/24": [
+      {
+        "DailyReturn": 0.23437091461139126
+      },
+      {
+        "WeeklyReturn": 4.288075568860301
+      },
+      {
+        "MonthlyReturn": -2.8987034443317805
+      },
+      {
+        "QuarterlyReturn": 19.17735748666471
+      },
+      {
+        "SixmonthsReturn": 56.11183853188515
+      },
+      {
+        "AnnualReturn": 47.26743261541031
+      },
+      {
+        "AutoCar_tseDailyReturn": 0.312930279133809
+      },
+      {
+        "AutoCar_tseWeeklyReturn": 3.4131234273178914
+      },
+      {
+        "AutoCar_tseMonthlyReturn": -3.364283130350899
+      },
+      {
+        "AutoCar_tseQuarterlyReturn": 24.29623885226832
+      },
+      {
+        "AutoCar_tseSixmonthsReturn": 63.53433323130293
+      },
+      {
+        "AutoCar_tseAnnualReturn": 56.67644183773216
+      },
+      {
+        "Khodran_tseDailyReturn": 0.312930279133809
+      },
+      {
+        "Khodran_tseWeeklyReturn": 3.4131234273178914
+      },
+      {
+        "Khodran_tseMonthlyReturn": -3.364283130350899
+      },
+      {
+        "Khodran_tseQuarterlyReturn": 24.29623885226832
+      },
+      {
+        "Khodran_tseSixmonthsReturn": 63.53433323130293
+      },
+      {
+        "Khodran_tseAnnualReturn": 56.67644183773216
+      },
+      {
+        "AutoAgah_tseDailyReturn": -0.2772691603452786
+      },
+      {
+        "AutoAgah_tseWeeklyReturn": 4.466487641804132
+      },
+      {
+        "AutoAgah_tseMonthlyReturn": -1.0947958283609194
+      },
+      {
+        "AutoAgah_tseQuarterlyReturn": 27.57328336233436
+      },
+      {
+        "AutoAgah_tseSixmonthsReturn": 73.7648131267092
+      },
+      {
+        "AutoAgah_tseAnnualReturn": 71.42086330935253
+      },
+      {
+        "AutoDariush_tseDailyReturn": -1.823388463561452
+      },
+      {
+        "AutoDariush_tseWeeklyReturn": 1.1196051285138144
+      },
+      {
+        "AutoDariush_tseMonthlyReturn": -5.4961746174617465
+      },
+      {
+        "AutoDariush_tseQuarterlyReturn": 27.409935532802425
+      },
+      {
+        "AutoDariush_tseSixmonthsReturn": 68.73242265970269
+      },
+      {
+        "AutoDariush_tseAnnualReturn": 64.89006674519042
+      },
+      {
+        "TakhtGaz_tseDailyReturn": 2.0353618421052633
+      },
+      {
+        "TakhtGaz_tseWeeklyReturn": 5.888628120332835
+      },
+      {
+        "TakhtGaz_tseMonthlyReturn": 2.245570663370416
+      },
+      {
+        "TakhtGaz_tseQuarterlyReturn": 23.4372409219035
+      },
+      {
+        "TakhtGaz_tseSixmonthsReturn": 54.19428334714167
+      },
+      {
+        "TakhtGaz_tseAnnualReturn": 48.86022795440912
+      },
+      {
+        "BehinRo_tseDailyReturn": 0.8378279310886527
+      },
+      {
+        "BehinRo_tseWeeklyReturn": 4.013179215728638
+      },
+      {
+        "BehinRo_tseMonthlyReturn": -2.4468085106382977
+      },
+      {
+        "BehinRo_tseQuarterlyReturn": 20.514425183052758
+      },
+      {
+        "BehinRo_tseSixmonthsReturn": 56.54824810990976
+      },
+      {
+        "BehinRo_tseAnnualReturn": 53.80990415335464
+      },
+      {
+        "key": "SIMPLE_WEEKLY",
+        "fromDate": "1405/08/17",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 4.64
+      },
+      {
+        "key": "SIMPLE_MONTHLY",
+        "fromDate": "1405/07/24",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 0.47
+      },
+      {
+        "key": "SIMPLE_MONTHLY3",
+        "fromDate": "1405/05/26",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 43.54
+      },
+      {
+        "key": "SIMPLE_MONTHLY6",
+        "fromDate": "1405/02/29",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 127.79
+      },
+      {
+        "key": "SIMPLE_YEARLY",
+        "fromDate": "1404/08/24",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 172.6
+      },
+      {
+        "key": "SIMPLE_ALL_DAYS",
+        "fromDate": "1402/09/12",
+        "toDate": "1405/08/24",
+        "marketSimpleReturn": 299.1
+      },
+      {
+        "key": "MAX_SIMPLE_WEEKLY",
+        "fromDate": "1404/01/27",
+        "toDate": "1404/02/03",
+        "marketSimpleReturn": 6.42
+      },
+      {
+        "key": "MIN_SIMPLE_WEEKLY",
+        "fromDate": "1403/05/08",
+        "toDate": "1403/05/15",
+        "marketSimpleReturn": -7.19
+      },
+      {
+        "marketDailyReturn": 1.34
+      },
+      {
+        "dailyReturnDate": "1405/08/24"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 6.35
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -0.16
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 23.53
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 77.54
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 70.99
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 87.78
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
+      },
+      {
+        "AutoAgah_fundDailyReturn": 2.46
+      },
+      {
+        "AutoAgah_fundNAV": 7450213541353.0
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 4.15
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -4.22
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 23.11
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 85.26
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 63.15
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 64.63
+      },
+      {
+        "AutoDariush_fundSimpleReturn": 27.95
+      },
+      {
+        "AutoDariush_fundSimpleReturn": -18.01
+      },
+      {
+        "AutoDariush_fundDailyReturn": 2.38
+      },
+      {
+        "AutoDariush_fundNAV": 9561314957094.0
+      },
+      {
+        "BehinRo_fundSimpleReturn": 5.9
+      },
+      {
+        "BehinRo_fundSimpleReturn": -2.61
+      },
+      {
+        "BehinRo_fundSimpleReturn": 15.93
+      },
+      {
+        "BehinRo_fundSimpleReturn": 61.91
+      },
+      {
+        "BehinRo_fundSimpleReturn": 51.03
+      },
+      {
+        "BehinRo_fundSimpleReturn": 88.97
+      },
+      {
+        "BehinRo_fundSimpleReturn": 30.15
+      },
+      {
+        "BehinRo_fundSimpleReturn": -19.99
+      },
+      {
+        "BehinRo_fundDailyReturn": 2.4
+      },
+      {
+        "BehinRo_fundNAV": 14274966734701.0
+      },
+      {
+        "Khodran_fundSimpleReturn": 6.38
+      },
+      {
+        "Khodran_fundSimpleReturn": -0.36
+      },
+      {
+        "Khodran_fundSimpleReturn": 19.24
+      },
+      {
+        "Khodran_fundSimpleReturn": 71.65
+      },
+      {
+        "Khodran_fundSimpleReturn": 56.92
+      },
+      {
+        "Khodran_fundSimpleReturn": 62.84
+      },
+      {
+        "Khodran_fundDailyReturn": 2.6281
+      },
+      {
+        "Khodran_fundNAV": 9798872545437.0
       }
     ],
     "1405/08/23": [
@@ -472,10 +768,10 @@
         "marketSimpleReturn": -7.19
       },
       {
-        "marketDailyReturn": -0.87
+        "marketDailyReturn": 1.34
       },
       {
-        "dailyReturnDate": "1405/08/23"
+        "dailyReturnDate": "1405/08/24"
       },
       {
         "AutoAgah_fundSimpleReturn": 2.38
@@ -502,10 +798,10 @@
         "AutoAgah_fundSimpleReturn": -13.61
       },
       {
-        "AutoAgah_fundDailyReturn": -1.0
+        "AutoAgah_fundDailyReturn": 2.46
       },
       {
-        "AutoAgah_fundNAV": 7271148268029.0
+        "AutoAgah_fundNAV": 7450213541353.0
       },
       {
         "AutoDariush_fundSimpleReturn": -0.73
@@ -532,10 +828,10 @@
         "AutoDariush_fundSimpleReturn": -18.01
       },
       {
-        "AutoDariush_fundDailyReturn": -1.51
+        "AutoDariush_fundDailyReturn": 2.38
       },
       {
-        "AutoDariush_fundNAV": 9338875206758.0
+        "AutoDariush_fundNAV": 9561314957094.0
       },
       {
         "BehinRo_fundSimpleReturn": 1.64
@@ -562,34 +858,34 @@
         "BehinRo_fundSimpleReturn": -19.99
       },
       {
-        "BehinRo_fundDailyReturn": -1.42
+        "BehinRo_fundDailyReturn": 2.4
       },
       {
-        "BehinRo_fundNAV": 13940950610198.0
+        "BehinRo_fundNAV": 14274966734701.0
       },
       {
-        "Khodran_fundSimpleReturn": 1.56
+        "Khodran_fundSimpleReturn": 6.38
       },
       {
-        "Khodran_fundSimpleReturn": -2.92
+        "Khodran_fundSimpleReturn": -0.36
       },
       {
-        "Khodran_fundSimpleReturn": 19.05
+        "Khodran_fundSimpleReturn": 19.24
       },
       {
-        "Khodran_fundSimpleReturn": 89.19
+        "Khodran_fundSimpleReturn": 71.65
       },
       {
-        "Khodran_fundSimpleReturn": 53.39
+        "Khodran_fundSimpleReturn": 56.92
       },
       {
-        "Khodran_fundSimpleReturn": 58.67
+        "Khodran_fundSimpleReturn": 62.84
       },
       {
-        "Khodran_fundDailyReturn": -1.6183
+        "Khodran_fundDailyReturn": 2.6281
       },
       {
-        "Khodran_fundNAV": 9759540786029.0
+        "Khodran_fundNAV": 9798872545437.0
       }
     ],
     "1405/08/22": [
@@ -768,10 +1064,10 @@
         "marketSimpleReturn": -7.19
       },
       {
-        "marketDailyReturn": -0.87
+        "marketDailyReturn": 1.34
       },
       {
-        "dailyReturnDate": "1405/08/23"
+        "dailyReturnDate": "1405/08/24"
       },
       {
         "AutoAgah_fundSimpleReturn": 6.19
@@ -798,10 +1094,10 @@
         "AutoAgah_fundSimpleReturn": -13.61
       },
       {
-        "AutoAgah_fundDailyReturn": -1.0
+        "AutoAgah_fundDailyReturn": 2.46
       },
       {
-        "AutoAgah_fundNAV": 7271148268029.0
+        "AutoAgah_fundNAV": 7450213541353.0
       },
       {
         "AutoDariush_fundSimpleReturn": 3.56
@@ -828,10 +1124,10 @@
         "AutoDariush_fundSimpleReturn": -18.01
       },
       {
-        "AutoDariush_fundDailyReturn": -1.51
+        "AutoDariush_fundDailyReturn": 2.38
       },
       {
-        "AutoDariush_fundNAV": 9338875206758.0
+        "AutoDariush_fundNAV": 9561314957094.0
       },
       {
         "BehinRo_fundSimpleReturn": 5.35
@@ -858,34 +1154,34 @@
         "BehinRo_fundSimpleReturn": -19.99
       },
       {
-        "BehinRo_fundDailyReturn": -1.42
+        "BehinRo_fundDailyReturn": 2.4
       },
       {
-        "BehinRo_fundNAV": 13940950610198.0
+        "BehinRo_fundNAV": 14274966734701.0
       },
       {
-        "Khodran_fundSimpleReturn": 1.56
+        "Khodran_fundSimpleReturn": 6.38
       },
       {
-        "Khodran_fundSimpleReturn": -2.92
+        "Khodran_fundSimpleReturn": -0.36
       },
       {
-        "Khodran_fundSimpleReturn": 19.05
+        "Khodran_fundSimpleReturn": 19.24
       },
       {
-        "Khodran_fundSimpleReturn": 89.19
+        "Khodran_fundSimpleReturn": 71.65
       },
       {
-        "Khodran_fundSimpleReturn": 53.39
+        "Khodran_fundSimpleReturn": 56.92
       },
       {
-        "Khodran_fundSimpleReturn": 58.67
+        "Khodran_fundSimpleReturn": 62.84
       },
       {
-        "Khodran_fundDailyReturn": -1.6183
+        "Khodran_fundDailyReturn": 2.6281
       },
       {
-        "Khodran_fundNAV": 9759540786029.0
+        "Khodran_fundNAV": 9798872545437.0
       }
     ],
     "1405/08/21": [
@@ -1064,10 +1360,10 @@
         "marketSimpleReturn": -7.19
       },
       {
-        "marketDailyReturn": -0.87
+        "marketDailyReturn": 1.34
       },
       {
-        "dailyReturnDate": "1405/08/23"
+        "dailyReturnDate": "1405/08/24"
       },
       {
         "AutoAgah_fundSimpleReturn": 6.19
@@ -1094,10 +1390,10 @@
         "AutoAgah_fundSimpleReturn": -13.61
       },
       {
-        "AutoAgah_fundDailyReturn": -1.0
+        "AutoAgah_fundDailyReturn": 2.46
       },
       {
-        "AutoAgah_fundNAV": 7271148268029.0
+        "AutoAgah_fundNAV": 7450213541353.0
       },
       {
         "AutoDariush_fundSimpleReturn": 3.56
@@ -1124,10 +1420,10 @@
         "AutoDariush_fundSimpleReturn": -18.01
       },
       {
-        "AutoDariush_fundDailyReturn": -1.51
+        "AutoDariush_fundDailyReturn": 2.38
       },
       {
-        "AutoDariush_fundNAV": 9338875206758.0
+        "AutoDariush_fundNAV": 9561314957094.0
       },
       {
         "BehinRo_fundSimpleReturn": 5.35
@@ -1154,34 +1450,34 @@
         "BehinRo_fundSimpleReturn": -19.99
       },
       {
-        "BehinRo_fundDailyReturn": -1.42
+        "BehinRo_fundDailyReturn": 2.4
       },
       {
-        "BehinRo_fundNAV": 13940950610198.0
+        "BehinRo_fundNAV": 14274966734701.0
       },
       {
-        "Khodran_fundSimpleReturn": 1.56
+        "Khodran_fundSimpleReturn": 6.38
       },
       {
-        "Khodran_fundSimpleReturn": -2.92
+        "Khodran_fundSimpleReturn": -0.36
       },
       {
-        "Khodran_fundSimpleReturn": 19.05
+        "Khodran_fundSimpleReturn": 19.24
       },
       {
-        "Khodran_fundSimpleReturn": 89.19
+        "Khodran_fundSimpleReturn": 71.65
       },
       {
-        "Khodran_fundSimpleReturn": 53.39
+        "Khodran_fundSimpleReturn": 56.92
       },
       {
-        "Khodran_fundSimpleReturn": 58.67
+        "Khodran_fundSimpleReturn": 62.84
       },
       {
-        "Khodran_fundDailyReturn": -1.6183
+        "Khodran_fundDailyReturn": 2.6281
       },
       {
-        "Khodran_fundNAV": 9759540786029.0
+        "Khodran_fundNAV": 9798872545437.0
       }
     ],
     "1405/08/20": [
@@ -1360,10 +1656,10 @@
         "marketSimpleReturn": -7.19
       },
       {
-        "marketDailyReturn": -0.87
+        "marketDailyReturn": 1.34
       },
       {
-        "dailyReturnDate": "1405/08/23"
+        "dailyReturnDate": "1405/08/24"
       },
       {
         "AutoAgah_fundSimpleReturn": 6.19
@@ -1390,10 +1686,10 @@
         "AutoAgah_fundSimpleReturn": -13.61
       },
       {
-        "AutoAgah_fundDailyReturn": -1.0
+        "AutoAgah_fundDailyReturn": 2.46
       },
       {
-        "AutoAgah_fundNAV": 7271148268029.0
+        "AutoAgah_fundNAV": 7450213541353.0
       },
       {
         "AutoDariush_fundSimpleReturn": 3.56
@@ -1420,10 +1716,10 @@
         "AutoDariush_fundSimpleReturn": -18.01
       },
       {
-        "AutoDariush_fundDailyReturn": -1.51
+        "AutoDariush_fundDailyReturn": 2.38
       },
       {
-        "AutoDariush_fundNAV": 9338875206758.0
+        "AutoDariush_fundNAV": 9561314957094.0
       },
       {
         "BehinRo_fundSimpleReturn": 5.44
@@ -1450,34 +1746,34 @@
         "BehinRo_fundSimpleReturn": -19.99
       },
       {
-        "BehinRo_fundDailyReturn": -1.42
+        "BehinRo_fundDailyReturn": 2.4
       },
       {
-        "BehinRo_fundNAV": 13940950610198.0
+        "BehinRo_fundNAV": 14274966734701.0
       },
       {
-        "Khodran_fundSimpleReturn": 1.56
+        "Khodran_fundSimpleReturn": 6.38
       },
       {
-        "Khodran_fundSimpleReturn": -2.92
+        "Khodran_fundSimpleReturn": -0.36
       },
       {
-        "Khodran_fundSimpleReturn": 19.05
+        "Khodran_fundSimpleReturn": 19.24
       },
       {
-        "Khodran_fundSimpleReturn": 89.19
+        "Khodran_fundSimpleReturn": 71.65
       },
       {
-        "Khodran_fundSimpleReturn": 53.39
+        "Khodran_fundSimpleReturn": 56.92
       },
       {
-        "Khodran_fundSimpleReturn": 58.67
+        "Khodran_fundSimpleReturn": 62.84
       },
       {
-        "Khodran_fundDailyReturn": -1.6183
+        "Khodran_fundDailyReturn": 2.6281
       },
       {
-        "Khodran_fundNAV": 9759540786029.0
+        "Khodran_fundNAV": 9798872545437.0
       }
     ],
     "1405/08/19": [
@@ -1656,10 +1952,10 @@
         "marketSimpleReturn": -7.19
       },
       {
-        "marketDailyReturn": -0.87
+        "marketDailyReturn": 1.34
       },
       {
-        "dailyReturnDate": "1405/08/23"
+        "dailyReturnDate": "1405/08/24"
       },
       {
         "AutoAgah_fundSimpleReturn": 7.06
@@ -1686,10 +1982,10 @@
         "AutoAgah_fundSimpleReturn": -13.61
       },
       {
-        "AutoAgah_fundDailyReturn": -1.0
+        "AutoAgah_fundDailyReturn": 2.46
       },
       {
-        "AutoAgah_fundNAV": 7271148268029.0
+        "AutoAgah_fundNAV": 7450213541353.0
       },
       {
         "AutoDariush_fundSimpleReturn": 5.64
@@ -1716,10 +2012,10 @@
         "AutoDariush_fundSimpleReturn": -18.01
       },
       {
-        "AutoDariush_fundDailyReturn": -1.51
+        "AutoDariush_fundDailyReturn": 2.38
       },
       {
-        "AutoDariush_fundNAV": 9338875206758.0
+        "AutoDariush_fundNAV": 9561314957094.0
       },
       {
         "BehinRo_fundSimpleReturn": 6.44
@@ -1746,338 +2042,38 @@
         "BehinRo_fundSimpleReturn": -19.99
       },
       {
-        "BehinRo_fundDailyReturn": -1.42
+        "BehinRo_fundDailyReturn": 2.4
       },
       {
-        "BehinRo_fundNAV": 13940950610198.0
+        "BehinRo_fundNAV": 14274966734701.0
       },
       {
-        "Khodran_fundSimpleReturn": 1.56
+        "Khodran_fundSimpleReturn": 6.38
       },
       {
-        "Khodran_fundSimpleReturn": -2.92
+        "Khodran_fundSimpleReturn": -0.36
       },
       {
-        "Khodran_fundSimpleReturn": 19.05
+        "Khodran_fundSimpleReturn": 19.24
       },
       {
-        "Khodran_fundSimpleReturn": 89.19
+        "Khodran_fundSimpleReturn": 71.65
       },
       {
-        "Khodran_fundSimpleReturn": 53.39
+        "Khodran_fundSimpleReturn": 56.92
       },
       {
-        "Khodran_fundSimpleReturn": 58.67
+        "Khodran_fundSimpleReturn": 62.84
       },
       {
-        "Khodran_fundDailyReturn": -1.6183
+        "Khodran_fundDailyReturn": 2.6281
       },
       {
-        "Khodran_fundNAV": 9759540786029.0
-      }
-    ],
-    "1405/08/18": [
-      {
-        "DailyReturn": 0.7791503166743665
-      },
-      {
-        "WeeklyReturn": 8.618983569062665
-      },
-      {
-        "MonthlyReturn": -6.610020972035764
-      },
-      {
-        "QuarterlyReturn": 18.68561381966343
-      },
-      {
-        "SixmonthsReturn": 50.85922676968988
-      },
-      {
-        "AnnualReturn": 34.21789793477599
-      },
-      {
-        "AutoCar_tseDailyReturn": 0.01935608748951545
-      },
-      {
-        "AutoCar_tseWeeklyReturn": 7.742563247150402
-      },
-      {
-        "AutoCar_tseMonthlyReturn": -5.256081163671922
-      },
-      {
-        "AutoCar_tseQuarterlyReturn": 20.30110197113146
-      },
-      {
-        "AutoCar_tseSixmonthsReturn": 58.16753392510968
-      },
-      {
-        "AutoCar_tseAnnualReturn": 45.28584817244611
-      },
-      {
-        "Khodran_tseDailyReturn": 0.01935608748951545
-      },
-      {
-        "Khodran_tseWeeklyReturn": 7.742563247150402
-      },
-      {
-        "Khodran_tseMonthlyReturn": -5.256081163671922
-      },
-      {
-        "Khodran_tseQuarterlyReturn": 20.30110197113146
-      },
-      {
-        "Khodran_tseSixmonthsReturn": 58.16753392510968
-      },
-      {
-        "Khodran_tseAnnualReturn": 45.28584817244611
-      },
-      {
-        "AutoAgah_tseDailyReturn": 1.2933632925960432
-      },
-      {
-        "AutoAgah_tseWeeklyReturn": 8.087719298245615
-      },
-      {
-        "AutoAgah_tseMonthlyReturn": -1.8532285471537808
-      },
-      {
-        "AutoAgah_tseQuarterlyReturn": 28.26509368494101
-      },
-      {
-        "AutoAgah_tseSixmonthsReturn": 68.48678213309026
-      },
-      {
-        "AutoAgah_tseAnnualReturn": 57.03483432455395
-      },
-      {
-        "AutoDariush_tseDailyReturn": -0.4213567687955216
-      },
-      {
-        "AutoDariush_tseWeeklyReturn": 6.051669978844798
-      },
-      {
-        "AutoDariush_tseMonthlyReturn": -3.780608387134299
-      },
-      {
-        "AutoDariush_tseQuarterlyReturn": 28.839563862928348
-      },
-      {
-        "AutoDariush_tseSixmonthsReturn": 66.1611088790679
-      },
-      {
-        "AutoDariush_tseAnnualReturn": 53.31788693234476
-      },
-      {
-        "TakhtGaz_tseDailyReturn": 0.7396344498968779
-      },
-      {
-        "TakhtGaz_tseWeeklyReturn": 5.708955223880597
-      },
-      {
-        "TakhtGaz_tseMonthlyReturn": 0.6895081034972989
-      },
-      {
-        "TakhtGaz_tseQuarterlyReturn": 16.988767756854973
-      },
-      {
-        "TakhtGaz_tseSixmonthsReturn": 46.6963545981773
-      },
-      {
-        "TakhtGaz_tseAnnualReturn": 31.498329001114
-      },
-      {
-        "BehinRo_tseDailyReturn": -0.5887436534514422
-      },
-      {
-        "BehinRo_tseWeeklyReturn": 6.584433634468382
-      },
-      {
-        "BehinRo_tseMonthlyReturn": -6.715661429295489
-      },
-      {
-        "BehinRo_tseQuarterlyReturn": 16.99828364376073
-      },
-      {
-        "BehinRo_tseSixmonthsReturn": 49.621981952686774
-      },
-      {
-        "BehinRo_tseAnnualReturn": 35.53019145802651
-      },
-      {
-        "key": "SIMPLE_WEEKLY",
-        "fromDate": "1405/08/11",
-        "toDate": "1405/08/18",
-        "marketSimpleReturn": 6.39
-      },
-      {
-        "key": "SIMPLE_MONTHLY",
-        "fromDate": "1405/07/18",
-        "toDate": "1405/08/18",
-        "marketSimpleReturn": -1.54
-      },
-      {
-        "key": "SIMPLE_MONTHLY3",
-        "fromDate": "1405/05/20",
-        "toDate": "1405/08/18",
-        "marketSimpleReturn": 41.86
-      },
-      {
-        "key": "SIMPLE_MONTHLY6",
-        "fromDate": "1405/02/23",
-        "toDate": "1405/08/18",
-        "marketSimpleReturn": 119.12
-      },
-      {
-        "key": "SIMPLE_YEARLY",
-        "fromDate": "1404/08/18",
-        "toDate": "1405/08/18",
-        "marketSimpleReturn": 158.24
-      },
-      {
-        "key": "SIMPLE_ALL_DAYS",
-        "fromDate": "1402/09/12",
-        "toDate": "1405/08/18",
-        "marketSimpleReturn": 283.65
-      },
-      {
-        "key": "MAX_SIMPLE_WEEKLY",
-        "fromDate": "1404/01/27",
-        "toDate": "1404/02/03",
-        "marketSimpleReturn": 6.42
-      },
-      {
-        "key": "MIN_SIMPLE_WEEKLY",
-        "fromDate": "1403/05/08",
-        "toDate": "1403/05/15",
-        "marketSimpleReturn": -7.19
-      },
-      {
-        "marketDailyReturn": -0.87
-      },
-      {
-        "dailyReturnDate": "1405/08/23"
-      },
-      {
-        "AutoAgah_fundSimpleReturn": 6.85
-      },
-      {
-        "AutoAgah_fundSimpleReturn": -3.33
-      },
-      {
-        "AutoAgah_fundSimpleReturn": 24.43
-      },
-      {
-        "AutoAgah_fundSimpleReturn": 67.18
-      },
-      {
-        "AutoAgah_fundSimpleReturn": 60.87
-      },
-      {
-        "AutoAgah_fundSimpleReturn": 80.52
-      },
-      {
-        "AutoAgah_fundSimpleReturn": 16.4
-      },
-      {
-        "AutoAgah_fundSimpleReturn": -13.61
-      },
-      {
-        "AutoAgah_fundDailyReturn": -1.0
-      },
-      {
-        "AutoAgah_fundNAV": 7271148268029.0
-      },
-      {
-        "AutoDariush_fundSimpleReturn": 5.28
-      },
-      {
-        "AutoDariush_fundSimpleReturn": -6.28
-      },
-      {
-        "AutoDariush_fundSimpleReturn": 26.57
-      },
-      {
-        "AutoDariush_fundSimpleReturn": 65.02
-      },
-      {
-        "AutoDariush_fundSimpleReturn": 57.14
-      },
-      {
-        "AutoDariush_fundSimpleReturn": 60.98
-      },
-      {
-        "AutoDariush_fundSimpleReturn": 27.95
-      },
-      {
-        "AutoDariush_fundSimpleReturn": -18.01
-      },
-      {
-        "AutoDariush_fundDailyReturn": -1.51
-      },
-      {
-        "AutoDariush_fundNAV": 9338875206758.0
-      },
-      {
-        "BehinRo_fundSimpleReturn": 5.89
-      },
-      {
-        "BehinRo_fundSimpleReturn": -6.79
-      },
-      {
-        "BehinRo_fundSimpleReturn": 17.42
-      },
-      {
-        "BehinRo_fundSimpleReturn": 90.92
-      },
-      {
-        "BehinRo_fundSimpleReturn": 41.97
-      },
-      {
-        "BehinRo_fundSimpleReturn": 79.74
-      },
-      {
-        "BehinRo_fundSimpleReturn": 30.15
-      },
-      {
-        "BehinRo_fundSimpleReturn": -19.99
-      },
-      {
-        "BehinRo_fundDailyReturn": -1.42
-      },
-      {
-        "BehinRo_fundNAV": 13940950610198.0
-      },
-      {
-        "Khodran_fundSimpleReturn": 1.56
-      },
-      {
-        "Khodran_fundSimpleReturn": -2.92
-      },
-      {
-        "Khodran_fundSimpleReturn": 19.05
-      },
-      {
-        "Khodran_fundSimpleReturn": 89.19
-      },
-      {
-        "Khodran_fundSimpleReturn": 53.39
-      },
-      {
-        "Khodran_fundSimpleReturn": 58.67
-      },
-      {
-        "Khodran_fundDailyReturn": -1.6183
-      },
-      {
-        "Khodran_fundNAV": 9759540786029.0
+        "Khodran_fundNAV": 9798872545437.0
       }
     ]
   },
   "indexHistory": [
-    {
-      "date": "1404/07/19",
-      "value": 349542.2
-    },
     {
       "date": "1404/07/20",
       "value": 354914.0
@@ -3133,6 +3129,10 @@
     {
       "date": "1405/08/23",
       "value": 538299.0
+    },
+    {
+      "date": "1405/08/24",
+      "value": 550117.2
     }
   ],
   "fundHistory": {}
