@@ -2,55 +2,55 @@
   "dates": {
     "1405/08/30": [
       {
-        "DailyReturn": 0.0
+        "indexDailyReturn": 0.0
       },
       {
-        "WeeklyReturn": 5.589298999017718
+        "indexWeeklyReturn": 7.655039299720044
       },
       {
-        "MonthlyReturn": 7.971321508980036
+        "indexMonthlyReturn": 7.971352022089648
       },
       {
-        "QuarterlyReturn": 15.993345921985306
+        "indexQuarterlyReturn": 13.275917339734317
       },
       {
-        "SixmonthsReturn": 59.59680721947569
+        "indexSixmonthsReturn": 55.83438431937785
       },
       {
-        "AnnualReturn": 54.15827495825536
+        "indexAnnualReturn": 54.15837580736122
       },
       {
         "AutoCar_tseDailyReturn": 0.0
       },
       {
-        "AutoCar_tseWeeklyReturn": 8.931030166478909
+        "AutoCar_tseWeeklyReturn": 2.1948233648128714
       },
       {
-        "AutoCar_tseMonthlyReturn": 11.043766747479904
+        "AutoCar_tseMonthlyReturn": 4.665950205982447
       },
       {
-        "AutoCar_tseQuarterlyReturn": 24.62408706859516
+        "AutoCar_tseQuarterlyReturn": 16.869999999999997
       },
       {
-        "AutoCar_tseSixmonthsReturn": 61.726444898717716
+        "AutoCar_tseSixmonthsReturn": null
       },
       {
-        "AutoCar_tseAnnualReturn": 69.47419668938656
+        "AutoCar_tseAnnualReturn": null
       },
       {
         "Khodran_tseDailyReturn": 0.0
       },
       {
-        "Khodran_tseWeeklyReturn": 8.931030166478909
+        "Khodran_tseWeeklyReturn": 11.270937220304308
       },
       {
         "Khodran_tseMonthlyReturn": 11.043766747479904
       },
       {
-        "Khodran_tseQuarterlyReturn": 24.62408706859516
+        "Khodran_tseQuarterlyReturn": 21.390710001394893
       },
       {
-        "Khodran_tseSixmonthsReturn": 61.726444898717716
+        "Khodran_tseSixmonthsReturn": 60.32608695652174
       },
       {
         "Khodran_tseAnnualReturn": 69.47419668938656
@@ -59,16 +59,16 @@
         "AutoAgah_tseDailyReturn": 0.0
       },
       {
-        "AutoAgah_tseWeeklyReturn": 4.415380591158776
+        "AutoAgah_tseWeeklyReturn": 6.607200085460955
       },
       {
         "AutoAgah_tseMonthlyReturn": 7.283379918297141
       },
       {
-        "AutoAgah_tseQuarterlyReturn": 23.333127355867266
+        "AutoAgah_tseQuarterlyReturn": 20.03969447284537
       },
       {
-        "AutoAgah_tseSixmonthsReturn": 80.52641099855282
+        "AutoAgah_tseSixmonthsReturn": 77.84014969259556
       },
       {
         "AutoAgah_tseAnnualReturn": 80.2981029810298
@@ -77,16 +77,16 @@
         "AutoDariush_tseDailyReturn": 0.0
       },
       {
-        "AutoDariush_tseWeeklyReturn": 2.1097539594412953
+        "AutoDariush_tseWeeklyReturn": 5.240332490061438
       },
       {
         "AutoDariush_tseMonthlyReturn": 1.5046766978446524
       },
       {
-        "AutoDariush_tseQuarterlyReturn": 23.967645806726267
+        "AutoDariush_tseQuarterlyReturn": 20.513174230928406
       },
       {
-        "AutoDariush_tseSixmonthsReturn": 74.78991596638656
+        "AutoDariush_tseSixmonthsReturn": 70.04379562043795
       },
       {
         "AutoDariush_tseAnnualReturn": 68.24265767934521
@@ -95,16 +95,16 @@
         "TakhtGaz_tseDailyReturn": 0.0
       },
       {
-        "TakhtGaz_tseWeeklyReturn": 9.347587719298247
+        "TakhtGaz_tseWeeklyReturn": 9.81417756366139
       },
       {
         "TakhtGaz_tseMonthlyReturn": 9.995863780504619
       },
       {
-        "TakhtGaz_tseQuarterlyReturn": 27.078687480089204
+        "TakhtGaz_tseQuarterlyReturn": 23.527134783618486
       },
       {
-        "TakhtGaz_tseSixmonthsReturn": 65.175983436853
+        "TakhtGaz_tseSixmonthsReturn": 65.10761589403974
       },
       {
         "TakhtGaz_tseAnnualReturn": 55.04810028179963
@@ -113,16 +113,16 @@
         "BehinRo_tseDailyReturn": 0.0
       },
       {
-        "BehinRo_tseWeeklyReturn": 3.7073885950672882
+        "BehinRo_tseWeeklyReturn": 5.122080679405521
       },
       {
         "BehinRo_tseMonthlyReturn": 3.5014371570420693
       },
       {
-        "BehinRo_tseQuarterlyReturn": 20.776924015123797
+        "BehinRo_tseQuarterlyReturn": 17.460411600735426
       },
       {
-        "BehinRo_tseSixmonthsReturn": 61.107947612462375
+        "BehinRo_tseSixmonthsReturn": 63.0712227254014
       },
       {
         "BehinRo_tseAnnualReturn": 57.0578905630452
@@ -298,40 +298,40 @@
     ],
     "1405/08/29": [
       {
-        "DailyReturn": 0.0
+        "indexDailyReturn": 0.0
       },
       {
-        "WeeklyReturn": 5.589298999017718
+        "indexWeeklyReturn": 5.589344605797788
       },
       {
-        "MonthlyReturn": 5.749822353301401
+        "indexMonthlyReturn": 7.971352022089648
       },
       {
-        "QuarterlyReturn": 19.177603836014324
+        "indexQuarterlyReturn": 15.993298679151247
       },
       {
-        "SixmonthsReturn": 65.27928739354294
+        "indexSixmonthsReturn": 59.596922110898745
       },
       {
-        "AnnualReturn": 54.15827495825536
+        "indexAnnualReturn": 54.15837580736122
       },
       {
         "AutoCar_tseDailyReturn": 0.0
       },
       {
-        "AutoCar_tseWeeklyReturn": 8.931030166478909
+        "AutoCar_tseWeeklyReturn": 2.806122448979592
       },
       {
-        "AutoCar_tseMonthlyReturn": 7.851034824637501
+        "AutoCar_tseMonthlyReturn": 4.665950205982447
       },
       {
-        "AutoCar_tseQuarterlyReturn": 28.345992183467295
+        "AutoCar_tseQuarterlyReturn": 16.869999999999997
       },
       {
-        "AutoCar_tseSixmonthsReturn": 66.57096372858646
+        "AutoCar_tseSixmonthsReturn": null
       },
       {
-        "AutoCar_tseAnnualReturn": 69.47419668938656
+        "AutoCar_tseAnnualReturn": null
       },
       {
         "Khodran_tseDailyReturn": 0.0
@@ -340,13 +340,13 @@
         "Khodran_tseWeeklyReturn": 8.931030166478909
       },
       {
-        "Khodran_tseMonthlyReturn": 7.851034824637501
+        "Khodran_tseMonthlyReturn": 11.043766747479904
       },
       {
-        "Khodran_tseQuarterlyReturn": 28.345992183467295
+        "Khodran_tseQuarterlyReturn": 24.62408706859516
       },
       {
-        "Khodran_tseSixmonthsReturn": 66.57096372858646
+        "Khodran_tseSixmonthsReturn": 61.726444898717716
       },
       {
         "Khodran_tseAnnualReturn": 69.47419668938656
@@ -358,13 +358,13 @@
         "AutoAgah_tseWeeklyReturn": 4.415380591158776
       },
       {
-        "AutoAgah_tseMonthlyReturn": 5.463672391017173
+        "AutoAgah_tseMonthlyReturn": 7.283379918297141
       },
       {
-        "AutoAgah_tseQuarterlyReturn": 26.635365776283233
+        "AutoAgah_tseQuarterlyReturn": 23.333127355867266
       },
       {
-        "AutoAgah_tseSixmonthsReturn": 85.9418669647848
+        "AutoAgah_tseSixmonthsReturn": 80.52641099855282
       },
       {
         "AutoAgah_tseAnnualReturn": 80.2981029810298
@@ -376,13 +376,13 @@
         "AutoDariush_tseWeeklyReturn": 2.1097539594412953
       },
       {
-        "AutoDariush_tseMonthlyReturn": 0.15477214101461736
+        "AutoDariush_tseMonthlyReturn": 1.5046766978446524
       },
       {
-        "AutoDariush_tseQuarterlyReturn": 27.635327635327634
+        "AutoDariush_tseQuarterlyReturn": 23.967645806726267
       },
       {
-        "AutoDariush_tseSixmonthsReturn": 80.03091190108191
+        "AutoDariush_tseSixmonthsReturn": 74.78991596638656
       },
       {
         "AutoDariush_tseAnnualReturn": 68.24265767934521
@@ -394,13 +394,13 @@
         "TakhtGaz_tseWeeklyReturn": 9.347587719298247
       },
       {
-        "TakhtGaz_tseMonthlyReturn": 10.975100848518569
+        "TakhtGaz_tseMonthlyReturn": 9.995863780504619
       },
       {
-        "TakhtGaz_tseQuarterlyReturn": 30.78688524590164
+        "TakhtGaz_tseQuarterlyReturn": 27.078687480089204
       },
       {
-        "TakhtGaz_tseSixmonthsReturn": 70.12474677470945
+        "TakhtGaz_tseSixmonthsReturn": 65.175983436853
       },
       {
         "TakhtGaz_tseAnnualReturn": 55.04810028179963
@@ -412,13 +412,13 @@
         "BehinRo_tseWeeklyReturn": 3.7073885950672882
       },
       {
-        "BehinRo_tseMonthlyReturn": 3.377179246267878
+        "BehinRo_tseMonthlyReturn": 3.5014371570420693
       },
       {
-        "BehinRo_tseQuarterlyReturn": 23.920660743336253
+        "BehinRo_tseQuarterlyReturn": 20.776924015123797
       },
       {
-        "BehinRo_tseSixmonthsReturn": 65.94051110180142
+        "BehinRo_tseSixmonthsReturn": 61.107947612462375
       },
       {
         "BehinRo_tseAnnualReturn": 57.0578905630452
@@ -570,130 +570,130 @@
     ],
     "1405/08/28": [
       {
-        "DailyReturn": 1.657819001003761
+        "indexDailyReturn": 0.0
       },
       {
-        "WeeklyReturn": 5.589298999017718
+        "indexWeeklyReturn": 5.589344605797788
       },
       {
-        "MonthlyReturn": 6.504980681377705
+        "indexMonthlyReturn": 5.749848995523698
       },
       {
-        "QuarterlyReturn": 19.177603836014324
+        "indexQuarterlyReturn": 19.177631443648792
       },
       {
-        "SixmonthsReturn": 70.46455540151659
+        "indexSixmonthsReturn": 65.27941772050812
       },
       {
-        "AnnualReturn": 54.98519701212319
+        "indexAnnualReturn": 54.15837580736122
       },
       {
-        "AutoCar_tseDailyReturn": 2.6722510618216138
+        "AutoCar_tseDailyReturn": 0.0
       },
       {
-        "AutoCar_tseWeeklyReturn": 8.931030166478909
+        "AutoCar_tseWeeklyReturn": 2.806122448979592
       },
       {
-        "AutoCar_tseMonthlyReturn": 9.796871057279837
+        "AutoCar_tseMonthlyReturn": 3.0417915711514723
       },
       {
-        "AutoCar_tseQuarterlyReturn": 28.345992183467295
+        "AutoCar_tseQuarterlyReturn": 16.869999999999997
       },
       {
-        "AutoCar_tseSixmonthsReturn": 71.56234598324298
+        "AutoCar_tseSixmonthsReturn": null
       },
       {
-        "AutoCar_tseAnnualReturn": 69.970703125
+        "AutoCar_tseAnnualReturn": null
       },
       {
-        "Khodran_tseDailyReturn": 2.6722510618216138
+        "Khodran_tseDailyReturn": 0.0
       },
       {
         "Khodran_tseWeeklyReturn": 8.931030166478909
       },
       {
-        "Khodran_tseMonthlyReturn": 9.796871057279837
+        "Khodran_tseMonthlyReturn": 7.851034824637501
       },
       {
         "Khodran_tseQuarterlyReturn": 28.345992183467295
       },
       {
-        "Khodran_tseSixmonthsReturn": 71.56234598324298
+        "Khodran_tseSixmonthsReturn": 66.57096372858646
       },
       {
-        "Khodran_tseAnnualReturn": 69.970703125
+        "Khodran_tseAnnualReturn": 69.47419668938656
       },
       {
-        "AutoAgah_tseDailyReturn": 0.5896583005745389
+        "AutoAgah_tseDailyReturn": 0.0
       },
       {
         "AutoAgah_tseWeeklyReturn": 4.415380591158776
       },
       {
-        "AutoAgah_tseMonthlyReturn": 6.114094316550587
+        "AutoAgah_tseMonthlyReturn": 5.463672391017173
       },
       {
         "AutoAgah_tseQuarterlyReturn": 26.635365776283233
       },
       {
-        "AutoAgah_tseSixmonthsReturn": 91.3431118780558
+        "AutoAgah_tseSixmonthsReturn": 85.9418669647848
       },
       {
-        "AutoAgah_tseAnnualReturn": 80.78804347826087
+        "AutoAgah_tseAnnualReturn": 80.2981029810298
       },
       {
-        "AutoDariush_tseDailyReturn": -0.8737092930897538
+        "AutoDariush_tseDailyReturn": 0.0
       },
       {
         "AutoDariush_tseWeeklyReturn": 2.1097539594412953
       },
       {
-        "AutoDariush_tseMonthlyReturn": 2.03819424166326
+        "AutoDariush_tseMonthlyReturn": 0.15477214101461736
       },
       {
         "AutoDariush_tseQuarterlyReturn": 27.635327635327634
       },
       {
-        "AutoDariush_tseSixmonthsReturn": 85.41865647882841
+        "AutoDariush_tseSixmonthsReturn": 80.03091190108191
       },
       {
-        "AutoDariush_tseAnnualReturn": 67.5649755442601
+        "AutoDariush_tseAnnualReturn": 68.24265767934521
       },
       {
-        "TakhtGaz_tseDailyReturn": 1.327236934019178
+        "TakhtGaz_tseDailyReturn": 0.0
       },
       {
         "TakhtGaz_tseWeeklyReturn": 9.347587719298247
       },
       {
-        "TakhtGaz_tseMonthlyReturn": 11.440145271685989
+        "TakhtGaz_tseMonthlyReturn": 10.975100848518569
       },
       {
         "TakhtGaz_tseQuarterlyReturn": 30.78688524590164
       },
       {
-        "TakhtGaz_tseSixmonthsReturn": 75.20588558251895
+        "TakhtGaz_tseSixmonthsReturn": 70.12474677470945
       },
       {
-        "TakhtGaz_tseAnnualReturn": 57.186484090237414
+        "TakhtGaz_tseAnnualReturn": 55.04810028179963
       },
       {
-        "BehinRo_tseDailyReturn": -0.03028620463378931
+        "BehinRo_tseDailyReturn": 0.0
       },
       {
         "BehinRo_tseWeeklyReturn": 3.7073885950672882
       },
       {
-        "BehinRo_tseMonthlyReturn": 2.9740550096188842
+        "BehinRo_tseMonthlyReturn": 3.377179246267878
       },
       {
         "BehinRo_tseQuarterlyReturn": 23.920660743336253
       },
       {
-        "BehinRo_tseSixmonthsReturn": 70.90956161546428
+        "BehinRo_tseSixmonthsReturn": 65.94051110180142
       },
       {
-        "BehinRo_tseAnnualReturn": 57.683121019108285
+        "BehinRo_tseAnnualReturn": 57.0578905630452
       },
       {
         "key": "SIMPLE_WEEKLY",
@@ -748,6 +748,30 @@
       },
       {
         "dailyReturnDate": "1405/08/29"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 4.92
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 4.73
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 25.78
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 79.43
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 73.94
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 99.03
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
       },
       {
         "AutoAgah_fundDailyReturn": 0.67
@@ -842,49 +866,49 @@
     ],
     "1405/08/27": [
       {
-        "DailyReturn": 2.7289965948257406
+        "indexDailyReturn": 1.6577318719564396
       },
       {
-        "WeeklyReturn": 6.010593985399776
+        "indexWeeklyReturn": 5.589344605797788
       },
       {
-        "MonthlyReturn": 6.7758095060510515
+        "indexMonthlyReturn": 6.504910753668362
       },
       {
-        "QuarterlyReturn": 19.177603836014324
+        "indexQuarterlyReturn": 19.177631443648792
       },
       {
-        "SixmonthsReturn": 70.46455540151659
+        "indexSixmonthsReturn": 70.46449992204896
       },
       {
-        "AnnualReturn": 52.428797899110904
+        "indexAnnualReturn": 54.98542429996524
       },
       {
-        "AutoCar_tseDailyReturn": 5.721921885440078
+        "AutoCar_tseDailyReturn": -0.5446344991915582
       },
       {
-        "AutoCar_tseWeeklyReturn": 9.047052189712424
+        "AutoCar_tseWeeklyReturn": 2.806122448979592
       },
       {
-        "AutoCar_tseMonthlyReturn": 10.528989648821998
+        "AutoCar_tseMonthlyReturn": 3.1236212829789114
       },
       {
-        "AutoCar_tseQuarterlyReturn": 28.345992183467295
+        "AutoCar_tseQuarterlyReturn": 16.869999999999997
       },
       {
-        "AutoCar_tseSixmonthsReturn": 71.56234598324298
+        "AutoCar_tseSixmonthsReturn": null
       },
       {
-        "AutoCar_tseAnnualReturn": 66.55502392344498
+        "AutoCar_tseAnnualReturn": null
       },
       {
-        "Khodran_tseDailyReturn": 5.721921885440078
+        "Khodran_tseDailyReturn": 2.6722510618216138
       },
       {
-        "Khodran_tseWeeklyReturn": 9.047052189712424
+        "Khodran_tseWeeklyReturn": 8.931030166478909
       },
       {
-        "Khodran_tseMonthlyReturn": 10.528989648821998
+        "Khodran_tseMonthlyReturn": 9.796871057279837
       },
       {
         "Khodran_tseQuarterlyReturn": 28.345992183467295
@@ -893,16 +917,16 @@
         "Khodran_tseSixmonthsReturn": 71.56234598324298
       },
       {
-        "Khodran_tseAnnualReturn": 66.55502392344498
+        "Khodran_tseAnnualReturn": 69.970703125
       },
       {
-        "AutoAgah_tseDailyReturn": 1.7537598776446597
+        "AutoAgah_tseDailyReturn": 0.5896583005745389
       },
       {
-        "AutoAgah_tseWeeklyReturn": 4.876254532079239
+        "AutoAgah_tseWeeklyReturn": 4.415380591158776
       },
       {
-        "AutoAgah_tseMonthlyReturn": 7.416177816048652
+        "AutoAgah_tseMonthlyReturn": 6.114094316550587
       },
       {
         "AutoAgah_tseQuarterlyReturn": 26.635365776283233
@@ -911,16 +935,16 @@
         "AutoAgah_tseSixmonthsReturn": 91.3431118780558
       },
       {
-        "AutoAgah_tseAnnualReturn": 75.85022026431719
+        "AutoAgah_tseAnnualReturn": 80.78804347826087
       },
       {
-        "AutoDariush_tseDailyReturn": 1.0000578068096422
+        "AutoDariush_tseDailyReturn": -0.8737092930897538
       },
       {
-        "AutoDariush_tseWeeklyReturn": 2.55928621742193
+        "AutoDariush_tseWeeklyReturn": 2.1097539594412953
       },
       {
-        "AutoDariush_tseMonthlyReturn": 2.7522935779816518
+        "AutoDariush_tseMonthlyReturn": 2.03819424166326
       },
       {
         "AutoDariush_tseQuarterlyReturn": 27.635327635327634
@@ -929,16 +953,16 @@
         "AutoDariush_tseSixmonthsReturn": 85.41865647882841
       },
       {
-        "AutoDariush_tseAnnualReturn": 67.48466257668711
+        "AutoDariush_tseAnnualReturn": 67.5649755442601
       },
       {
-        "TakhtGaz_tseDailyReturn": 4.335316811613156
+        "TakhtGaz_tseDailyReturn": 1.327236934019178
       },
       {
-        "TakhtGaz_tseWeeklyReturn": 9.505181524946812
+        "TakhtGaz_tseWeeklyReturn": 9.347587719298247
       },
       {
-        "TakhtGaz_tseMonthlyReturn": 14.758342922899883
+        "TakhtGaz_tseMonthlyReturn": 11.440145271685989
       },
       {
         "TakhtGaz_tseQuarterlyReturn": 30.78688524590164
@@ -947,16 +971,16 @@
         "TakhtGaz_tseSixmonthsReturn": 75.20588558251895
       },
       {
-        "TakhtGaz_tseAnnualReturn": 53.837254145777095
+        "TakhtGaz_tseAnnualReturn": 57.186484090237414
       },
       {
-        "BehinRo_tseDailyReturn": 0.2734038782846438
+        "BehinRo_tseDailyReturn": -0.03028620463378931
       },
       {
-        "BehinRo_tseWeeklyReturn": 4.522904792062487
+        "BehinRo_tseWeeklyReturn": 3.7073885950672882
       },
       {
-        "BehinRo_tseMonthlyReturn": 3.4203655352480418
+        "BehinRo_tseMonthlyReturn": 2.9740550096188842
       },
       {
         "BehinRo_tseQuarterlyReturn": 23.920660743336253
@@ -965,7 +989,7 @@
         "BehinRo_tseSixmonthsReturn": 70.90956161546428
       },
       {
-        "BehinRo_tseAnnualReturn": 53.40821068938807
+        "BehinRo_tseAnnualReturn": 57.683121019108285
       },
       {
         "key": "SIMPLE_WEEKLY",
@@ -1020,6 +1044,30 @@
       },
       {
         "dailyReturnDate": "1405/08/29"
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 4.91
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 5.06
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 25.77
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 82.83
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 77.28
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 95.58
+      },
+      {
+        "AutoAgah_fundSimpleReturn": 16.4
+      },
+      {
+        "AutoAgah_fundSimpleReturn": -13.61
       },
       {
         "AutoAgah_fundDailyReturn": 0.67
@@ -1114,130 +1162,130 @@
     ],
     "1405/08/26": [
       {
-        "DailyReturn": 3.6245003791919252
+        "indexDailyReturn": 1.0536914655245766
       },
       {
-        "WeeklyReturn": 7.232494939407387
+        "indexWeeklyReturn": 4.281906671374136
       },
       {
-        "MonthlyReturn": 3.0366423632612447
+        "indexMonthlyReturn": 5.034529012477614
       },
       {
-        "QuarterlyReturn": 18.826171531389107
+        "indexQuarterlyReturn": 17.234202700646165
       },
       {
-        "SixmonthsReturn": 67.6846474542538
+        "indexSixmonthsReturn": 67.68473659904046
       },
       {
-        "AnnualReturn": 50.44788141441903
+        "indexAnnualReturn": 49.94331647294315
       },
       {
-        "AutoCar_tseDailyReturn": 5.764911405041178
+        "AutoCar_tseDailyReturn": 0.034051247126926025
       },
       {
-        "AutoCar_tseWeeklyReturn": 9.353631789446522
+        "AutoCar_tseWeeklyReturn": 3.9727481861617413
       },
       {
-        "AutoCar_tseMonthlyReturn": 5.363913232643421
+        "AutoCar_tseMonthlyReturn": 4.788657035848047
       },
       {
-        "AutoCar_tseQuarterlyReturn": 27.190876350540215
+        "AutoCar_tseQuarterlyReturn": 17.51
       },
       {
-        "AutoCar_tseSixmonthsReturn": 67.09709216362741
+        "AutoCar_tseSixmonthsReturn": null
       },
       {
-        "AutoCar_tseAnnualReturn": 63.3140655105973
+        "AutoCar_tseAnnualReturn": null
       },
       {
-        "Khodran_tseDailyReturn": 5.764911405041178
+        "Khodran_tseDailyReturn": 2.9702970297029703
       },
       {
-        "Khodran_tseWeeklyReturn": 9.353631789446522
+        "Khodran_tseWeeklyReturn": 6.208884155128125
       },
       {
-        "Khodran_tseMonthlyReturn": 5.363913232643421
+        "Khodran_tseMonthlyReturn": 7.652251222455071
       },
       {
-        "Khodran_tseQuarterlyReturn": 27.190876350540215
+        "Khodran_tseQuarterlyReturn": 25.005530565592508
       },
       {
         "Khodran_tseSixmonthsReturn": 67.09709216362741
       },
       {
-        "Khodran_tseAnnualReturn": 63.3140655105973
+        "Khodran_tseAnnualReturn": 62.22009569377991
       },
       {
-        "AutoAgah_tseDailyReturn": 4.091910607491344
+        "AutoAgah_tseDailyReturn": 1.1572775936783073
       },
       {
-        "AutoAgah_tseWeeklyReturn": 7.352702483363091
+        "AutoAgah_tseWeeklyReturn": 4.261468130944249
       },
       {
-        "AutoAgah_tseMonthlyReturn": 6.129653401797175
+        "AutoAgah_tseMonthlyReturn": 6.786502341101125
       },
       {
-        "AutoAgah_tseQuarterlyReturn": 25.765354630157827
+        "AutoAgah_tseQuarterlyReturn": 25.89302709218958
       },
       {
         "AutoAgah_tseSixmonthsReturn": 90.22145527753811
       },
       {
-        "AutoAgah_tseAnnualReturn": 75.74844995571301
+        "AutoAgah_tseAnnualReturn": 74.8193832599119
       },
       {
-        "AutoDariush_tseDailyReturn": 4.922912078099887
+        "AutoDariush_tseDailyReturn": 1.8902826752991504
       },
       {
-        "AutoDariush_tseWeeklyReturn": 6.546575590884363
+        "AutoDariush_tseWeeklyReturn": 3.463254285043437
       },
       {
-        "AutoDariush_tseMonthlyReturn": 2.1560217920482208
+        "AutoDariush_tseMonthlyReturn": 3.657962832274759
       },
       {
-        "AutoDariush_tseQuarterlyReturn": 30.524289099526065
+        "AutoDariush_tseQuarterlyReturn": 28.76031850390825
       },
       {
         "AutoDariush_tseSixmonthsReturn": 87.05295553433089
       },
       {
-        "AutoDariush_tseAnnualReturn": 69.15547024952016
+        "AutoDariush_tseAnnualReturn": 68.96088957055214
       },
       {
-        "TakhtGaz_tseDailyReturn": 5.7626435623614745
+        "TakhtGaz_tseDailyReturn": 2.968678480350487
       },
       {
-        "TakhtGaz_tseWeeklyReturn": 11.168372749735262
+        "TakhtGaz_tseWeeklyReturn": 8.070825612518014
       },
       {
-        "TakhtGaz_tseMonthlyReturn": 11.372798642053894
+        "TakhtGaz_tseMonthlyReturn": 13.255178365937859
       },
       {
-        "TakhtGaz_tseQuarterlyReturn": 27.692182938696075
+        "TakhtGaz_tseQuarterlyReturn": 29.07377049180328
       },
       {
         "TakhtGaz_tseSixmonthsReturn": 72.91094762270781
       },
       {
-        "TakhtGaz_tseAnnualReturn": 56.297766749379655
+        "TakhtGaz_tseAnnualReturn": 51.822213652140384
       },
       {
-        "BehinRo_tseDailyReturn": 2.8768759412161815
+        "BehinRo_tseDailyReturn": 0.30378208698293757
       },
       {
-        "BehinRo_tseWeeklyReturn": 7.639228470524315
+        "BehinRo_tseWeeklyReturn": 4.554570403208782
       },
       {
-        "BehinRo_tseMonthlyReturn": 2.5998239163084573
+        "BehinRo_tseMonthlyReturn": 3.4516971279373365
       },
       {
-        "BehinRo_tseQuarterlyReturn": 23.02676519903124
+        "BehinRo_tseQuarterlyReturn": 23.958202978350645
       },
       {
         "BehinRo_tseSixmonthsReturn": 70.96133931653435
       },
       {
-        "BehinRo_tseAnnualReturn": 54.53198127925118
+        "BehinRo_tseAnnualReturn": 53.454686289697904
       },
       {
         "key": "SIMPLE_WEEKLY",
@@ -1410,130 +1458,130 @@
     ],
     "1405/08/25": [
       {
-        "DailyReturn": 4.795308926823193
+        "indexDailyReturn": 2.5440042754541308
       },
       {
-        "WeeklyReturn": 7.7052776363313145
+        "indexWeeklyReturn": 6.114479305201023
       },
       {
-        "MonthlyReturn": -0.4284608575395049
+        "indexMonthlyReturn": 1.962386241425744
       },
       {
-        "QuarterlyReturn": 18.801710067707724
+        "indexQuarterlyReturn": 17.587271412163695
       },
       {
-        "SixmonthsReturn": 64.16570340337509
+        "indexSixmonthsReturn": 65.93628017661058
       },
       {
-        "AnnualReturn": 50.186591055822895
+        "indexAnnualReturn": 48.87914152850575
       },
       {
-        "AutoCar_tseDailyReturn": 5.248689425904616
+        "AutoCar_tseDailyReturn": 2.5491051942383236
       },
       {
-        "AutoCar_tseWeeklyReturn": 7.292752867570386
+        "AutoCar_tseWeeklyReturn": 6.086877991510882
       },
       {
-        "AutoCar_tseMonthlyReturn": -0.7415892921741228
+        "AutoCar_tseMonthlyReturn": 6.5777535837416075
       },
       {
-        "AutoCar_tseQuarterlyReturn": 23.97770916484675
+        "AutoCar_tseQuarterlyReturn": 17.47
       },
       {
-        "AutoCar_tseSixmonthsReturn": 66.24255276178936
+        "AutoCar_tseSixmonthsReturn": null
       },
       {
-        "AutoCar_tseAnnualReturn": 59.67992240543162
+        "AutoCar_tseAnnualReturn": null
       },
       {
-        "Khodran_tseDailyReturn": 5.248689425904616
+        "Khodran_tseDailyReturn": 2.714000499126529
       },
       {
-        "Khodran_tseWeeklyReturn": 7.292752867570386
+        "Khodran_tseWeeklyReturn": 6.199200103212489
       },
       {
-        "Khodran_tseMonthlyReturn": -0.7415892921741228
+        "Khodran_tseMonthlyReturn": 2.324569581701784
       },
       {
-        "Khodran_tseQuarterlyReturn": 23.97770916484675
+        "Khodran_tseQuarterlyReturn": 23.521908763505404
       },
       {
-        "Khodran_tseSixmonthsReturn": 66.24255276178936
+        "Khodran_tseSixmonthsReturn": 62.27698373583046
       },
       {
-        "Khodran_tseAnnualReturn": 59.67992240543162
+        "Khodran_tseAnnualReturn": 58.603082851637765
       },
       {
-        "AutoAgah_tseDailyReturn": 4.769789552398248
+        "AutoAgah_tseDailyReturn": 2.9010596999265554
       },
       {
-        "AutoAgah_tseWeeklyReturn": 8.954063211686941
+        "AutoAgah_tseWeeklyReturn": 6.1245468809176
       },
       {
-        "AutoAgah_tseMonthlyReturn": 1.7745031909925804
+        "AutoAgah_tseMonthlyReturn": 4.915489944373128
       },
       {
-        "AutoAgah_tseQuarterlyReturn": 27.45289148797921
+        "AutoAgah_tseQuarterlyReturn": 24.326551308867337
       },
       {
-        "AutoAgah_tseSixmonthsReturn": 83.24925261584455
+        "AutoAgah_tseSixmonthsReturn": 88.04524973636276
       },
       {
-        "AutoAgah_tseAnnualReturn": 75.60429722470904
+        "AutoAgah_tseAnnualReturn": 73.7378210806023
       },
       {
-        "AutoDariush_tseDailyReturn": 4.198289362727382
+        "AutoDariush_tseDailyReturn": 2.976367640931008
       },
       {
-        "AutoDariush_tseWeeklyReturn": 5.85607636764166
+        "AutoDariush_tseWeeklyReturn": 4.569908722722602
       },
       {
-        "AutoDariush_tseMonthlyReturn": -2.6833933393339335
+        "AutoDariush_tseMonthlyReturn": 0.2608090877477686
       },
       {
-        "AutoDariush_tseQuarterlyReturn": 27.385861561119295
+        "AutoDariush_tseQuarterlyReturn": 28.102784360189574
       },
       {
-        "AutoDariush_tseSixmonthsReturn": 78.65330992461014
+        "AutoDariush_tseSixmonthsReturn": 83.5827231242704
       },
       {
-        "AutoDariush_tseAnnualReturn": 67.96776386056898
+        "AutoDariush_tseAnnualReturn": 66.0172744721689
       },
       {
-        "TakhtGaz_tseDailyReturn": 5.251204404679973
+        "TakhtGaz_tseDailyReturn": 2.7134125864732352
       },
       {
-        "TakhtGaz_tseWeeklyReturn": 9.792519204537296
+        "TakhtGaz_tseWeeklyReturn": 7.96328979879986
       },
       {
-        "TakhtGaz_tseMonthlyReturn": 5.019914846861695
+        "TakhtGaz_tseMonthlyReturn": 8.161821911026239
       },
       {
-        "TakhtGaz_tseQuarterlyReturn": 23.14195990015299
+        "TakhtGaz_tseQuarterlyReturn": 24.010703859876745
       },
       {
-        "TakhtGaz_tseSixmonthsReturn": 62.91679982955151
+        "TakhtGaz_tseSixmonthsReturn": 67.92577138464917
       },
       {
-        "TakhtGaz_tseAnnualReturn": 52.35106594939231
+        "TakhtGaz_tseAnnualReturn": 51.791563275434235
       },
       {
-        "BehinRo_tseDailyReturn": 4.8354564755838645
+        "BehinRo_tseDailyReturn": 2.565300929532118
       },
       {
-        "BehinRo_tseWeeklyReturn": 9.435948581560284
+        "BehinRo_tseWeeklyReturn": 7.313230100516164
       },
       {
-        "BehinRo_tseMonthlyReturn": 0.05572441742654508
+        "BehinRo_tseMonthlyReturn": 2.2890879900564505
       },
       {
-        "BehinRo_tseQuarterlyReturn": 21.95739425748688
+        "BehinRo_tseQuarterlyReturn": 22.654163820406136
       },
       {
-        "BehinRo_tseSixmonthsReturn": 65.36336235766912
+        "BehinRo_tseSixmonthsReturn": 70.44356230583362
       },
       {
-        "BehinRo_tseAnnualReturn": 56.134387351778656
+        "BehinRo_tseAnnualReturn": 54.06396255850234
       },
       {
         "key": "SIMPLE_WEEKLY",
@@ -1706,130 +1754,130 @@
     ],
     "1405/08/24": [
       {
-        "DailyReturn": 0.23437091461139126
+        "indexDailyReturn": 2.195434136047067
       },
       {
-        "WeeklyReturn": 4.288075568860301
+        "indexWeeklyReturn": 5.033269372130099
       },
       {
-        "MonthlyReturn": -2.8987034443317805
+        "indexMonthlyReturn": -2.8986530494811475
       },
       {
-        "QuarterlyReturn": 19.17735748666471
+        "indexQuarterlyReturn": 15.854593394744269
       },
       {
-        "SixmonthsReturn": 56.11183853188515
+        "indexSixmonthsReturn": 60.09318351798337
       },
       {
-        "AnnualReturn": 47.26743261541031
+        "indexAnnualReturn": 46.46079545908356
       },
       {
-        "AutoCar_tseDailyReturn": 0.312930279133809
+        "AutoCar_tseDailyReturn": 0.16614200769499823
       },
       {
-        "AutoCar_tseWeeklyReturn": 3.4131234273178914
+        "AutoCar_tseWeeklyReturn": 3.4404912407440853
       },
       {
-        "AutoCar_tseMonthlyReturn": -3.364283130350899
+        "AutoCar_tseMonthlyReturn": 1.4255356826633612
       },
       {
-        "AutoCar_tseQuarterlyReturn": 24.29623885226832
+        "AutoCar_tseQuarterlyReturn": 14.549999999999999
       },
       {
-        "AutoCar_tseSixmonthsReturn": 63.53433323130293
+        "AutoCar_tseSixmonthsReturn": null
       },
       {
-        "AutoCar_tseAnnualReturn": 56.67644183773216
+        "AutoCar_tseAnnualReturn": null
       },
       {
-        "Khodran_tseDailyReturn": 0.312930279133809
+        "Khodran_tseDailyReturn": 2.467715125942974
       },
       {
-        "Khodran_tseWeeklyReturn": 3.4131234273178914
+        "Khodran_tseWeeklyReturn": 4.457768508863399
       },
       {
         "Khodran_tseMonthlyReturn": -3.364283130350899
       },
       {
-        "Khodran_tseQuarterlyReturn": 24.29623885226832
+        "Khodran_tseQuarterlyReturn": 20.701860079825288
       },
       {
-        "Khodran_tseSixmonthsReturn": 63.53433323130293
+        "Khodran_tseSixmonthsReturn": 61.84994446127436
       },
       {
-        "Khodran_tseAnnualReturn": 56.67644183773216
+        "Khodran_tseAnnualReturn": 55.460717749757514
       },
       {
-        "AutoAgah_tseDailyReturn": -0.2772691603452786
+        "AutoAgah_tseDailyReturn": 1.816045294306164
       },
       {
-        "AutoAgah_tseWeeklyReturn": 4.466487641804132
+        "AutoAgah_tseWeeklyReturn": 5.88235294117647
       },
       {
         "AutoAgah_tseMonthlyReturn": -1.0947958283609194
       },
       {
-        "AutoAgah_tseQuarterlyReturn": 27.57328336233436
+        "AutoAgah_tseQuarterlyReturn": 23.859649122807017
       },
       {
-        "AutoAgah_tseSixmonthsReturn": 73.7648131267092
+        "AutoAgah_tseSixmonthsReturn": 78.0829596412556
       },
       {
-        "AutoAgah_tseAnnualReturn": 71.42086330935253
+        "AutoAgah_tseAnnualReturn": 70.65353625783348
       },
       {
-        "AutoDariush_tseDailyReturn": -1.823388463561452
+        "AutoDariush_tseDailyReturn": 1.186604023611613
       },
       {
-        "AutoDariush_tseWeeklyReturn": 1.1196051285138144
+        "AutoDariush_tseWeeklyReturn": 2.796475339615714
       },
       {
         "AutoDariush_tseMonthlyReturn": -5.4961746174617465
       },
       {
-        "AutoDariush_tseQuarterlyReturn": 27.409935532802425
+        "AutoDariush_tseQuarterlyReturn": 23.703976435935196
       },
       {
-        "AutoDariush_tseSixmonthsReturn": 68.73242265970269
+        "AutoDariush_tseSixmonthsReturn": 73.48962098523185
       },
       {
-        "AutoDariush_tseAnnualReturn": 64.89006674519042
+        "AutoDariush_tseAnnualReturn": 63.11292358481406
       },
       {
-        "TakhtGaz_tseDailyReturn": 2.0353618421052633
+        "TakhtGaz_tseDailyReturn": 2.4707501720578113
       },
       {
-        "TakhtGaz_tseWeeklyReturn": 5.888628120332835
+        "TakhtGaz_tseWeeklyReturn": 6.892095627826836
       },
       {
         "TakhtGaz_tseMonthlyReturn": 2.245570663370416
       },
       {
-        "TakhtGaz_tseQuarterlyReturn": 23.4372409219035
+        "TakhtGaz_tseQuarterlyReturn": 19.888879942024317
       },
       {
-        "TakhtGaz_tseSixmonthsReturn": 54.19428334714167
+        "TakhtGaz_tseSixmonthsReturn": 58.61297539149888
       },
       {
-        "TakhtGaz_tseAnnualReturn": 48.86022795440912
+        "TakhtGaz_tseAnnualReturn": 48.32635983263599
       },
       {
-        "BehinRo_tseDailyReturn": 0.8378279310886527
+        "BehinRo_tseDailyReturn": 2.213375796178344
       },
       {
-        "BehinRo_tseWeeklyReturn": 4.013179215728638
+        "BehinRo_tseWeeklyReturn": 6.698803191489362
       },
       {
         "BehinRo_tseMonthlyReturn": -2.4468085106382977
       },
       {
-        "BehinRo_tseQuarterlyReturn": 20.514425183052758
+        "BehinRo_tseQuarterlyReturn": 18.907070083359063
       },
       {
-        "BehinRo_tseSixmonthsReturn": 56.54824810990976
+        "BehinRo_tseSixmonthsReturn": 61.22739450770261
       },
       {
-        "BehinRo_tseAnnualReturn": 53.80990415335464
+        "BehinRo_tseAnnualReturn": 52.2292490118577
       },
       {
         "key": "SIMPLE_WEEKLY",
@@ -2004,71 +2052,71 @@
   "indexHistory": [
     {
       "date": "1404/07/26",
-      "value": 377316.5
+      "value": 377316.0
     },
     {
       "date": "1404/07/27",
-      "value": 382773.1
+      "value": 382773.0
     },
     {
       "date": "1404/07/28",
-      "value": 384351.5
+      "value": 384351.0
     },
     {
       "date": "1404/07/29",
-      "value": 376795.9
+      "value": 376795.0
     },
     {
       "date": "1404/07/30",
-      "value": 380899.1
+      "value": 380899.0
     },
     {
       "date": "1404/08/03",
-      "value": 374991.7
+      "value": 374991.0
     },
     {
       "date": "1404/08/04",
-      "value": 380530.6
+      "value": 380530.0
     },
     {
       "date": "1404/08/05",
-      "value": 386072.5
+      "value": 386072.0
     },
     {
       "date": "1404/08/06",
-      "value": 385057.9
+      "value": 385057.0
     },
     {
       "date": "1404/08/07",
-      "value": 391370.5
+      "value": 391370.0
     },
     {
       "date": "1404/08/10",
-      "value": 397052.8
+      "value": 397052.0
     },
     {
       "date": "1404/08/11",
-      "value": 400363.5
+      "value": 400363.0
     },
     {
       "date": "1404/08/12",
-      "value": 406106.5
+      "value": 406106.0
     },
     {
       "date": "1404/08/13",
-      "value": 398721.4
+      "value": 398721.0
     },
     {
       "date": "1404/08/14",
-      "value": 396071.1
+      "value": 396071.0
     },
     {
       "date": "1404/08/17",
-      "value": 396078.1
+      "value": 396078.0
     },
     {
       "date": "1404/08/18",
-      "value": 384954.9
+      "value": 384954.0
     },
     {
       "date": "1404/08/19",
@@ -2076,31 +2124,31 @@
     },
     {
       "date": "1404/08/20",
-      "value": 373506.6
+      "value": 373506.0
     },
     {
       "date": "1404/08/21",
-      "value": 373549.8
+      "value": 373549.0
     },
     {
       "date": "1404/08/24",
-      "value": 375607.5
+      "value": 375607.0
     },
     {
       "date": "1404/08/25",
-      "value": 378906.1
+      "value": 378906.0
     },
     {
       "date": "1404/08/26",
-      "value": 380181.9
+      "value": 380181.0
     },
     {
       "date": "1404/08/27",
-      "value": 373911.0
+      "value": 373910.0
     },
     {
       "date": "1404/08/28",
-      "value": 375916.7
+      "value": 375916.0
     },
     {
       "date": "1404/09/01",
@@ -2112,175 +2160,175 @@
     },
     {
       "date": "1404/09/04",
-      "value": 398074.6
+      "value": 398074.0
     },
     {
       "date": "1404/09/05",
-      "value": 391631.2
+      "value": 391631.0
     },
     {
       "date": "1404/09/08",
-      "value": 383403.3
+      "value": 383403.0
     },
     {
       "date": "1404/09/09",
-      "value": 381471.3
+      "value": 381471.0
     },
     {
       "date": "1404/09/10",
-      "value": 385175.6
+      "value": 385175.0
     },
     {
       "date": "1404/09/11",
-      "value": 393692.0
+      "value": 393691.0
     },
     {
       "date": "1404/09/12",
-      "value": 395744.4
+      "value": 395744.0
     },
     {
       "date": "1404/09/15",
-      "value": 405122.7
+      "value": 405122.0
     },
     {
       "date": "1404/09/16",
-      "value": 399504.6
+      "value": 399504.0
     },
     {
       "date": "1404/09/17",
-      "value": 402497.3
+      "value": 402497.0
     },
     {
       "date": "1404/09/18",
-      "value": 412349.5
+      "value": 412349.0
     },
     {
       "date": "1404/09/19",
-      "value": 419741.5
+      "value": 419741.0
     },
     {
       "date": "1404/09/22",
-      "value": 429603.6
+      "value": 429603.0
     },
     {
       "date": "1404/09/23",
-      "value": 425807.3
+      "value": 425807.0
     },
     {
       "date": "1404/09/24",
-      "value": 434931.0
+      "value": 434930.0
     },
     {
       "date": "1404/09/25",
-      "value": 430085.4
+      "value": 430085.0
     },
     {
       "date": "1404/09/26",
-      "value": 426639.8
+      "value": 426639.0
     },
     {
       "date": "1404/09/29",
-      "value": 438878.3
+      "value": 438878.0
     },
     {
       "date": "1404/09/30",
-      "value": 441350.8
+      "value": 441350.0
     },
     {
       "date": "1404/10/01",
-      "value": 443456.7
+      "value": 443456.0
     },
     {
       "date": "1404/10/02",
-      "value": 446900.4
+      "value": 446900.0
     },
     {
       "date": "1404/10/03",
-      "value": 459416.3
+      "value": 459416.0
     },
     {
       "date": "1404/10/06",
-      "value": 465146.8
+      "value": 465146.0
     },
     {
       "date": "1404/10/07",
-      "value": 466048.6
+      "value": 466048.0
     },
     {
       "date": "1404/10/08",
-      "value": 454199.6
+      "value": 454199.0
     },
     {
       "date": "1404/10/09",
-      "value": 440731.2
+      "value": 440731.0
     },
     {
       "date": "1404/10/10",
-      "value": 434344.0
+      "value": 434343.0
     },
     {
       "date": "1404/10/14",
-      "value": 421824.4
+      "value": 421824.0
     },
     {
       "date": "1404/10/15",
-      "value": 432666.7
+      "value": 432666.0
     },
     {
       "date": "1404/10/16",
-      "value": 445065.5
+      "value": 445065.0
     },
     {
       "date": "1404/10/17",
-      "value": 433551.5
+      "value": 433551.0
     },
     {
       "date": "1404/10/20",
-      "value": 421305.2
+      "value": 421305.0
     },
     {
       "date": "1404/10/21",
-      "value": 410114.2
+      "value": 410114.0
     },
     {
       "date": "1404/10/22",
-      "value": 419123.4
+      "value": 419123.0
     },
     {
       "date": "1404/10/23",
-      "value": 430265.7
+      "value": 430265.0
     },
     {
       "date": "1404/10/24",
-      "value": 418519.5
+      "value": 418519.0
     },
     {
       "date": "1404/10/28",
-      "value": 427396.7
+      "value": 427396.0
     },
     {
       "date": "1404/10/29",
-      "value": 431793.1
+      "value": 431793.0
     },
     {
       "date": "1404/10/30",
-      "value": 431925.6
+      "value": 431925.0
     },
     {
       "date": "1404/11/01",
-      "value": 443636.6
+      "value": 443636.0
     },
     {
       "date": "1404/11/04",
-      "value": 431082.5
+      "value": 431082.0
     },
     {
       "date": "1404/11/05",
-      "value": 418584.2
+      "value": 418584.0
     },
     {
       "date": "1404/11/06",
-      "value": 406493.3
+      "value": 406493.0
     },
     {
       "date": "1404/11/07",
@@ -2288,63 +2336,63 @@
     },
     {
       "date": "1404/11/08",
-      "value": 400988.1
+      "value": 400988.0
     },
     {
       "date": "1404/11/11",
-      "value": 398490.7
+      "value": 398490.0
     },
     {
       "date": "1404/11/12",
-      "value": 396239.1
+      "value": 396239.0
     },
     {
       "date": "1404/11/13",
-      "value": 397113.6
+      "value": 397113.0
     },
     {
       "date": "1404/11/14",
-      "value": 395068.8
+      "value": 395068.0
     },
     {
       "date": "1404/11/18",
-      "value": 397458.7
+      "value": 397458.0
     },
     {
       "date": "1404/11/19",
-      "value": 396432.3
+      "value": 396432.0
     },
     {
       "date": "1404/11/20",
-      "value": 394107.2
+      "value": 394107.0
     },
     {
       "date": "1404/11/21",
-      "value": 395920.6
+      "value": 395920.0
     },
     {
       "date": "1404/11/25",
-      "value": 381915.9
+      "value": 381915.0
     },
     {
       "date": "1404/11/26",
-      "value": 371611.0
+      "value": 371610.0
     },
     {
       "date": "1404/11/27",
-      "value": 375511.8
+      "value": 375511.0
     },
     {
       "date": "1404/11/28",
-      "value": 375077.9
+      "value": 375077.0
     },
     {
       "date": "1404/11/29",
-      "value": 370960.0
+      "value": 370959.0
     },
     {
       "date": "1404/12/02",
-      "value": 360111.9
+      "value": 360111.0
     },
     {
       "date": "1404/12/03",
@@ -2352,251 +2400,251 @@
     },
     {
       "date": "1404/12/04",
-      "value": 354772.3
+      "value": 354772.0
     },
     {
       "date": "1404/12/05",
-      "value": 349521.5
+      "value": 349521.0
     },
     {
       "date": "1404/12/06",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/09",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/11",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/12",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/13",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/16",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/17",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/18",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/19",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/23",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/24",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/25",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/26",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1404/12/27",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/05",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/08",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/09",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/10",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/11",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/15",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/16",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/17",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/18",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/19",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/22",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/23",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/24",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/26",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/29",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/30",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/01/31",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/01",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/02",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/05",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/06",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/07",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/08",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/09",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/12",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/13",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/14",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/15",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/16",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/19",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/20",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/21",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/22",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/23",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/26",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/27",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/28",
-      "value": 352386.6
+      "value": 352386.0
     },
     {
       "date": "1405/02/29",
-      "value": 343623.6
+      "value": 343623.0
     },
     {
       "date": "1405/02/30",
-      "value": 339957.3
+      "value": 339957.0
     },
     {
       "date": "1405/03/02",
-      "value": 350622.7
+      "value": 350622.0
     },
     {
       "date": "1405/03/03",
-      "value": 363106.7
+      "value": 363106.0
     },
     {
       "date": "1405/03/04",
-      "value": 371873.4
+      "value": 371873.0
     },
     {
       "date": "1405/03/05",
-      "value": 377054.6
+      "value": 377054.0
     },
     {
       "date": "1405/03/09",
-      "value": 387894.8
+      "value": 387894.0
     },
     {
       "date": "1405/03/10",
-      "value": 399309.4
+      "value": 399309.0
     },
     {
       "date": "1405/03/11",
-      "value": 399937.6
+      "value": 399937.0
     },
     {
       "date": "1405/03/12",
@@ -2604,91 +2652,91 @@
     },
     {
       "date": "1405/03/13",
-      "value": 383434.8
+      "value": 383434.0
     },
     {
       "date": "1405/03/16",
-      "value": 379363.6
+      "value": 379363.0
     },
     {
       "date": "1405/03/17",
-      "value": 390342.3
+      "value": 390342.0
     },
     {
       "date": "1405/03/18",
-      "value": 379408.4
+      "value": 379408.0
     },
     {
       "date": "1405/03/19",
-      "value": 390433.4
+      "value": 390433.0
     },
     {
       "date": "1405/03/20",
-      "value": 393274.3
+      "value": 393274.0
     },
     {
       "date": "1405/03/23",
-      "value": 404691.3
+      "value": 404691.0
     },
     {
       "date": "1405/03/24",
-      "value": 416481.3
+      "value": 416481.0
     },
     {
       "date": "1405/03/25",
-      "value": 428483.3
+      "value": 428483.0
     },
     {
       "date": "1405/03/26",
-      "value": 431513.3
+      "value": 431513.0
     },
     {
       "date": "1405/03/27",
-      "value": 426088.9
+      "value": 426088.0
     },
     {
       "date": "1405/03/30",
-      "value": 431187.6
+      "value": 431187.0
     },
     {
       "date": "1405/03/31",
-      "value": 438639.4
+      "value": 438639.0
     },
     {
       "date": "1405/04/01",
-      "value": 429521.2
+      "value": 429521.0
     },
     {
       "date": "1405/04/02",
-      "value": 438561.6
+      "value": 438561.0
     },
     {
       "date": "1405/04/06",
-      "value": 427894.4
+      "value": 427894.0
     },
     {
       "date": "1405/04/07",
-      "value": 416061.7
+      "value": 416061.0
     },
     {
       "date": "1405/04/08",
-      "value": 407909.6
+      "value": 407909.0
     },
     {
       "date": "1405/04/09",
-      "value": 414080.0
+      "value": 414079.0
     },
     {
       "date": "1405/04/10",
-      "value": 425105.7
+      "value": 425105.0
     },
     {
       "date": "1405/04/16",
-      "value": 436960.8
+      "value": 436960.0
     },
     {
       "date": "1405/04/17",
-      "value": 435783.6
+      "value": 435783.0
     },
     {
       "date": "1405/04/20",
@@ -2696,79 +2744,79 @@
     },
     {
       "date": "1405/04/21",
-      "value": 412871.3
+      "value": 412871.0
     },
     {
       "date": "1405/04/22",
-      "value": 403659.0
+      "value": 403658.0
     },
     {
       "date": "1405/04/23",
-      "value": 397311.0
+      "value": 397310.0
     },
     {
       "date": "1405/04/24",
-      "value": 391653.4
+      "value": 391653.0
     },
     {
       "date": "1405/04/27",
-      "value": 383900.6
+      "value": 383900.0
     },
     {
       "date": "1405/04/28",
-      "value": 369682.3
+      "value": 369682.0
     },
     {
       "date": "1405/04/29",
-      "value": 374913.1
+      "value": 374913.0
     },
     {
       "date": "1405/04/30",
-      "value": 376255.7
+      "value": 376255.0
     },
     {
       "date": "1405/04/31",
-      "value": 375495.4
+      "value": 375495.0
     },
     {
       "date": "1405/05/03",
-      "value": 381617.5
+      "value": 381617.0
     },
     {
       "date": "1405/05/04",
-      "value": 394790.3
+      "value": 394790.0
     },
     {
       "date": "1405/05/05",
-      "value": 402179.9
+      "value": 402179.0
     },
     {
       "date": "1405/05/06",
-      "value": 403323.6
+      "value": 403323.0
     },
     {
       "date": "1405/05/07",
-      "value": 395719.2
+      "value": 395719.0
     },
     {
       "date": "1405/05/10",
-      "value": 401376.1
+      "value": 401376.0
     },
     {
       "date": "1405/05/11",
-      "value": 411248.8
+      "value": 411248.0
     },
     {
       "date": "1405/05/12",
-      "value": 422982.8
+      "value": 422982.0
     },
     {
       "date": "1405/05/14",
-      "value": 435221.1
+      "value": 435221.0
     },
     {
       "date": "1405/05/17",
-      "value": 447920.4
+      "value": 447920.0
     },
     {
       "date": "1405/05/18",
@@ -2776,167 +2824,167 @@
     },
     {
       "date": "1405/05/19",
-      "value": 447912.5
+      "value": 447912.0
     },
     {
       "date": "1405/05/20",
-      "value": 453182.7
+      "value": 453182.0
     },
     {
       "date": "1405/05/24",
-      "value": 449596.6
+      "value": 449596.0
     },
     {
       "date": "1405/05/25",
-      "value": 461595.4
+      "value": 461595.0
     },
     {
       "date": "1405/05/26",
-      "value": 474835.0
+      "value": 474834.0
     },
     {
       "date": "1405/05/27",
-      "value": 479739.6
+      "value": 479739.0
     },
     {
       "date": "1405/05/28",
-      "value": 486254.7
+      "value": 486254.0
     },
     {
       "date": "1405/05/31",
-      "value": 499603.4
+      "value": 499603.0
     },
     {
       "date": "1405/06/01",
-      "value": 511588.6
+      "value": 511588.0
     },
     {
       "date": "1405/06/02",
-      "value": 517547.0
+      "value": 517546.0
     },
     {
       "date": "1405/06/03",
-      "value": 525890.5
+      "value": 525890.0
     },
     {
       "date": "1405/06/04",
-      "value": 539986.7
+      "value": 539986.0
     },
     {
       "date": "1405/06/07",
-      "value": 551474.0
+      "value": 551473.0
     },
     {
       "date": "1405/06/09",
-      "value": 547000.7
+      "value": 547000.0
     },
     {
       "date": "1405/06/10",
-      "value": 547428.2
+      "value": 547428.0
     },
     {
       "date": "1405/06/11",
-      "value": 538112.6
+      "value": 538112.0
     },
     {
       "date": "1405/06/14",
-      "value": 547933.9
+      "value": 547933.0
     },
     {
       "date": "1405/06/15",
-      "value": 559038.2
+      "value": 559038.0
     },
     {
       "date": "1405/06/16",
-      "value": 575247.5
+      "value": 575247.0
     },
     {
       "date": "1405/06/17",
-      "value": 588283.2
+      "value": 588283.0
     },
     {
       "date": "1405/06/18",
-      "value": 576185.2
+      "value": 576185.0
     },
     {
       "date": "1405/06/21",
-      "value": 586457.8
+      "value": 586457.0
     },
     {
       "date": "1405/06/22",
-      "value": 587492.3
+      "value": 587492.0
     },
     {
       "date": "1405/06/23",
-      "value": 572299.3
+      "value": 572299.0
     },
     {
       "date": "1405/06/24",
-      "value": 584384.8
+      "value": 584384.0
     },
     {
       "date": "1405/06/25",
-      "value": 574964.9
+      "value": 574964.0
     },
     {
       "date": "1405/06/28",
-      "value": 562946.9
+      "value": 562946.0
     },
     {
       "date": "1405/06/29",
-      "value": 548712.9
+      "value": 548712.0
     },
     {
       "date": "1405/06/30",
-      "value": 545220.1
+      "value": 545220.0
     },
     {
       "date": "1405/06/31",
-      "value": 531963.8
+      "value": 531963.0
     },
     {
       "date": "1405/07/01",
-      "value": 533364.6
+      "value": 533364.0
     },
     {
       "date": "1405/07/04",
-      "value": 519622.6
+      "value": 519622.0
     },
     {
       "date": "1405/07/05",
-      "value": 526641.8
+      "value": 526641.0
     },
     {
       "date": "1405/07/06",
-      "value": 538642.0
+      "value": 538641.0
     },
     {
       "date": "1405/07/07",
-      "value": 535075.7
+      "value": 535075.0
     },
     {
       "date": "1405/07/08",
-      "value": 547942.3
+      "value": 547942.0
     },
     {
       "date": "1405/07/11",
-      "value": 550257.2
+      "value": 550257.0
     },
     {
       "date": "1405/07/12",
-      "value": 556042.3
+      "value": 556042.0
     },
     {
       "date": "1405/07/13",
-      "value": 547989.2
+      "value": 547989.0
     },
     {
       "date": "1405/07/14",
-      "value": 563384.1
+      "value": 563384.0
     },
     {
       "date": "1405/07/15",
-      "value": 569234.2
+      "value": 569234.0
     },
     {
       "date": "1405/07/18",
@@ -2944,99 +2992,99 @@
     },
     {
       "date": "1405/07/19",
-      "value": 564791.0
+      "value": 564790.0
     },
     {
       "date": "1405/07/20",
-      "value": 559411.5
+      "value": 559411.0
     },
     {
       "date": "1405/07/21",
-      "value": 570870.2
+      "value": 570870.0
     },
     {
       "date": "1405/07/22",
-      "value": 566539.5
+      "value": 566539.0
     },
     {
       "date": "1405/07/25",
-      "value": 553255.8
+      "value": 553255.0
     },
     {
       "date": "1405/07/26",
-      "value": 542732.2
+      "value": 542732.0
     },
     {
       "date": "1405/07/27",
-      "value": 544112.3
+      "value": 544112.0
     },
     {
       "date": "1405/07/28",
-      "value": 547997.8
+      "value": 547997.0
     },
     {
       "date": "1405/07/29",
-      "value": 536722.8
+      "value": 536722.0
     },
     {
       "date": "1405/08/02",
-      "value": 523013.6
+      "value": 523013.0
     },
     {
       "date": "1405/08/03",
-      "value": 514287.7
+      "value": 514287.0
     },
     {
       "date": "1405/08/04",
-      "value": 515232.6
+      "value": 515232.0
     },
     {
       "date": "1405/08/05",
-      "value": 506963.8
+      "value": 506963.0
     },
     {
       "date": "1405/08/06",
-      "value": 509990.7
+      "value": 509990.0
     },
     {
       "date": "1405/08/09",
-      "value": 501217.4
+      "value": 501217.0
     },
     {
       "date": "1405/08/10",
-      "value": 489424.3
+      "value": 489424.0
     },
     {
       "date": "1405/08/11",
-      "value": 498571.9
+      "value": 498571.0
     },
     {
       "date": "1405/08/12",
-      "value": 511019.0
+      "value": 511018.0
     },
     {
       "date": "1405/08/13",
-      "value": 515306.7
+      "value": 515306.0
     },
     {
       "date": "1405/08/16",
-      "value": 527497.7
+      "value": 527497.0
     },
     {
       "date": "1405/08/17",
-      "value": 523755.3
+      "value": 523755.0
     },
     {
       "date": "1405/08/18",
-      "value": 531607.7
+      "value": 531607.0
     },
     {
       "date": "1405/08/19",
-      "value": 546649.8
+      "value": 546649.0
     },
     {
       "date": "1405/08/20",
-      "value": 548830.9
+      "value": 548830.0
     },
     {
       "date": "1405/08/23",
@@ -3044,19 +3092,19 @@
     },
     {
       "date": "1405/08/24",
-      "value": 550117.2
+      "value": 550117.0
     },
     {
       "date": "1405/08/25",
-      "value": 564112.1
+      "value": 564112.0
     },
     {
       "date": "1405/08/26",
-      "value": 570056.2
+      "value": 570056.0
     },
     {
       "date": "1405/08/27",
-      "value": 579506.7
+      "value": 579506.0
     }
   ],
   "fundHistory": {}
