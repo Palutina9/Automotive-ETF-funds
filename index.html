@@ -253,6 +253,7 @@
       </h2>
       <select class="period-select" id="tsePeriodSelect"></select>
     </div>
+    <div class="chart-filters" id="tseChartFilters"></div>
     <div class="chart-box"><canvas id="tseChart"></canvas></div>
     <div class="table-caption">میله‌ها: بازدهی قیمتی دوره انتخاب‌شده (٪) — مرتب‌شده بر اساس بازدهی</div>
   </section>
@@ -648,6 +649,8 @@ function renderNavList(state) {
 // ---------- Table (transposed: rows = بازار/شاخص/فands, columns = periods) ----------
 let sortState = { column: null, direction: 'desc' };
 let chartFilters = {};  // { "__MARKET__": true, "__INDEX__": true, "Khodran": true, ... }
+let tseChartFilters = {};  // ← NEW: independent filter state for the TSE chart
+
 
 function sortRows(rowKeys, state) {
   if (!sortState.column) return rowKeys;
@@ -757,6 +760,40 @@ function buildChartFilters(state) {
 let tseChartInstance = null;
 const TSE_PERIOD_KEYS = ["daily", "SIMPLE_WEEKLY", "SIMPLE_MONTHLY", "SIMPLE_MONTHLY3", "SIMPLE_MONTHLY6", "SIMPLE_YEARLY"];
 
+function buildTseChartFilters(state) {
+  const host = document.getElementById("tseChartFilters");
+  if (!host) return;
+
+  // TSE chart only has شاخص خودرو (no بازار data for TSE returns)
+  const entities = [
+    { key: "__INDEX__", name: "شاخص خودرو", color: "#14B8A6" },
+  ];
+
+  // Initialize filters (all checked by default)
+  if (Object.keys(tseChartFilters).length === 0) {
+    entities.forEach(e => { tseChartFilters[e.key] = true; });
+  }
+
+  host.innerHTML = entities.map(e => {
+    const isActive = tseChartFilters[e.key];
+    return '<label class="chart-filter-chip' + (isActive ? ' active' : '') + '" style="color:' + e.color + '">' +
+      '<span class="dot"></span>' +
+      '<span style="color: var(--ink)">' + e.name + '</span>' +
+      '</label>';
+  }).join("");
+
+  // Wire up click handlers
+  host.querySelectorAll('.chart-filter-chip').forEach((chip, i) => {
+    chip.addEventListener('click', function() {
+      const key = entities[i].key;
+      tseChartFilters[key] = !tseChartFilters[key];
+      // Re-render TSE chart with current period selection
+      const sel = document.getElementById("tsePeriodSelect");
+      renderTseChart(state, sel.value);
+    });
+  });
+}
+  
 function renderTseChart(state, selectedKey) {
   const { funds, order } = state;
   const ctx = document.getElementById("tseChart");
@@ -773,6 +810,7 @@ function renderTseChart(state, selectedKey) {
       return { key: slug, name: FUND_NAMES_FA[slug] || slug, ret: ret, color: color };
     }),
   ]
+  .filter(e => tseChartFilters[e.key] !== false)
   .filter(e => e.ret !== null && isFinite(e.ret))
   .sort((a, b) => {
     const av = a.ret === null || !isFinite(a.ret) ? -Infinity : a.ret;
@@ -1027,6 +1065,7 @@ function renderForDate(dateKey) {
   renderTable(state);
   setupPeriodSelect(state);
   buildChartFilters(state);
+  buildTseChartFilters(state);
   renderCumulativeChart(state);
   setupTsePeriodSelect(state);
   document.getElementById("exportBtn").disabled = state.order.length === 0;
