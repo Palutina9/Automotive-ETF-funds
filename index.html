@@ -843,7 +843,7 @@ function setupTsePeriodSelect(state) {
   if (!select) return;
   const options = TSE_PERIOD_KEYS.map(k => ({ value: k, label: PERIOD_LABELS[k] }));
   select.innerHTML = options.map(o => '<option value="' + o.value + '">' + o.label + '</option>').join("");
-  select.value = "SIMPLE_YEARLY";
+  select.value = "SIMPLE_WEEKLY";
   select.onchange = () => renderTseChart(state, select.value);
   renderTseChart(state, select.value);
 }
