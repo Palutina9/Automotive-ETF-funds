@@ -1,26 +1,26 @@
 {
   "dates": {
-    "1405/09/02": [
+    "1405/09/03": [
       {
-        "TakhtGaz_fundDailyReturn": 1.816
+        "TakhtGaz_fundDailyReturn": 0.614
       },
       {
-        "TakhtGaz_fundSimpleReturn": 5.009
+        "TakhtGaz_fundSimpleReturn": 4.83
       },
       {
-        "TakhtGaz_fundSimpleReturn": 8.378
+        "TakhtGaz_fundSimpleReturn": 11.453
       },
       {
-        "TakhtGaz_fundSimpleReturn": 16.639
+        "TakhtGaz_fundSimpleReturn": 13.832
       },
       {
-        "TakhtGaz_fundSimpleReturn": 53.61
+        "TakhtGaz_fundSimpleReturn": 54.872
       },
       {
-        "TakhtGaz_fundSimpleReturn": 45.357
+        "TakhtGaz_fundSimpleReturn": 41.033
       },
       {
-        "TakhtGaz_fundSimpleReturn": 54.398
+        "TakhtGaz_fundSimpleReturn": 55.346
       },
       {
         "TakhtGaz_fundSimpleReturn": 10.32
@@ -29,28 +29,28 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7770072264376.0
+        "TakhtGaz_fundNAV": 8031188826000.0
       },
       {
-        "AutoCar_fundDailyReturn": 1.954
+        "AutoCar_fundDailyReturn": 1.117
       },
       {
-        "AutoCar_fundSimpleReturn": 5.962
+        "AutoCar_fundSimpleReturn": 5.865
       },
       {
-        "AutoCar_fundSimpleReturn": 7.175
+        "AutoCar_fundSimpleReturn": 11.311
       },
       {
-        "AutoCar_fundSimpleReturn": 23.011
-      },
-      {
-        "AutoCar_fundSimpleReturn": 0.0
+        "AutoCar_fundSimpleReturn": 23.26
       },
       {
         "AutoCar_fundSimpleReturn": 0.0
       },
       {
-        "AutoCar_fundSimpleReturn": 22.704
+        "AutoCar_fundSimpleReturn": 0.0
+      },
+      {
+        "AutoCar_fundSimpleReturn": 24.074
       },
       {
         "AutoCar_fundSimpleReturn": 6.86
@@ -59,7 +59,69 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4949364595438.0
+        "AutoCar_fundNAV": 5048290759149.0
+      }
+    ],
+    "1405/09/02": [
+      {
+        "TakhtGaz_fundDailyReturn": 0.614
+      },
+      {
+        "TakhtGaz_fundSimpleReturn": 4.83
+      },
+      {
+        "TakhtGaz_fundSimpleReturn": 11.453
+      },
+      {
+        "TakhtGaz_fundSimpleReturn": 13.832
+      },
+      {
+        "TakhtGaz_fundSimpleReturn": 54.872
+      },
+      {
+        "TakhtGaz_fundSimpleReturn": 41.033
+      },
+      {
+        "TakhtGaz_fundSimpleReturn": 55.346
+      },
+      {
+        "TakhtGaz_fundSimpleReturn": 10.32
+      },
+      {
+        "TakhtGaz_fundSimpleReturn": -12.04
+      },
+      {
+        "TakhtGaz_fundNAV": 8031188826000.0
+      },
+      {
+        "AutoCar_fundDailyReturn": 1.117
+      },
+      {
+        "AutoCar_fundSimpleReturn": 5.865
+      },
+      {
+        "AutoCar_fundSimpleReturn": 11.311
+      },
+      {
+        "AutoCar_fundSimpleReturn": 23.26
+      },
+      {
+        "AutoCar_fundSimpleReturn": 0.0
+      },
+      {
+        "AutoCar_fundSimpleReturn": 0.0
+      },
+      {
+        "AutoCar_fundSimpleReturn": 24.074
+      },
+      {
+        "AutoCar_fundSimpleReturn": 6.86
+      },
+      {
+        "AutoCar_fundSimpleReturn": -3.55
+      },
+      {
+        "AutoCar_fundNAV": 5048290759149.0
       }
     ],
     "1405/09/01": [
@@ -91,7 +153,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7770072264376.0
+        "TakhtGaz_fundNAV": 8031188826000.0
       },
       {
         "AutoCar_fundDailyReturn": 1.954
@@ -121,7 +183,7 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4949364595438.0
+        "AutoCar_fundNAV": 5048290759149.0
       }
     ],
     "1405/08/30": [
@@ -153,7 +215,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7770072264376.0
+        "TakhtGaz_fundNAV": 8031188826000.0
       },
       {
         "AutoCar_fundDailyReturn": 0.931
@@ -183,7 +245,7 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4949364595438.0
+        "AutoCar_fundNAV": 5048290759149.0
       }
     ],
     "1405/08/29": [
@@ -215,7 +277,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7770072264376.0
+        "TakhtGaz_fundNAV": 8031188826000.0
       },
       {
         "AutoCar_fundDailyReturn": 0.0
@@ -245,7 +307,7 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4949364595438.0
+        "AutoCar_fundNAV": 5048290759149.0
       }
     ],
     "1405/08/28": [
@@ -277,7 +339,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7770072264376.0
+        "TakhtGaz_fundNAV": 8031188826000.0
       },
       {
         "AutoCar_fundDailyReturn": -0.042
@@ -307,7 +369,7 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4949364595438.0
+        "AutoCar_fundNAV": 5048290759149.0
       }
     ],
     "1405/08/27": [
@@ -339,7 +401,7 @@
         "TakhtGaz_fundSimpleReturn": -12.04
       },
       {
-        "TakhtGaz_fundNAV": 7770072264376.0
+        "TakhtGaz_fundNAV": 8031188826000.0
       },
       {
         "AutoCar_fundDailyReturn": 0.837
@@ -369,69 +431,7 @@
         "AutoCar_fundSimpleReturn": -3.55
       },
       {
-        "AutoCar_fundNAV": 4944668827936.0
-      }
-    ],
-    "1405/08/26": [
-      {
-        "TakhtGaz_fundDailyReturn": 0.573
-      },
-      {
-        "TakhtGaz_fundSimpleReturn": 2.939
-      },
-      {
-        "TakhtGaz_fundSimpleReturn": 4.957
-      },
-      {
-        "TakhtGaz_fundSimpleReturn": 20.038
-      },
-      {
-        "TakhtGaz_fundSimpleReturn": 63.271
-      },
-      {
-        "TakhtGaz_fundSimpleReturn": 41.375
-      },
-      {
-        "TakhtGaz_fundSimpleReturn": 49.037
-      },
-      {
-        "TakhtGaz_fundSimpleReturn": 10.32
-      },
-      {
-        "TakhtGaz_fundSimpleReturn": -12.04
-      },
-      {
-        "TakhtGaz_fundNAV": 7770072264376.0
-      },
-      {
-        "AutoCar_fundDailyReturn": 0.948
-      },
-      {
-        "AutoCar_fundSimpleReturn": 2.666
-      },
-      {
-        "AutoCar_fundSimpleReturn": 4.066
-      },
-      {
-        "AutoCar_fundSimpleReturn": 0.0
-      },
-      {
-        "AutoCar_fundSimpleReturn": 0.0
-      },
-      {
-        "AutoCar_fundSimpleReturn": 0.0
-      },
-      {
-        "AutoCar_fundSimpleReturn": 18.311
-      },
-      {
-        "AutoCar_fundSimpleReturn": 6.86
-      },
-      {
-        "AutoCar_fundSimpleReturn": -3.55
-      },
-      {
-        "AutoCar_fundNAV": 4944668827936.0
+        "AutoCar_fundNAV": 5048290759149.0
       }
     ]
   },
@@ -808,6 +808,10 @@
       {
         "date": "1405/09/01",
         "nav": 12263.0
+      },
+      {
+        "date": "1405/09/02",
+        "nav": 12400.0
       }
     ]
   }
